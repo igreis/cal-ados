@@ -4,12 +4,13 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import tenisDuramo from '../assets/duramo-Photoroom.png'
 import logo from '../assets/image-removebg-preview.png'
+import logoP from '../assets/logoC-removebg-preview.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css';
 import ImgMediaCard from '../ui/card'
-import { FaWhatsappSquare, FaInstagramSquare, FaFacebookSquare } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
 import { Man, Woman } from '@mui/icons-material';
 import { Radio, RadioGroup, FormControlLabel, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
@@ -43,7 +44,7 @@ export default function LandingPage() {
       <header className="fixed top-4 left-4 right-4 z-50 px-4 lg:px-6 h-16 flex items-center bg-[#150047] rounded-full shadow-lg">
         <a className="flex items-center justify-center" href="#">
           <img
-            src="/placeholder.svg?height=40&width=40"
+            src={logoP}
             alt=""
             className="h-10 w-10 rounded-full bg-yellow-400"
           />
@@ -67,29 +68,12 @@ export default function LandingPage() {
       <main className="flex-1 pt-16">
         <div
           className="absolute inset-0 bg-yellow-400 lg:[clip-path:polygon(40%_0,_100%_0,_100%_100%,_100%_100%)]"
+
         ></div>
         <section id="home" className="flex  md:h-[60vh] lg:h-[65vh] mt-10">
-          <div className=" flex lg:flex-row md:flex-col max-w-full xl:ml-[2px] lg:ml-[2px] md:ml-[60px] lg:gap-[35px] mr-[40px] items-center mx-auto h-full xl:gap-[45px]">
-            <div className=''>
-            <motion.div
-                className="flex space-x-4 mt-[20px] flex flex-col items-center mr-[50px] gap-[20px]"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1 }}
-              >
-                <a href="#" className="text-[#190046] hover:text-yellow-400 transition-colors ml-[15px]">
-                  <FaWhatsappSquare size={60} />
-                </a>
-                <a href="#" className="text-[#190046] hover:text-yellow-400 transition-colors">
-                  <FaInstagramSquare size={60} />
-                </a>
-                <a href="#" className="text-[#190046] hover:text-yellow-400 transition-colors">
-                  <FaFacebookSquare size={60} />
-                </a>
-              
-              </motion.div>
-            </div>
-            <div className="mb-[50px]">
+          <div className=" flex xl:ml-[60px] lg:flex-row md:flex-col max-w-full lg:ml-[2px] md:ml-[60px] lg:gap-[35px] mr-[40px] items-center mx-auto h-full xl:gap-[45px]">
+
+            <div className="mb-[50px] ml-[80px] max-[420px] max-w-full">
               {/* Animação sincronizada para h1 e p */}
               <motion.div
                 className="max-w-[600px] min-w-[460px] mb-[10px]"
@@ -101,17 +85,44 @@ export default function LandingPage() {
                 <img src={logo} alt="" className='' />
               </motion.div>
 
-              <a href="#" className=''>
-                <button className='bg-[#e10004] rounded-full w-[180px]  h-[40px]'>Saiba Mais</button>
-              </a>
-              <a href="#" className=''>
-                <button className='bg-[#e10004] rounded-full w-[180px] ml-[20px] h-[40px]'>Ver Produtos</button>
-              </a>
-             
+              <motion.div
+                style={{ color: '#190046' }}
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
+              >
+                <div className='ml-[46px]'>
+                  <a href="#" className='max-w-full'>
+                    <button className='bg-yellow-500 rounded-[12px] w-[32%] h-[45px] font-bold '>Saiba Mais</button>
+                  </a>
+                  <a href="#Adulto" className=''>
+                    <button className='bg-yellow-500 rounded-[12px] w-[32%] ml-[20px] h-[45px] font-bold'>Ver Produtos</button>
+                  </a>
+                </div>
+              </motion.div>
+
+              <motion.div
+                style={{ color: '#190046' }}
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.8, duration: 1 }}
+              >
+                <div className='flex ml-[32px] mt-[20px] gap-3'>
+                  <a href="#" className="text-[#190046] hover:text-yellow-400 transition-colors ml-[15px]">
+                    <FaWhatsapp size={35} />
+                  </a>
+                  <a href="#" className="text-[#190046] hover:text-yellow-400 transition-colors">
+                    <FaInstagram size={35} />
+                  </a>
+                  <a href="#" className="text-[#190046] hover:text-yellow-400 transition-colors">
+                    <FaFacebook size={35} />
+                  </a>
+                </div>
+              </motion.div>
             </div>
 
             <Swiper
-              className='w-[680px] ml-[80px] mb-[50px]'
+              className='w-[680px] mb-[50px]'
               modules={[Autoplay, Navigation]}
               autoplay={{ delay: 3000 }}  // Transição automática a cada 3 segundos
               navigation  // Adiciona botões de navegação
@@ -126,12 +137,14 @@ export default function LandingPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
                   >
-                    <img src={shoe.image} alt={shoe.name} className="object-contain transform rotate-[-26deg] xl:w-[580px] lg:w-[480px] md:w-[380px] mb-[200px] pr-[10px cl]" />
+                    <img src={shoe.image} alt={shoe.name} className="object-contain transform rotate-[-26deg] xl:w-[580px] lg:w-[480px] md:w-[380px] mb-[180px] mr-[10px]" />
                   </motion.div>
 
                 </SwiperSlide>
               ))}
+              
             </Swiper>
+            
           </div>
         </section>
 
@@ -140,16 +153,18 @@ export default function LandingPage() {
           <div className="flex flex-col max-w-full pr-[10px] pl-[10px] h-[400px] ml-[20px]">
             <div className='mb-[20px] w-full flex justify-center'>
               <FormControl component="fieldset">
-                <RadioGroup row aria-label="gender" name="row-radio-buttons-group" className='ml-[85px]'>
-                  <FormControlLabel className=''
+                <RadioGroup row aria-label="gender" name="row-radio-buttons-group" className=''>
+                  <FormControlLabel className='flex flex-col'
                     value="male"
                     control={<Radio icon={<Man style={{ fontSize: 60 }} />} checkedIcon={<Man style={{ fontSize: 60 }} />} />}
                     label="Masculino"
+                    
                   />
-                  <FormControlLabel
+                  <FormControlLabel className='flex flex-col'
                     value="female"
                     control={<Radio icon={<Woman style={{ fontSize: 60 }} />} checkedIcon={<Woman style={{ fontSize: 60 }} />} />}
                     label="Feminino"
+                    style={{color: 'black'}}
                   />
                 </RadioGroup>
               </FormControl>
@@ -165,21 +180,21 @@ export default function LandingPage() {
               transition={{ duration: 1, ease: "easeOut" }}
             >
               <div className='w-[200px] mb-[30px]'>
-              <FormControl fullWidth variant="outlined" className=''>
-                <InputLabel id="shoe-type-label">Tipo de Calçado</InputLabel>
-                <Select
-                  labelId="shoe-type-label"
-                  id="shoe-type"
-                  //value={shoeType}
-                  //onChange={handleChange}
-                  label="Tipo de Calçado"
-                >
-                  <MenuItem value="tenis">Tênis</MenuItem>
-                  <MenuItem value="chuteira">Chuteira</MenuItem>
-                  <MenuItem value="sapatilha">Sapatilha</MenuItem>
-                  <MenuItem value="sandalia">Sandália</MenuItem>
-                </Select>
-              </FormControl>
+                <FormControl fullWidth variant="outlined" className=''>
+                  <InputLabel id="shoe-type-label">Tipo de Calçado</InputLabel>
+                  <Select
+                    labelId="shoe-type-label"
+                    id="shoe-type"
+                    //value={shoeType}
+                    //onChange={handleChange}
+                    label="Tipo de Calçado"
+                  >
+                    <MenuItem value="tenis">Tênis</MenuItem>
+                    <MenuItem value="chuteira">Chuteira</MenuItem>
+                    <MenuItem value="sapatilha">Sapatilha</MenuItem>
+                    <MenuItem value="sandalia">Sandália</MenuItem>
+                  </Select>
+                </FormControl>
               </div>
               <ImgMediaCard />
             </motion.div>
