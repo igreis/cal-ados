@@ -1,68 +1,37 @@
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import { useEffect, useState } from 'react';
+interface Data {
+  marca: string,
+  imageUrl: string,
+  preço: number,
+}
 
-export default function ImgMediaCard({ genero, shoeType }) {
-  const [dados, setDados] = useState([])
-  const data = {
-    masculino: {
-      tenis: [
-        { marca: 'nike', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true' },
-        { marca: 'nike', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true' }
-      ]
-    },
-    feminino: {
-      sapatilha: [
-        { marca: 'modare', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true' }
-      ]
-    }
+interface CardProps {
+  data: Data[] | null | undefined;
+  genero?: string;
+}
+
+export default function Card({ data }: CardProps) {
+  if (!data || data.length === 0) {
+    return <div>No data available</div>;
   }
 
-  useEffect(() => {
-    for (const index in data) {
-      if (index == genero) {
-        const dados = data[index]
-        if (Object.keys(dados).includes(shoeType)) {
-          setDados(dados[shoeType])
-        } else {
-          console.log('trocar o genero com zustand')
-        }
-      }
-    }
-  })
-
   return (
-    <div className='flex justify-start flex-row gap-[50px] flex-wrap'>
-      {dados.map((item, index) => (
-        <Card key={index} sx={{ width: 250 }}>
-          key={ }
-          <CardMedia
-            component="img"
-            alt="Tênis"
-            image={item.imageUrl}
-            sx={{
-              height: 150,
-              objectFit: 'cover',
-            }}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Share</Button>
-            <Button size="small">Learn More</Button>
-          </CardActions>
-        </Card>
-      ))}
+    <div className="bg-[#ecedf2]">
+      <h2 className="sr-only">Products</h2>
+      <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+        {data.map((product, index) => (
+          <a key={index} href="#" className="group">
+            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200">
+              <img
+                alt={product.marca}
+                src={product.imageUrl}
+                className="w-full object-contain object-center group-hover:opacity-75"
+              />
+            </div>
+            <h3 className="mt-4 text-sm text-gray-700">{product.marca}</h3>
+            <p className="mt-1 text-lg font-medium text-gray-900">{product.preço.toFixed(2).replace('.', ',')}</p>
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
