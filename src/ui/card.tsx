@@ -7,9 +7,10 @@ interface Data {
 interface CardProps {
   data: Data[] | null | undefined;
   genero?: string;
+  onClickModal: (produto: Data) => void;
 }
 
-export default function Card({ data }: CardProps) {
+export default function Card({ data, onClickModal }: CardProps) {
   if (!data || data.length === 0) {
     return <div>No data available</div>;
   }
@@ -19,8 +20,8 @@ export default function Card({ data }: CardProps) {
       <h2 className="sr-only">Products</h2>
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
         {data.map((product, index) => (
-          <a key={index} href="#" className="group">
-            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200">
+          <a key={index} className="group">
+            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200" onClick={() => onClickModal(product)}>
               <img
                 alt={product.marca}
                 src={product.imageUrl}

@@ -16,7 +16,7 @@ export default function CardNovidades({ data }: CardProps) {
 
         <div className="">
           {data.map((product: Data, index: number) => (
-            <a key={index} href="#" className="group">
+            <a key={index} className="group">
               <div className="h-full w-full overflow-hidden rounded-lg bg-gray-200">
                 <img
                   alt={product.marca}

@@ -4,6 +4,8 @@ import { useState, ChangeEvent, useEffect } from 'react';
 import { motion } from 'framer-motion'
 import Card from '../../ui/card';
 import papet from '../../assets/papet.jpeg';
+import Modal from '../../ui/modal';
+import { SelectChangeEvent } from '@mui/material';
 
 interface Data {
   marca: string,
@@ -60,13 +62,25 @@ export const Adulto = () => {
 
   const [genero, setGenero] = useState<string>('masculino')
   const [ shoeType, setShoeType ] = useState<string>('tenis');
+  const [selectedProduct, setSelectedProduct] = useState<Data | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (produto: Data) => {
+    setSelectedProduct(produto);
+    setIsModalOpen(true)
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setIsModalOpen(false)
+  };
 
 
   const handleGener = (event: ChangeEvent<HTMLInputElement>) => {
     setGenero(event.target.value)
   }
 
-  const handleType = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleType = (event: SelectChangeEvent<string>) => {
     setShoeType(event.target.value)
   }
 
@@ -142,9 +156,13 @@ export const Adulto = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <Card data={filteredData} />
+          <Card data={filteredData} onClickModal={openModal}/>
         </motion.div>
       </div>
+       {/* Modal */}
+       {selectedProduct && (
+        <Modal isOpen={isModalOpen} product={selectedProduct} onClose={closeModal} />
+      )}
     </section>
   )
 }

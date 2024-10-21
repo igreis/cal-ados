@@ -6,7 +6,7 @@ import "swiper/css/navigation"; // Importando os estilos de navegação
 
 export const Categorias = () => {
   return (
-    <section id="novidades" className="h-[500px] bg-white py-20"> {/* Ajuste no padding vertical */}
+    <section id="novidades" className="h-[400px] bg-[white] py-12"> {/* Ajuste no padding vertical */}
       <div className="text-center mb-8 text-3xl font-bold text-blue-900">
         <h1>Categorias</h1>
       </div>

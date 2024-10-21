@@ -4,6 +4,7 @@ import { useState, ChangeEvent, useEffect } from 'react';
 import { motion } from 'framer-motion'
 import Card from '../../ui/card';
 import papet from '../../assets/papet.jpeg'
+import Modal from '../../ui/modal';
 
 interface Data {
   marca: string,
@@ -58,6 +59,18 @@ export const Infantil = () => {
 
     const [ shoeType, setShoeType ] =  useState<string>('tenis');
     const [genero, setGenero] = useState<string>('masculino')
+    const [selectedProduct, setSelectedProduct] = useState<Data | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+  
+    const openModal = (produto: Data) => {
+      setSelectedProduct(produto);
+      setIsModalOpen(true)
+    };
+  
+    const closeModal = () => {
+      setSelectedProduct(null);
+      setIsModalOpen(false)
+    };
 
     const handleGener = (event: ChangeEvent<HTMLInputElement>) => {
         setGenero(event.target.value)
@@ -139,9 +152,13 @@ export const Infantil = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <Card data={filteredData} />
+            <Card data={filteredData} onClickModal={openModal}/>
           </motion.div>
         </div>
+        {/* Modal */}
+      {selectedProduct && (
+        <Modal isOpen={isModalOpen} product={selectedProduct} onClose={closeModal} />
+      )}
       </section>
     )
 }
