@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
-import { FaPhone, FaMapMarkerAlt, FaEnvelope, FaFacebook, FaInstagram, FaWhatsapp, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { useState } from 'react'
+import { FaPhone, FaMapMarkerAlt, FaEnvelope, FaFacebook, FaInstagram, FaWhatsapp, FaChevronLeft, FaChevronRight, FaLinkedin, FaGithub } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const stores = [
   {
     name: "Loja 1",
-    address: "Avenida Bahia, 500 - Araguari - MG, 38400-000",
+    address: "Avenida Bahia, 500 - Araguari - MG, 38440-188",
     phone: "(34) 3242-6156",
-    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.2106606632354!2d-48.27619708509823!3d-18.91972998720279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a4450c10bbae3d%3A0x6c0a7a3c0d0c3b0!2sAv.%20Bahia%2C%20500%20-%20Brasil%2C%20Uberl%C3%A2ndia%20-%20MG%2C%2038400-000!5e0!3m2!1sen!2sbr!4v1635789876543!5m2!1sen!2sbr"
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.1085435770597!2d-48.20118512393177!3d-18.659124582461523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a431ad5eb4988f%3A0xed0d7656e143f805!2sCal%C3%A7ados%20Lj.%2001!5e0!3m2!1spt-BR!2sbr!4v1729627606847!5m2!1spt-BR!2sbr"
   },
   {
     name: "Loja 2",
-    address: "Avenida Brasil, 1010 - Araguari - MG, 38411-145",
-    phone: "(34) 3228-8888",
-    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.716282774696!2d-48.283327385098674!3d-18.895429987207036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a445653a9430f1%3A0x7eeea0d2e44c9c0!2sShopping%20Uberlandia!5e0!3m2!1sen!2sbr!4v1635790123456!5m2!1sen!2sbr"
+    address: "Avenida Brasil, 1010 - Araguari - MG, 38441-098",
+    phone: "(34) 3241-6741",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.166511794971!2d-48.215102223931844!3d-18.656522482463565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a43046f2fe4d47%3A0x49c0187b83f8c9fd!2sCal%C3%A7ados%20Lj.%2002!5e0!3m2!1spt-BR!2sbr!4v1729624527559!5m2!1spt-BR!2sbr" 
   }
 ]
 
@@ -29,9 +29,9 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-blue-900 text-white py-12">
+    <footer id='saibaMais' className="bg-blue-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap -mx-4">
+        <div className="flex flex-wrap md:flex-nowrap md:gap-[100px] -mx-4">
           <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
             <h2 className="text-3xl font-bold mb-6">Nossas Lojas</h2>
             <div className="relative">
@@ -44,7 +44,7 @@ export default function Footer() {
                   transition={{ duration: 0.3 }}
                 >
                   <h3 className="text-2xl font-semibold mb-4">{stores[currentStore].name}</h3>
-                  <div className="w-full h-96 mb-6"> {/* Aumentamos o tamanho do mapa */}
+                  <div className="w-full h-96 mb-6">
                     <iframe 
                       src={stores[currentStore].mapSrc}
                       width="100%" 
@@ -81,7 +81,7 @@ export default function Footer() {
               </button>
             </div>
           </div>
-          <div className="w-full md:w-1/2 px-4">
+          <div className="w-full md:w-1/2 px-4 md:mt-[100px]">
             <h2 className="text-3xl font-bold mb-6">Informações de Contato</h2>
             <ul className="space-y-5 text-lg">
               <li className="flex items-center">
@@ -105,8 +105,23 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 text-center">
-          <p>&copy; 2024 Calçados. Todos os direitos reservados.</p>
+        <div className="mt-12 text-center flex justify-center gap-[20px] flex-nowrap">
+        <p className="mt-6 whitespace-nowrap">&copy; Desenvolvido por Igor Reis</p>
+          <div className="flex justify-center space-x-6 items-end">
+            <a href="https://wa.me/553432426156" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+              <FaWhatsapp size={22} />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+              <FaLinkedin size={22} />
+            </a>
+            <a href="https://github.com/igor-reis" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+              <FaGithub size={22} />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+              <FaInstagram size={22} />
+            </a>
+          </div>
+          
         </div>
       </div>
     </footer>

@@ -25,7 +25,7 @@ export default function Card({ data, onClickModal }: CardProps) {
               <img
                 alt={product.marca}
                 src={product.imageUrl}
-                className="w-full object-contain object-center group-hover:opacity-75"
+                className="w-full object-contain object-center transition-transform duration-300 ease-in-out group-hover:scale-110"
               />
             </div>
             <h3 className="mt-4 text-sm text-gray-700">{product.marca}</h3>

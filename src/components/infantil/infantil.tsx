@@ -100,7 +100,7 @@ export const Infantil = () => {
     return (
         <section id="infantil" className="py-[80px] min-h-screen bg-[#ecedf2] px-4 relative border">
         <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">INFANTIL</h2>
-        <div className="max-w-[1500px] mx-auto">
+        <div className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] mx-auto">
           <div className="mb-8">
             <FormControl component="fieldset" className="w-full">
               <RadioGroup

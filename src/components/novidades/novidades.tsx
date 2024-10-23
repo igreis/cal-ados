@@ -49,14 +49,14 @@ export default function NovidadesCarrossel() {
       </div>
 
       <Swiper
-        className="max-w-[1500px] w-full px-[10px]"
+        className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] w-full px-[10px]"
         breakpoints={{
           100: {
             slidesPerView: 2,
             slidesOffsetBefore: 0,
             slidesOffsetAfter: 0,
           },
-          800: {
+          768: {
             slidesPerView: 3,
           },
           1120: {

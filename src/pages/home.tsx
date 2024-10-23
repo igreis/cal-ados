@@ -11,7 +11,7 @@ import { Adulto } from '../components/adulto/adulto'
 import { Infantil } from '../components/infantil/infantil'
 import Novidades from '../components/novidades/novidades'
 import {Categorias} from '../components/categorias/categorias'
-
+import Footer from '../components/footer/footer';
 
 export default function LandingPage() {
 
@@ -57,7 +57,7 @@ export default function LandingPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
               >
-                <a href="#" className="bg-blue-900 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition-colors text-sm sm:text-base">
+                <a href="#saibaMais" className="bg-blue-900 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition-colors text-sm sm:text-base">
                   Saiba Mais
                 </a>
                 <a href="#adulto" className="bg-yellow-500 text-blue-900 px-6 py-2 rounded-full hover:bg-yellow-400 transition-colors text-sm sm:text-base">
@@ -101,6 +101,7 @@ export default function LandingPage() {
         <Categorias />
         <Adulto />
         <Infantil />
+        <Footer />
       </main>
     </div>
   )

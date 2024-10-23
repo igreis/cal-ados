@@ -11,7 +11,7 @@ export const Categorias = () => {
         <h1>Categorias</h1>
       </div>
       <Swiper
-        className="max-w-[1500px] mx-auto px-[10px]" // Centralizando o swiper
+        className="md:max-w-[80%] sm:max-w-[90%] mx-auto px-[10px]" // Centralizando o swiper
         breakpoints={{
 
           100: {

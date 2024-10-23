@@ -26,21 +26,7 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'nike', imageUrl: papet, preço: 169.90 },
       { marca: 'nike', imageUrl: papet, preço: 169.90 },
       { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
+     
 
     ],
   },
@@ -104,7 +90,7 @@ export const Adulto = () => {
   return (
     <section id="adulto" className="min-h-screen bg-[#ecedf2] py-12 pt-[100px] px-4 relative">
       <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">ADULTO</h2>
-      <div className="max-w-[1500px] mx-auto">
+      <div className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] mx-auto">
         <div className="mb-8">
           <FormControl component="fieldset" className="w-full">
             <RadioGroup
