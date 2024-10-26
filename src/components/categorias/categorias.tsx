@@ -5,10 +5,18 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation"; // Importando os estilos de navegação
 
 export const Categorias = () => {
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section id="novidades" className="h-[400px] bg-[white] py-12"> {/* Ajuste no padding vertical */}
+    <section id="novidades" className="h-[400px] bg-white py-12"> {/* Ajuste no padding vertical */}
       <div className="text-center mb-8 text-3xl font-bold text-blue-900">
-        <h1>Categorias</h1>
+        <h1 className='mb-[50px]'>Categorias</h1>
       </div>
       <Swiper
         className="md:max-w-[80%] sm:max-w-[90%] mx-auto px-[10px]" // Centralizando o swiper
@@ -33,13 +41,13 @@ export const Categorias = () => {
         navigation // Ativando a navegação
       >
         {/* Card 1 */}
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisInfantil")}>
           <img src={papet} alt="Tênis" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Tênis Feminio
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Tênis" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Tênis Masculino
@@ -47,7 +55,7 @@ export const Categorias = () => {
         </SwiperSlide>
 
         {/* Card 2 */}
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Chuteiras" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Chuteiras
@@ -55,73 +63,73 @@ export const Categorias = () => {
         </SwiperSlide>
 
         {/* Card 3 */}
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Sapatilhas
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Sandálias
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Sapatos Femininos
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Sapatos Masculinos
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Mocassins
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Papetes
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Mules
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Bota Feminina
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Coturno Masculino
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Coturno Feminino
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Sapatênis
           </div>
         </SwiperSlide>
-        <SwiperSlide className="relative min-w-[250px]">
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src={papet} alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Botina

@@ -4,19 +4,15 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import CardNovidades from "../../ui/CardNovidades";
-import papet from '../../assets/papet.jpeg';
-import outra from '../../assets/file.jpg';
-import mizu from '../../assets/mizu.jpg';
 import Modal from '../../ui/modal';
-
+import outra from '../../assets/file.jpg';
 
 const data = {
   novidades: [
-    { marca: 'Nike', imageUrl: papet, preço: 169.90 },
-    { marca: 'Adidas', imageUrl: papet, preço: 199.90 },
-    { marca: 'Puma', imageUrl: papet, preço: 149.90 },
+    { marca: 'Nike', imageUrl: outra, preço: 169.90 },
+    { marca: 'Adidas', imageUrl: outra, preço: 199.90 },
     { marca: 'Puma', imageUrl: outra, preço: 149.90 },
-    { marca: 'Puma', imageUrl: mizu, preço: 149.90 },
+    { marca: 'Puma', imageUrl: outra, preço: 149.90 },
     { marca: 'Puma', imageUrl: "https://imgnike-a.akamaihd.net/1300x1300/027284IMA8.jpg", preço: 200.90 },
     { marca: 'Puma', imageUrl: "https://cdn.shoppub.io/cdn-cgi/image/w=600,h=600,q=80,f=auto/missapatilhas/media/uploads/produtos/foto/qfewmtoo/image00004.png", preço: 149.90 },
   ]
@@ -34,18 +30,20 @@ export default function NovidadesCarrossel() {
 
   const openModal = (produto: Data) => {
     setSelectedProduct(produto);
-    setIsModalOpen(true)
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setSelectedProduct(null);
-    setIsModalOpen(false)
+    setIsModalOpen(false);
   };
 
   return (
-    <section id="novidades" className="bg-[#ecedf2] py-10 pt-[100px]">
-      <div className="text-center mb-[50px] text-3xl font-bold text-blue-900">
-        <h1>Novidades</h1>
+    <section id="novidades" className="bg-white py-10 pt-[100px]">
+      <div className="flex items-center justify-center mb-[50px]">
+        <div className="w-[35%] border-b border-blue-300 mr-2"></div>
+        <h1 className="text-3xl font-bold text-blue-900">Novidades</h1>
+        <div className="w-[35%] border-b border-blue-300 ml-2"></div>
       </div>
 
       <Swiper

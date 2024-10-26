@@ -10,7 +10,7 @@ interface CardProps {
 
 export default function CardNovidades({ data }: CardProps) {
   return (
-    <div className="bg-[#ecedf2]">
+    <div className="bg-white">
       <div className="">
         <h2 className="sr-only">Products</h2>
 

@@ -8,10 +8,14 @@ import 'swiper/css';
 import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
 import { Header } from '../components/header/header'
 import { Adulto } from '../components/adulto/adulto'
+import { Adulto2 } from '../components/adulto/adulto2'
 import { Infantil } from '../components/infantil/infantil'
+import { Infantil2 } from '../components/infantil/infantil2'
 import Novidades from '../components/novidades/novidades'
 import {Categorias} from '../components/categorias/categorias'
 import Footer from '../components/footer/footer';
+import Destaques from '../components/destaques/destaques';
+import tapetes from '../assets/tapetes.jpg'
 
 export default function LandingPage() {
 
@@ -82,16 +86,8 @@ export default function LandingPage() {
                 </a>
               </motion.div>
             </div>
-
-            <div className="flex flex-col items-start mr-[20px] md:block hidden">
-              <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-[#150045] whitespace-nowrap italic">Avenida Bahia 500</h1>
-              <h2 className="text-6xl font-semibold text-[#e00004] italic">3242-6156</h2>
-              </div>
-              <div className='mt-[30px]'>
-              <h1 className="text-4xl lg:text-5xl font-bold text-[#150045] whitespace-nowrap italic">Avenida Brasil 1010</h1>
-              <h2 className="text-6xl font-semibold text-[#e00004] italic">3242-6156</h2>
-              </div>
+            <div className='max-h-full'>
+              <img src={tapetes} alt="" className='h-[400px] w-[800px] rounded-lg'/>
             </div>
           </div>
         </section>
@@ -99,8 +95,8 @@ export default function LandingPage() {
         
         <Novidades />
         <Categorias />
-        <Adulto />
-        <Infantil />
+        <Adulto2 />
+        <Infantil2 />
         <Footer />
       </main>
     </div>

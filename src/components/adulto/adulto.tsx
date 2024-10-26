@@ -88,7 +88,7 @@ export const Adulto = () => {
   const filteredData = data[genero]?.[shoeType] || [];
 
   return (
-    <section id="adulto" className="min-h-screen bg-[#ecedf2] py-12 pt-[100px] px-4 relative">
+    <section id="adulto" className="min-h-screen bg-[#ecedf2] py-8 pt-[100px] px-4 relative">
       <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">ADULTO</h2>
       <div className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] mx-auto">
         <div className="mb-8">
