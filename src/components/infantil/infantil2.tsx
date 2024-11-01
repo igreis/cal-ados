@@ -75,7 +75,7 @@ export const Infantil2 = () => {
   const filteredData = data[genero] || [];
 
   return (
-    <section id="infantil" className="min-h-screen bg-white py-16 px-4 relative">
+    <section id="infantil" className="min-h-screen bg-white py-16 relative">
       <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">INFANTIL</h2>
       
       {/* Botões de seleção de gênero */}

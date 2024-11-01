@@ -5,3 +5,26 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* Adicionando classe para garantir que a Swiper ocupe o espaço correto */
+.cardSwiper {
+    overflow: visible;
+    display: flex;
+    justify-content: center; /* Centraliza os slides */
+    width: 100%; /* Garante que o carrossel ocupe a largura total */
+}
+
+/* Estilos dos slides */
+.cardSwiper .swiper-slide {
+    transform: scale(0.9); /* Deixe todos os slides levemente menores */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+    width: auto !important; /* Garante que cada slide se ajuste ao conteúdo */
+}
+
+/* Estilos para o slide ativo */
+.cardSwiper .swiper-slide-active {
+    transform: scale(1); /* Slide ativo em tamanho normal */
+    opacity: 1;
+}
+    

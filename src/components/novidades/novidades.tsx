@@ -47,7 +47,7 @@ export default function NovidadesCarrossel() {
       </div>
 
       <Swiper
-        className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] w-full px-[10px]"
+        className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] w-full "
         breakpoints={{
           100: {
             slidesPerView: 2,
