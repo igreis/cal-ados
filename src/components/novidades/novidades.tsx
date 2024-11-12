@@ -39,7 +39,7 @@ export default function NovidadesCarrossel() {
   };
 
   return (
-    <section id="novidades" className="bg-white py-10 pt-[100px]">
+    <section id="novidades" className="bg-white pt-[50px]">
       <div className="flex items-center justify-center mb-[50px]">
         <div className="w-[35%] border-b border-blue-300 mr-2"></div>
         <h1 className="text-3xl font-bold text-blue-900">Novidades</h1>
@@ -47,7 +47,7 @@ export default function NovidadesCarrossel() {
       </div>
 
       <Swiper
-        className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] w-full "
+        className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] w-full"
         breakpoints={{
           100: {
             slidesPerView: 2,

@@ -1,66 +1,60 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import tapet from '../../assets/tapetes.jpg';
-
-// Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/effect-creative';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-// Import required modules
-import { Autoplay, Pagination, Navigation, EffectCards } from 'swiper/modules';
+import 'swiper/css/effect-cards';
+import bg from '../../assets/liquid-cheese.png';
+import tapet from '../../assets/tapetes.jpg';
+import { EffectCreative, Pagination, Autoplay, EffectCards } from 'swiper/modules';
 
 export default function Slider() {
-    return (
-        <section className='h-[600px]'>
-            <div className='flex mx-6'>
-                <Swiper
-                    spaceBetween={30}
-                    centeredSlides={true}
+  return (
+    <section
+      className="h-[70dvh] bg-[#f4ff2b] flex justify-center items-center"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div className="max-h-[600px] max-w-full h-full w-full flex justify-center flex-col lg:flex-row">
 
-                    pagination={false}
-                    navigation={false}
-                    modules={[Autoplay, Pagination, Navigation]}
-                    className="mySwiper w-full h-[680px]"
-                >
-                    <SwiperSlide className='w-full flex sm:flex-row flex-col justify-center gap-[5%] lg:gap-[20%] sm:mt-[50px]'>
+        <div className="flex flex-col items-center min-h-[350px] flex-start justify-start">
+          <div className="flex flex-col items-center pb-[60px] min-h-[350px]">
+            <h1 className="font-bold text-blue-900 italic text-8xl">Perfumes</h1>
+            <div className="w-[10vw] h-[0.5vh] bg-blue-900 mb-[3vh]"></div>
+            <button className="bg-black text-white py-[1vh] px-[2vw] rounded-full text-[1vw] hover:bg-gray-800">
+              Saiba Mais
+            </button>
+          </div>
+        </div>
 
-                        <div className=''>
-                            <div className='flex flex-col items-center'>
-                                <h1 className="text-7xl md:text-8xl font-bold text-blue-900 italic xl:text-8xl mb-2">Tapete</h1>
-                                {/* Linha abaixo do título */}
-                                <div className="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
-                                {/* Botão */}
-                                <button className="max-w-[300px] bg-black text-white py-2 px-4 mt-4 rounded-full text-lg hover:bg-gray-800">
-                                    Saiba Mais
-                                </button>
-                            </div>
-                        </div>
-                        <Swiper
-                            effect={'cards'}
-                            grabCursor={true}
-                            modules={[EffectCards, Autoplay]}
-                            autoplay={{
-                                delay: 2500, // Intervalo de 2.5 segundos entre slides
-                                disableOnInteraction: false, // Continua o autoplay mesmo após interação
-                              }}
-                            className="mySwiper max-w-[420px] sm:max-w-[600px] mx-0 max-h-[580px]"
-                        >
-                            <SwiperSlide>
-                                <div className=''>
-                                    <img src={tapet} alt="" className="rounded-lg w-[90%] sm:w-[90%] object-cover" />
-                                    </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div><img src={tapet} alt="" className='rounded-lg'/></div>
-                            </SwiperSlide>
-                        </Swiper>
-
-
-                    </SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                </Swiper>
+        <div className="flex justify-center gap-[30px]">
+          {/* Primeira imagem com preço */}
+          {/* Segunda imagem com preço */}
+          <div className="flex items-center mt-[160px] relative">
+            <img
+              src={tapet}
+              alt=""
+              className="max-h-[352px] h-full w-full rounded-lg shadow-lg border-[6px] border-[#ffb703]"
+            />
+            <div className="absolute bottom-[30px] left-1/2 transform -translate-x-1/2 bg-blue-900 text-white py-2 px-4 rounded-md text-xl font-semibold shadow-lg">
+              R$ 149,99
             </div>
+          </div>
 
-        </ section>
-    );
+          <div className="flex items-center relative">
+            <img
+              src={tapet}
+              alt=""
+              className="max-h-[550px] h-full w-full min-h-[470px] rounded-lg shadow-lg border-[6px] border-[#ffb703]"
+            />
+            <div className="absolute bottom-[10px] left-1/2 transform -translate-x-1/2 bg-blue-900 text-white py-2 px-4 rounded-md text-xl font-semibold shadow-lg">
+              R$ 99,99
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -18,7 +18,7 @@ export default function LandingPage() {
         <Categorias />
         <Adulto2 />
         <Infantil2 />
-        <Footer />
+    
       </main>
     </div>
   )

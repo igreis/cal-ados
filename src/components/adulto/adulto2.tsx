@@ -78,8 +78,8 @@ export const Adulto2 = () => {
   const filteredData = data[genero] || [];
 
   return (
-    <section id="adulto" className=" bg-white lg:py-12 relative">
-      <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">ADULTO</h2>
+    <section id="adulto" className=" bg-white lg:py-12 relative mt-[50px]">
+      <h2 className="text-3xl font-bold text-blue-900 text-center mb-8 mt-[20px]">ADULTO</h2>
       
       {/* Botões de seleção de gênero */}
       <div className="flex flex-col items-center space-y-2 mb-8">
