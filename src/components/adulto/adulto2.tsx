@@ -78,11 +78,29 @@ export const Adulto2 = () => {
   const filteredData = data[genero] || [];
 
   return (
-    <section id="adulto" className=" bg-white lg:py-12 relative mt-[50px]">
-      <h2 className="text-3xl font-bold text-blue-900 text-center mb-8 mt-[20px]">ADULTO</h2>
-      
+    <section id="adulto" className=" bg-white lg:py-8 relative mt-[10px]" >
+      <div className="relative w-fit mx-auto text-center mb-8 mt-[20px]" data-aos="fade-up">
+        <h2 className="text-3xl font-bold text-blue-900">ADULTO</h2>
+        <div className="absolute left-1/2 bottom-0 w-0 h-[1px] bg-blue-900 transition-all duration-500 ease-out animate-[expand_2s_ease-out_forwards]"></div>
+      </div>
+
+      <style>
+        {`
+          @keyframes expand {
+            from {
+              width: 0;
+              left: 50%;
+            }
+            to {
+              width: 80%;
+              left: 8%;
+            }
+          }
+        `}
+      </style>
+
       {/* Botões de seleção de gênero */}
-      <div className="flex flex-col items-center space-y-2 mb-8">
+      <div className="flex flex-col items-center space-y-2 mb-8" data-aos="fade-up">
         <label htmlFor="gender-group" className="text-sm font-medium text-gray-700">
           Selecione o gênero:
         </label>
@@ -108,8 +126,12 @@ export const Adulto2 = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
+          <div data-aos="fade-right">
           <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tênis'/>
-          <Card2 data={filteredData.sapato || null} onClickModal={openModal} titulo='Sapato'/>
+          </div>
+          <div data-aos="fade-left" data-aos-anchor-placement="top-top">
+          <Card2 data={filteredData.sapato || null} onClickModal={openModal} titulo='Sapato' />
+          </div>
         </motion.div>
       </div>
 

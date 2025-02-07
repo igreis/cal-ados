@@ -14,10 +14,28 @@ export const Categorias = () => {
   };
 
   return (
-    <section id="novidades" className="h-[400px] bg-white py-12 mt-[60px]"> {/* Ajuste no padding vertical */}
-      <div className="text-center mb-8 text-3xl font-bold text-blue-900">
-        <h1 className='mb-[50px]'>Categorias</h1>
+    <section id="novidades" className="h-[400px] bg-white py-12 mt-[10px]" data-aos="fade-left" data-aos-anchor-placement="center-center"> {/* Ajuste no padding vertical */}
+      <div className="relative w-fit mx-auto text-center mb-8">
+        <h1 className="text-3xl font-bold text-blue-900">Categorias</h1>
+        <div className="absolute left-1/2 bottom-0 w-0 h-[1px] bg-blue-900 transition-all duration-500 ease-out animate-[expand_1s_ease-out_forwards]"></div>
       </div>
+
+      <style>
+        {`
+  @keyframes expand {
+    from {
+      width: 0;
+      left: 50%;
+    }
+    to {
+      width: 100%;
+      left: 0;
+    }
+  }
+`}
+      </style>
+
+
       <Swiper
         className="md:max-w-[80%] sm:max-w-[90%] mx-auto px-[10px]" // Centralizando o swiper
         breakpoints={{
@@ -41,7 +59,7 @@ export const Categorias = () => {
         navigation // Ativando a navegação
       >
         {/* Card 1 */}
-        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisInfantil")}>
+        <SwiperSlide className="relative min-w-[250px]" olick={() => scrollToSection("tenisInfantil")}>
           <img src="https://static.clube.netshoes.com.br/produtos/tenis-feminino-casual-original-estilo-shoes/14/30G-0016-014/30G-0016-014_zoom1.jpg?ts=1727867070" alt="Tênis" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Tênis Feminio

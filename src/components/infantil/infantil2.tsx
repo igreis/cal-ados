@@ -75,9 +75,27 @@ export const Infantil2 = () => {
   const filteredData = data[genero] || [];
 
   return (
-    <section id="infantil" className="min-h-screen bg-white py-16 relative">
-      <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">INFANTIL</h2>
-      
+    <section id="infantil" className="min-h-screen bg-white lg:py-8 relative">
+      <div className="relative w-fit mx-auto text-center mb-8 mt-[20px]">
+        <h2 className="text-3xl font-bold text-blue-900">INFANTIL</h2>
+        <div className="absolute left-1/2 bottom-0 w-0 h-[1px] bg-blue-900 transition-all duration-500 ease-out animate-[expand_1s_ease-out_forwards]"></div>
+      </div>
+
+      <style>
+        {`
+          @keyframes expand {
+            from {
+              width: 0;
+              left: 50%;
+            }
+            to {
+              width: 80%;
+              left: 8%;
+            }
+          }
+        `}
+      </style>
+
       {/* Botões de seleção de gênero */}
       <div className="flex flex-col items-center space-y-2 mb-8">
         <label htmlFor="gender-group" className="text-sm font-medium text-gray-700">
@@ -106,16 +124,16 @@ export const Infantil2 = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <div id=''>
-          <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis'/>
+            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />
           </div>
           <div id='tenisInfantil'>
-          <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis'/>
+            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />
           </div>
           <div id=''>
-          <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis'/>
+            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />
           </div>
           <div id=''>
-          <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis'/>
+            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />
           </div>
         </motion.div>
       </div>

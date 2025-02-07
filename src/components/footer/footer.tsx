@@ -114,9 +114,6 @@ export default function Footer() {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
               <FaLinkedin size={22} />
             </a>
-            <a href="https://github.com/igor-reis" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
-              <FaGithub size={22} />
-            </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
               <FaInstagram size={22} />
             </a>

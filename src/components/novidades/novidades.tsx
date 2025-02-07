@@ -39,15 +39,55 @@ export default function NovidadesCarrossel() {
   };
 
   return (
-    <section id="novidades" className="bg-white pt-[50px]">
+    <section id="novidades" className="bg-white pt-[50px] fade-up delay-400" >
       <div className="flex items-center justify-center mb-[50px]">
-        <div className="w-[35%] border-b border-blue-300 mr-2"></div>
+        <div className="sm:w-[35%] w-[24%] border-b border-blue-300 mr-2"></div>
         <h1 className="text-3xl font-bold text-blue-900">Novidades</h1>
-        <div className="w-[35%] border-b border-blue-300 ml-2"></div>
+        <div className="sm:w-[35%] w-[24%] border-b border-blue-300 ml-2"></div>
       </div>
 
+      <style>
+        {`
+
+          @keyframes fadeUp {
+            from {
+              opacity: 0;
+              transform: translateY(40px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .fade-up {
+            opacity: 0;
+            animation: fadeUp 1s ease-out forwards;
+          }
+
+
+         @keyframes writing {
+                from {
+                  width: 0;
+                }
+                to {
+                  width: 100%;
+                }
+              }
+
+              .writing-animation {
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 0;
+                animation: writing 0.5s ease-out forwards;
+                animation-delay: 0.3s;
+              }
+      `}
+      </style>
+
       <Swiper
-        className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] w-full"
+        className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] w-full fade-up delay-400"
         breakpoints={{
           100: {
             slidesPerView: 2,

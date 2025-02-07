@@ -1,55 +1,99 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaBars, FaTimes, FaHome, FaShoppingBag, FaChild, FaNewspaper, FaPhoneAlt } from 'react-icons/fa';
 import logo from '../../assets/image-removebg-preview.png';
-import backgroundImage from '../../assets/bgcal.jpg'; // Adicione a imagem de fundo aqui
-import { FaWhatsapp } from 'react-icons/fa'; // Para usar o ícone do WhatsApp
 
-export const HeaderWithBackground = () => {
+export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const menuItems = [
+    { name: 'Início', icon: FaHome, href: '#' },
+    { name: 'Novidades', icon: FaNewspaper, href: '#novidades' },
+    { name: 'Adulto', icon: FaShoppingBag, href: '#adulto' },
+    { name: 'Infantil', icon: FaChild, href: '#infantil' },
+    { name: 'Saiba Mais', icon: FaPhoneAlt, href: '#saibaMais' },
+  ];
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleOutsideClick);
+    } else {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [isOpen]);
+
   return (
-    <header
-      className="relative h-[800px] flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      <div className="absolute inset-0 bg-black opacity-50 h-[100vh]"></div> {/* Camada de opacidade sobre a imagem */}
-      
-      <div className="relative z-10 flex flex-col items-center">
-        {/* Logo */}
-        <a className="flex items-center justify-center" href="#">
-          <img
-            src={logo}
-            alt="Calçados Logo"
-            className="h-20 lg:h-24"
-          />
-          <span className="ml-2 text-4xl lg:text-5xl font-bold text-white">Calçados</span>
-        </a>
+    <header className="fixed top-0 left-0 right-0 z-50 px-4 lg:px-8 h-16 flex items-center justify-between bg-[#f4ff2b]">
+      <a className="flex items-center justify-center w-32" href="#">
+        <img src={logo} alt="Calçados Logo" className="h-14" />
+      </a>
 
-        {/* Navegação */}
-        <nav className="mt-6 flex gap-4 sm:gap-6">
-          <a className="text-lg font-medium hover:underline underline-offset-4 text-[white]" href="#home">
-            Home
-          </a>
-          <a className="text-lg font-medium hover:underline underline-offset-4 text-[white]" href="#novidades">
-            Novidades
-          </a>
-          <a className="text-lg font-medium hover:underline underline-offset-4 text-[white]" href="#adulto">
-            Adulto
-          </a>
-          <a className="text-lg font-medium hover:underline underline-offset-4 text-[white]" href="#infantil">
-            Infantil
-          </a>
-        </nav>
-
-        {/* Botão do WhatsApp */}
-        <div className="mt-6">
-          <a
-            href="https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_WHATSAPP"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600"
+      {/* Navegação para telas maiores */}
+      <nav className="hidden sm:flex items-center justify-center flex-1 gap-8">
+        {menuItems.map((item) => (
+          <motion.a
+            key={item.name}
+            href={item.href}
+            className="text-gray-700 hover:text-gray-900 font-medium text-base transition-colors duration-200 flex items-center space-x-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <FaWhatsapp className="text-xl" />
-            <span>Contato WhatsApp</span>
-          </a>
-        </div>
-      </div>
+            <item.icon className="w-5 h-5" />
+            <span>{item.name}</span>
+          </motion.a>
+        ))}
+      </nav>
+
+      {/* Botão para abrir/fechar menu móvel */}
+      <button
+        onClick={toggleMenu}
+        className="sm:hidden text-black focus:outline-none"
+        aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+        aria-expanded={isOpen}
+      >
+        {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+      </button>
+
+      {/* Navegação móvel */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            ref={menuRef}
+            initial={{ opacity: 0, maxHeight: 0 }}
+            animate={{ opacity: 1, maxHeight: '500px' }}
+            exit={{ opacity: 0, maxHeight: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-16 left-0 right-0 bg-blue-800 sm:hidden overflow-hidden"
+          >
+            {menuItems.map((item) => (
+              <motion.a
+                key={item.name}
+                href={item.href}
+                className="flex items-center px-4 py-3 text-white hover:bg-blue-700 transition-colors duration-200"
+                onClick={toggleMenu}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <item.icon className="mr-3" size={20} />
+                {item.name}
+              </motion.a>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
