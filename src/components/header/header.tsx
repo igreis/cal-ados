@@ -37,26 +37,26 @@ export const Header = () => {
   }, [isOpen])
 
   return (
-    
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 lg:px-20 h-16 flex items-center bg-[#f4ff2b]">
+
+    <header className="fixed top-0 left-0 right-0 z-50 px-4 lg:px-20 h-16 flex items-center bg-gradient-to-l from-[#FFFF66] to-[#F6C500]">
       <a className="flex items-center justify-center" href="#">
         <img src={logo} alt="Calçados Logo" className="h-14" />
       </a>
 
       {/* Navegação para telas maiores */}
       <nav className="ml-auto hidden gap-4 sm:gap-6 sm:flex">
-       {menuItems.map((item) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-gray-900 font-medium text-sm whitespace-nowrap transition-colors duration-200 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <item.icon className="w-4 h-4 flex-shrink-0" />
-                <span>{item.name}</span>
-              </motion.a>
-            ))}
+        {menuItems.map((item) => (
+          <motion.a
+            key={item.name}
+            href={item.href}
+            className="text-gray-700 hover:text-gray-900 font-medium text-sm whitespace-nowrap transition-colors duration-200 flex items-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <item.icon className="w-4 h-4 flex-shrink-0" />
+            <span>{item.name}</span>
+          </motion.a>
+        ))}
       </nav>
 
       {/* Botão para abrir/fechar menu móvel (aparece abaixo de sm) */}

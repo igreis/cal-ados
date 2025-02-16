@@ -10,11 +10,12 @@ import climatiza from '../../assets/climatiza.jpg';
 import clima2 from '../../assets/clima2.jpg';
 import climas from '../../assets/climas.jpg';
 import blue from '../../assets/blue.png';
+import lliquid from '../../assets/liquid-cheese.png';
 
 export default function Slider() {
   return (
     <Swiper
-      modules={[Pagination, Autoplay]}
+      modules={[Pagination]}
       pagination={{ clickable: true }}
       autoplay={{ delay: 4000 }}
       className="w-full"
@@ -22,14 +23,19 @@ export default function Slider() {
       {/* Slide 1 - Climatizador */}
       <SwiperSlide>
         <section
-          className="max-h-[60dvh] sm:min-h-[70dvh] lg:min-h-[70dvh] bg-[#f4ff2b] flex justify-center items-center"
+          className="max-h-[60dvh] sm:min-h-[70dvh] lg:min-h-[65dvh] bg-[#A8DADC] flex justify-center items-center"
+          style={{
+            backgroundImage: `url(${lliquid})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
          
         >
           <div className="max-w-7xl w-full flex flex-col lg:flex-row justify-center items-center ">
             {/* Title Section */}
             <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-280px]">
               <div className="hidden sm:flex flex-col items-center pb-6 lg:pb-[60px]">
-                <h1 className="font-bold text-blue-900 italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl text-center transition-all duration-300 writing-animation">
+                <h1 className="font-bold text-black italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl text-center transition-all duration-300 writing-animation">
                   Climatizador
                 </h1>
                 <div className="w-16 sm:w-24 md:w-32 lg:w-[10vw] h-[1px] sm:h-[2px] md:h-[2px] bg-blue-900 my-2 sm:my-3 md:my-4 " data-aos="zoom-in" data-aos-delay="800"></div>
