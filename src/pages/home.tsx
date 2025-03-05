@@ -3,10 +3,12 @@
 import { Header } from '../components/header/header'
 import { Adulto2 } from '../components/adulto/adulto2'
 import { Infantil2 } from '../components/infantil/infantil2'
-import Novidades from '../components/novidades/novidades'
+import Variedades from '../components/variedades/variedades'
 import { Categorias } from '../components/categorias/categorias'
 import Footer from '../components/footer/footer';
-import Slider from '../components/slider/slider';
+import Slider from '../components/slider/slider'; 
+import {ProductSections} from '../components/opcoes/opcoes'
+import {BrandsCarousel}  from '../components/marcas/marcas'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react'
@@ -24,8 +26,10 @@ export default function LandingPage() {
       <Header />
       <main className="flex-1 pt-16">
         <Slider />
-        <Novidades />
+        <Variedades />
+        <ProductSections />
         <Categorias />
+        <BrandsCarousel />
         <Adulto2 />
         <Infantil2 />
         <Footer />

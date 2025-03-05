@@ -5,14 +5,14 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import CardNovidades from "../../ui/CardNovidades";
 import Modal from '../../ui/modal';
-import outra from '../../assets/file.jpg';
+import opcao from '../../assets/relogio.jpg';
 
 const data = {
   novidades: [
-    { marca: 'Nike', imageUrl: outra, preço: 169.90 },
-    { marca: 'Adidas', imageUrl: outra, preço: 199.90 },
-    { marca: 'Puma', imageUrl: outra, preço: 149.90 },
-    { marca: 'Puma', imageUrl: outra, preço: 149.90 },
+    { marca: 'Nike', imageUrl: opcao, preço: 169.90 },
+    { marca: 'Adidas', imageUrl: opcao, preço: 199.90 },
+    { marca: 'Puma', imageUrl: opcao, preço: 149.90 },
+    { marca: 'Puma', imageUrl: opcao, preço: 149.90 },
     { marca: 'Puma', imageUrl: "https://imgnike-a.akamaihd.net/1300x1300/027284IMA8.jpg", preço: 200.90 },
     { marca: 'Puma', imageUrl: "https://cdn.shoppub.io/cdn-cgi/image/w=600,h=600,q=80,f=auto/missapatilhas/media/uploads/produtos/foto/qfewmtoo/image00004.png", preço: 149.90 },
   ]
@@ -24,7 +24,7 @@ interface Data {
   preço: number;
 }
 
-export default function NovidadesCarrossel() {
+export default function VariedadesCarrossel() {
   const [selectedProduct, setSelectedProduct] = useState<Data | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -39,10 +39,10 @@ export default function NovidadesCarrossel() {
   };
 
   return (
-    <section id="novidades" className="bg-white pt-[50px] fade-up delay-400" >
+    <section id="variedades" className="bg-white pt-[50px] fade-up" >
       <div className="flex items-center justify-center mb-[50px]">
         <div className="sm:w-[35%] w-[24%] border-b border-blue-300 mr-2"></div>
-        <h1 className="text-3xl font-bold text-blue-900">Novidades</h1>
+        <h1 className="text-3xl font-bold text-blue-900">Variedades</h1>
         <div className="sm:w-[35%] w-[24%] border-b border-blue-300 ml-2"></div>
       </div>
 
@@ -62,32 +62,15 @@ export default function NovidadesCarrossel() {
 
           .fade-up {
             opacity: 0;
-            animation: fadeUp 1s ease-out forwards;
+            animation: fadeUp 0.8s ease-out forwards;
+            animation-delay: 1.5s;
           }
 
-
-         @keyframes writing {
-                from {
-                  width: 0;
-                }
-                to {
-                  width: 100%;
-                }
-              }
-
-              .writing-animation {
-                display: inline-block;
-                white-space: nowrap;
-                overflow: hidden;
-                width: 0;
-                animation: writing 0.5s ease-out forwards;
-                animation-delay: 0.3s;
-              }
       `}
       </style>
 
       <Swiper
-        className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] w-full fade-up delay-400"
+        className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] w-full "
         breakpoints={{
           100: {
             slidesPerView: 2,

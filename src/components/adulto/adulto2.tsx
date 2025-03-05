@@ -81,8 +81,9 @@ export const Adulto2 = () => {
     <section id="adulto" className=" bg-white lg:py-8 relative mt-[10px]" >
       <div className="relative w-fit mx-auto text-center mb-8 mt-[20px]" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-blue-900">ADULTO</h2>
-        <div className="absolute left-1/2 bottom-0 w-0 h-[1px] bg-blue-900 transition-all duration-500 ease-out animate-[expand_2s_ease-out_forwards]"></div>
+        <div className="absolute left-[10%] bottom-0 w-[80%] h-[1px] bg-blue-900" data-aos="zoom-in"></div>
       </div>
+
 
       <style>
         {`
@@ -127,10 +128,10 @@ export const Adulto2 = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <div data-aos="fade-right">
-          <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tênis'/>
+            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tênis' />
           </div>
-          <div data-aos="fade-left" data-aos-anchor-placement="top-top">
-          <Card2 data={filteredData.sapato || null} onClickModal={openModal} titulo='Sapato' />
+          <div data-aos="fade-right">
+            <Card2 data={filteredData.sapato || null} onClickModal={openModal} titulo='Sapato' />
           </div>
         </motion.div>
       </div>
