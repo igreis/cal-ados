@@ -7,6 +7,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import bg from '../../assets/bg.jpeg';
 import climatiza from '../../assets/climatiza.jpg';
 import clima2 from '../../assets/clima2.jpg';
+import carna from '../../assets/carna.jpg'
 
 
 export default function Slider() {
@@ -18,7 +19,7 @@ export default function Slider() {
       className="w-full"
     >
       {/* Slide 1 - Climatizador */}
-      <SwiperSlide>
+     {/* <SwiperSlide>
         <section
           className="mt-[15px] md:min-h-[75dvh] max-h-[60dvh] sm:min-h-[70dvh] lg:min-h-[70dvh] bg-[#f4ff2b] flex justify-center items-center"
           style={{
@@ -29,7 +30,7 @@ export default function Slider() {
         >
           <div className="lg:max-w-[1770px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center lg:gap-24">
             {/* Title Section */}
-            <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-130px]">
+          {/*</Swiper>  <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-130px]">
               <div className="hidden sm:flex flex-col items-center pb-6 lg:pb-[60px]">
                 <h1 className="font-bold text-blue-900 italic text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
                   Climatizador
@@ -96,7 +97,7 @@ export default function Slider() {
             </style>
 
             {/* Products Section */}
-            <div className="w-full lg:w-auto">
+           {/* <div className="w-full lg:w-auto">
               <div className="hidden sm:flex justify-center gap-8" data-aos="zoom-in-down" data-aos-delay="800" >
                 <div className="flex items-center lg:mt-[160px] relative">
                   <img
@@ -117,7 +118,7 @@ export default function Slider() {
               </div>
 
               {/* Mobile View */}
-              <div className="sm:hidden flex w-full h-full mt-[10px]" data-aos="zoom-in" data-aos-delay="100">
+             {/* <div className="sm:hidden flex w-full h-full mt-[10px]" data-aos="zoom-in" data-aos-delay="100">
                 <Swiper className="w-full h-full">
                   <SwiperSlide>
                     <img src={climatiza} alt="" className="w-full h-full object-cover" />
@@ -127,22 +128,22 @@ export default function Slider() {
             </div>
           </div>
         </section>
-      </SwiperSlide>
+      </SwiperSlide> */}
 
       {/* Slide 2 - Outro Produto */}
       <SwiperSlide>
-        <section className="hidden sm:flex max-h-[60dvh] sm:min-h-[70dvh] lg:min-h-[70dvh] bg-[#e3e3e3] flex justify-center items-center">
-          <h1 className="text-4xl font-bold">Outro Produto Aqui</h1>
+        <section className="sm:flex max-h-[70dvh] bg-[#e3e3e3] flex justify-center items-center">
+          <img src={carna} alt="" className="w-[100%] h-full object-cover" />
         </section>
 
         {/* Mobile View */}
-        <div className="sm:hidden flex w-full h-full">
+        {/*<div className="sm:hidden flex w-full h-full">
           <Swiper className="w-full h-full">
             <SwiperSlide>
               <img src={climatiza} alt="" className="w-full h-full object-cover" />
             </SwiperSlide>
           </Swiper>
-        </div>
+        </div>*/}
       </SwiperSlide>
 
 

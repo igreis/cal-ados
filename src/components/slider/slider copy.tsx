@@ -10,6 +10,7 @@ import climatiza from '../../assets/climatiza.jpg';
 import clima2 from '../../assets/clima2.jpg';
 import climas from '../../assets/climas.jpg';
 import blue from '../../assets/blue.png';
+import carna from '../../assets/carna.jpg'; // Imagem adicionada
 
 export default function Slider() {
   return (
@@ -23,7 +24,6 @@ export default function Slider() {
       <SwiperSlide>
         <section
           className="md:min-h-[75dvh] max-h-[60dvh] sm:min-h-[70dvh] lg:min-h-[70dvh] bg-[#f4ff2b] flex justify-center items-center"
-
         >
           <div className="lg:max-w-[1770px] max-w-7xl md:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center lg:gap-24">
             {/* Title Section */}
@@ -38,48 +38,6 @@ export default function Slider() {
                 </button>
               </div>
             </div>
-
-            <style>
-              {`
-
-               @keyframes writing {
-                from {
-                  width: 0;
-                }
-                to {
-                  width: 100%;
-                }
-              }
-
-              .writing-animation {
-                display: inline-block;
-                white-space: nowrap;
-                overflow: hidden;
-                width: 0;
-                animation: writing 0.5s ease-out forwards;
-                animation-delay: 0.3s;
-              }
-
-
-              @keyframes emerge {
-                from {
-                  opacity: 0;
-                  transform: scale(0.8);
-              }
-              to {
-                opacity: 1;
-                transform: scale(1);
-              }
-            }
-
-            .emerge-animation {
-              opacity: 0;
-              transform: scale(0.8);
-              animation: emerge 0.8s ease-out forwards;
-              animation-delay: 0.8s;
-            }
-              `}
-            </style>
 
             {/* Products Section */}
             <div className="w-full lg:w-auto">
@@ -112,6 +70,9 @@ export default function Slider() {
                   <SwiperSlide>
                     <img src={climatiza} alt="" className="w-full h-full object-cover" />
                   </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={carna} alt="" className="w-full h-full object-cover" />
+                  </SwiperSlide>
                 </Swiper>
               </div>
             </div>
@@ -129,13 +90,14 @@ export default function Slider() {
         <div className="sm:hidden flex w-full h-full">
           <Swiper className="w-full h-full">
             <SwiperSlide>
-              <img src={climatiza} alt="" className="w-full h-full object-cover" />
+              <img src={carna} alt="" className="w-full h-full object-cover" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={carna} alt="" className="w-full h-full object-cover" />
             </SwiperSlide>
           </Swiper>
         </div>
       </SwiperSlide>
-
-
     </Swiper>
   );
 }

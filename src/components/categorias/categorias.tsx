@@ -14,10 +14,11 @@ export const Categorias = () => {
   };
 
   return (
-    <section id="novidades" className="h-[400px] bg-white py-12 mt-[10px]" > {/* Ajuste no padding vertical */}
-      <div className="relative w-fit mx-auto text-center mb-8" data-aos="fade-up">
-        <h1 className="text-3xl font-bold text-blue-900">Categorias</h1>
-        <div className="absolute left-1/2 bottom-0 w-0 h-[1px] bg-blue-900 transition-all duration-500 ease-out animate-[expand_1s_ease-out_1s_forwards]"></div>
+    <section id="novidades" className="h-[400px] bg-white md:py-12 sm:mt-[10px]" > {/* Ajuste no padding vertical */}
+      <div className="flex items-center justify-center w-full mb-[50px]" data-aos="fade-up">
+        <div className="sm:w-[35%] w-[24%] border-b border-black mr-2"></div>
+        <h1 className="text-3xl text-black text-center">Categorias</h1>
+        <div className="sm:w-[35%] w-[24%] border-b border-black ml-2"></div>
       </div>
 
       <style>

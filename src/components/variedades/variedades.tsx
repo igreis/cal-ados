@@ -39,11 +39,11 @@ export default function VariedadesCarrossel() {
   };
 
   return (
-    <section id="variedades" className="bg-white pt-[50px] fade-up" >
-      <div className="flex items-center justify-center mb-[50px]">
-        <div className="sm:w-[35%] w-[24%] border-b border-blue-300 mr-2"></div>
-        <h1 className="text-3xl font-bold text-blue-900">Variedades</h1>
-        <div className="sm:w-[35%] w-[24%] border-b border-blue-300 ml-2"></div>
+    <section id="variedades" className="bg-white pt-[25px] sm:pt-[50px] fade-up" >
+      <div className="flex items-center justify-center mb-[20px] md:mb-[50px]">
+        <div className="sm:w-[35%] w-[24%] border-b border-black mr-2"></div>
+        <h1 className="text-3xl text-black">Variedades</h1>
+        <div className="sm:w-[35%] w-[24%] border-b border-black ml-2"></div>
       </div>
 
       <style>
@@ -63,7 +63,7 @@ export default function VariedadesCarrossel() {
           .fade-up {
             opacity: 0;
             animation: fadeUp 0.8s ease-out forwards;
-            animation-delay: 1.5s;
+            animation-delay: 0.8s;
           }
 
       `}

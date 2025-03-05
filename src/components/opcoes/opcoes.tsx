@@ -27,7 +27,7 @@ export const ProductSections = () => {
     ];
 
     return (
-        <section className="w-full py-12 flex justify-center mt-[50px]">
+        <section className="w-full py-12 flex justify-center lg:mt-[50px]">
             <Swiper
                 className="w-full flex justify-center items-center items-center gap-8 md:max-w-[80%] sm:max-w-[90%] max-w-[95%] max-h-full"
                 breakpoints={{

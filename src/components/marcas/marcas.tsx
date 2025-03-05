@@ -7,6 +7,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import adidas from '../../assets/adidas.png'
+import nike from '../../assets/nike-logo-47A65A59D5-seeklogo.com.png'
+import ol from '../../assets/olympikus.png'
 
 // Import team logos (you would replace these with actual imported images)
 
@@ -15,21 +17,27 @@ import adidas from '../../assets/adidas.png'
 interface TeamLogo {
   src: string;
   alt: string;
+  delay: number
 }
 
 export const BrandsCarousel: React.FC = () => {
   const teamLogos: TeamLogo[] = [
-    { src: adidas, alt: 'Argentina' },
-    { src: adidas, alt: 'Chile' },
-    { src: adidas, alt: 'Peru' },
-    { src: adidas, alt: 'Germany' },
-    { src: adidas, alt: 'Italy' },
-    { src: adidas, alt: 'Spain' },
-    { src: adidas, alt: 'Belgium' }
+    { src: adidas, alt: 'Argentina', delay: 0 },
+    { src: nike, alt: 'Chile', delay: 200 },
+    { src: ol, alt: 'Peru', delay: 300 },
+    { src: adidas, alt: 'Germany', delay: 400 },
+    { src: adidas, alt: 'Italy', delay: 500 },
+    { src: adidas, alt: 'Spain', delay: 600 },
+    { src: adidas, alt: 'Belgium', delay: 700 }
   ];
 
   return (
-    <div className="w-full max-w-3xl mx-auto p-4 mt-12">
+    <div className="w-full max-w-3xl mx-auto sm:p-4 sm:mt-14 mb-8">
+      <div className='flex justify-center' data-aos="fade-up">
+        <h1 className='text-2xl mb-10'>
+          Marcas
+        </h1>
+      </div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         
@@ -43,11 +51,11 @@ export const BrandsCarousel: React.FC = () => {
           100: {
             slidesPerView: 3,
           },
-          440: {
+          380: {
             slidesPerView: 4
           },
           // when window width is >= 640px
-          640: {
+          530: {
             slidesPerView: 5,
            
           },
@@ -55,18 +63,22 @@ export const BrandsCarousel: React.FC = () => {
           768: {
             slidesPerView: 6,
             
-          }
+          },
+          1024: {
+            slidesPerView: 7,
+          },
         }}
         className="team-logos-swiper"
       >
         {teamLogos.map((logo, index) => (
-          <SwiperSlide key={index} className="flex justify-center items-center" 
+          <SwiperSlide key={index} className="flex justify-center items-center mx-auto" 
           
           >
             <img 
               src={logo.src} 
               alt={logo.alt} 
-              className="max-h-20 max-w-20 object-contain transition-transform duration-300"
+              className="max-h-16 max-w-16 object-contain transition-transform duration-300"
+              data-aos="fade-up" data-aos-delay= {logo.delay}
             />
           </SwiperSlide>
         ))}

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import { FaBars, FaTimes, FaHome, FaShoppingBag, FaChild, FaNewspaper, FaPhoneAlt } from 'react-icons/fa';
 
-import logo from '../../assets/image-removebg-preview.png';
+import logo from '../../assets/logo.png';
 
 export const Header = () => {
 
@@ -39,7 +39,7 @@ export const Header = () => {
   }, [isOpen]);
 
   return (
-    <header className=" flex items-center justify-between fixed top-0 left-0 right-0 z-50 px-6 lg:px-20 h-20 bg-white/80 backdrop-blur-md shadow-md border-b border-gray-200">
+    <header className=" flex items-center justify-between fixed top-0 left-0 right-0 z-50 px-6 lg:px-20 h-20 bg-white shadow-md border-b border-gray-200">
       <a className="flex items-center" href="#">
         <img src={logo} alt="Calçados Logo" className="h-14" />
       </a>
@@ -48,7 +48,7 @@ export const Header = () => {
       <div className="flex-1"></div>
 
       {/* Navegação Desktop */}
-      <nav className="hidden sm:flex gap-6 md:gap-10">
+      <nav className="hidden sm:flex gap-4 md:gap-10">
         {menuItems.map((item) => (
           <motion.a
             key={item.name}
@@ -57,7 +57,7 @@ export const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <item.icon className="w-7 h-7 text-blue-500" />
+            <item.icon className="w-6 h-6 text-black" />
             {item.name}
           </motion.a>
         ))}

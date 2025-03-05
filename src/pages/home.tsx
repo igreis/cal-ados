@@ -1,8 +1,8 @@
 'use client'
 
 import { Header } from '../components/header/header'
-import { Adulto2 } from '../components/adulto/adulto2'
-import { Infantil2 } from '../components/infantil/infantil2'
+import { Adulto } from '../components/adulto/adulto'
+import { Infantil } from '../components/infantil/infantil'
 import Variedades from '../components/variedades/variedades'
 import { Categorias } from '../components/categorias/categorias'
 import Footer from '../components/footer/footer';
@@ -30,8 +30,8 @@ export default function LandingPage() {
         <ProductSections />
         <Categorias />
         <BrandsCarousel />
-        <Adulto2 />
-        <Infantil2 />
+        <Adulto />
+        <Infantil />
         <Footer />
       </main>
     </div>
