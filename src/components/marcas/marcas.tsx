@@ -22,17 +22,17 @@ interface TeamLogo {
 
 export const BrandsCarousel: React.FC = () => {
   const teamLogos: TeamLogo[] = [
-    { src: adidas, alt: 'Argentina', delay: 0 },
+    { src: "https://seeklogo.com/images/N/nike-logo-5C7A059F94-seeklogo.com.png", alt: 'Argentina', delay: 0 },
     { src: nike, alt: 'Chile', delay: 200 },
     { src: ol, alt: 'Peru', delay: 300 },
-    { src: adidas, alt: 'Germany', delay: 400 },
+    { src: "https://images.seeklogo.com/logo-png/16/1/adidas-logo-png_seeklogo-168374.png", alt: 'Germany', delay: 400 },
     { src: adidas, alt: 'Italy', delay: 500 },
     { src: adidas, alt: 'Spain', delay: 600 },
     { src: adidas, alt: 'Belgium', delay: 700 }
   ];
 
   return (
-    <div className="w-full max-w-3xl mx-auto sm:p-4 sm:mt-14 mb-8">
+    <div className="w-full max-w-2xl mx-auto sm:p-4 sm:mt-14 mb-8">
       <div className='flex justify-center' data-aos="fade-up">
         <h1 className='text-2xl mb-10'>
           Marcas

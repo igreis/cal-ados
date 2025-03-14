@@ -37,8 +37,8 @@ export default function Card2({ data, onClickModal, titulo }: CardProps) {
   return (
     <div className="bg-white">
       <div className="flex items-center mb-4">
-        <h1 className="text-3xl font-bold text-blue-900">{titulo}</h1>
-        <div className="h-0.5 bg-blue-500 w-[20%] ml-4" />
+        <h1 className="text-3xl font-bold text-black">{titulo}</h1>
+        <div className="h-0.5 bg-black w-[20%] ml-4" />
       </div>
       <h2 className="sr-only">Products</h2>
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5 mb-8">

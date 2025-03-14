@@ -17,7 +17,7 @@ export default function LandingPage() {
   useEffect(() => {
     AOS.init({
       duration: 1300, // Duração da animação em milissegundos
-      offset: window.innerWidth > 640 ? 180 : 550, // 200px acima no sm e 550px antes
+      //offset: window.innerWidth > 640 ? 180 : 550, // 200px acima no sm e 550px antes
       once: true, // Se `true`, a animação ocorre apenas uma vez
     });
   }, []);

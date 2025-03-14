@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 export const ProductSections = () => {
-    
+
 
     const Data = [
         {
@@ -27,9 +27,9 @@ export const ProductSections = () => {
     ];
 
     return (
-        <section className="w-full py-12 flex justify-center lg:mt-[50px]">
+        <section className="w-full py-12 flex justify-center lg:mt-[30px]">
             <Swiper
-                className="w-full flex justify-center items-center items-center gap-8 md:max-w-[80%] sm:max-w-[90%] max-w-[95%] max-h-full"
+                className="w-full flex justify-center items-center items-center gap-8  md:max-w-[75%] sm:max-w-[90%] max-w-[95%] max-h-full"
                 breakpoints={{
                     500: {
                         slidesPerView: 2,
@@ -46,18 +46,51 @@ export const ProductSections = () => {
 
                 <div className=''>
                     <SwiperSlide className='flex justify-center' >
-                        <div className="" > 
-                            <img src={img} alt="" className='sm:min-h-[500px] min-h-[450px]' data-aos="fade-right" />
+                        <div className="group relative flex justify-center items-center overflow-hidden">
+                            <img
+                                src={img}
+                                alt=""
+                                className='sm:min-h-[480px] min-h-[450px] transition-all duration-300 group-hover:brightness-75'
+                                data-aos="fade-right"
+                            />
+                            {/* Botão de Comprar */}
+                            <button
+                                className="absolute border-2 border-white text-white font-semibold px-8 py-3 rounded-full bg-black bg-opacity-50 hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-all duration-300 transform hover:scale-105"
+                            >
+                                COMPRAR
+                            </button>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='flex justify-center'>
-                        <div className="">
-                            <img src={img} alt="" className='sm:min-h-[500px] min-h-[450px]' data-aos="fade-right" data-aos-delay="200" />
+                        <div className="group relative flex justify-center items-center overflow-hidden">
+                            <img
+                                src={img}
+                                alt=""
+                                className='sm:min-h-[480px] min-h-[450px] transition-all duration-300 group-hover:brightness-75'
+                                data-aos="fade-right"
+                            />
+                            {/* Botão de Comprar */}
+                            <button
+                                className="absolute border-2 border-white text-white font-semibold px-8 py-3 rounded-full bg-black bg-opacity-50 hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-all duration-300 transform hover:scale-105"
+                            >
+                                COMPRAR
+                            </button>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='flex justify-center'>
-                        <div className="">
-                            <img src={img} alt="" className='sm:min-h-[500px] min-h-[450px]' data-aos="fade-right" data-aos-delay="300"/>
+                        <div className="group relative flex justify-center items-center overflow-hidden">
+                            <img
+                                src={img}
+                                alt=""
+                                className='sm:min-h-[480px] min-h-[450px] transition-all duration-300 group-hover:brightness-75'
+                                data-aos="fade-right"
+                            />
+                            {/* Botão de Comprar */}
+                            <button
+                                className="absolute border-2 border-white text-white font-semibold px-8 py-3 rounded-full bg-black bg-opacity-50 hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-all duration-300 transform hover:scale-105"
+                            >
+                                COMPRAR
+                            </button>
                         </div>
                     </SwiperSlide>
                 </div>

@@ -78,7 +78,7 @@ export const Adulto = () => {
   const filteredData = data[genero] || [];
 
   return (
-    <section id="adulto" className=" bg-white py-8 relative mt-[10px]" >
+    <section id="adulto" className=" bg-white py-4 relative mt-[10px]" >
       <div className="relative w-fit mx-auto text-center mb-8 mt-[20px]" data-aos="fade-up">
         <h2 className="text-3xl text-black font-bold">ADULTO</h2>
         <div className="absolute left-[10%] bottom-0 w-[80%] h-[1px] bg-black" data-aos="zoom-in"></div>
@@ -101,7 +101,7 @@ export const Adulto = () => {
       </style>
 
       {/* Botões de seleção de gênero */}
-      <div className="flex flex-col items-center space-y-2 mb-8" data-aos="fade-up">
+      <div className="flex flex-col items-center space-y-2 mb-6" data-aos="fade-up">
         <label htmlFor="gender-group" className="text-sm font-medium text-gray-700">
           Selecione o gênero:
         </label>
@@ -121,7 +121,7 @@ export const Adulto = () => {
         </div>
       </div>
 
-      <div className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] mx-auto">
+      <div className="md:max-w-[75%] sm:max-w-[85%] max-w-[95%] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

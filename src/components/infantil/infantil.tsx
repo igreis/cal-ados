@@ -97,7 +97,7 @@ export const Infantil = () => {
       </style>
 
       {/* Botões de seleção de gênero */}
-      <div className="flex flex-col items-center space-y-2 mb-8">
+      <div className="flex flex-col items-center space-y-2 mb-6">
         <label htmlFor="gender-group" className="text-sm font-medium text-gray-700">
           Selecione o gênero:
         </label>

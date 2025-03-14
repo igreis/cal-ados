@@ -9,8 +9,8 @@ import opcao from '../../assets/relogio.jpg';
 
 const data = {
   novidades: [
-    { marca: 'Nike', imageUrl: opcao, preço: 169.90 },
-    { marca: 'Adidas', imageUrl: opcao, preço: 199.90 },
+    { marca: 'Relógio', imageUrl: opcao, preço: 169.90 },
+    { marca: 'Adidas Duramo', imageUrl: opcao, preço: 199.90 },
     { marca: 'Puma', imageUrl: opcao, preço: 149.90 },
     { marca: 'Puma', imageUrl: opcao, preço: 149.90 },
     { marca: 'Puma', imageUrl: "https://imgnike-a.akamaihd.net/1300x1300/027284IMA8.jpg", preço: 200.90 },
@@ -41,9 +41,9 @@ export default function VariedadesCarrossel() {
   return (
     <section id="variedades" className="bg-white pt-[25px] sm:pt-[50px] fade-up" >
       <div className="flex items-center justify-center mb-[20px] md:mb-[50px]">
-        <div className="sm:w-[35%] w-[24%] border-b border-black mr-2"></div>
+        <div className="sm:w-[34%] w-[26%] border-b border-black mr-2"></div>
         <h1 className="text-3xl text-black">Variedades</h1>
-        <div className="sm:w-[35%] w-[24%] border-b border-black ml-2"></div>
+        <div className="sm:w-[34%] w-[26%] border-b border-black ml-2"></div>
       </div>
 
       <style>
@@ -70,7 +70,7 @@ export default function VariedadesCarrossel() {
       </style>
 
       <Swiper
-        className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] w-full "
+        className="md:max-w-[75%] sm:max-w-[85%] max-w-[95%] w-full "
         breakpoints={{
           100: {
             slidesPerView: 2,
