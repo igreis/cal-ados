@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import adidas from '../../assets/adidas.png'
 import nike from '../../assets/nike-logo-47A65A59D5-seeklogo.com.png'
 import ol from '../../assets/olympikus.png'
+import mizuno from '../../assets/mizuno-seeklogo.png'
 
 // Import team logos (you would replace these with actual imported images)
 
@@ -22,13 +23,12 @@ interface TeamLogo {
 
 export const BrandsCarousel: React.FC = () => {
   const teamLogos: TeamLogo[] = [
-    { src: "https://seeklogo.com/images/N/nike-logo-5C7A059F94-seeklogo.com.png", alt: 'Argentina', delay: 0 },
+    { src: mizuno, alt: 'Argentina', delay: 0 },
     { src: nike, alt: 'Chile', delay: 200 },
     { src: ol, alt: 'Peru', delay: 300 },
-    { src: "https://images.seeklogo.com/logo-png/16/1/adidas-logo-png_seeklogo-168374.png", alt: 'Germany', delay: 400 },
     { src: adidas, alt: 'Italy', delay: 500 },
-    { src: adidas, alt: 'Spain', delay: 600 },
-    { src: adidas, alt: 'Belgium', delay: 700 }
+    { src: adidas, alt: 'Italy', delay: 500 },
+    { src: adidas, alt: 'Italy', delay: 500 },
   ];
 
   return (
