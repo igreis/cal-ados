@@ -34,7 +34,7 @@ export default function Slider() {
           <div className="lg:max-w-[1770px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center lg:gap-24">
             {/* Title Section */}
             <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-130px]">
-              <div className="flex flex-col items-center pb-6 lg:pb-[60px]">
+              <div className="flex flex-col items-center h850:pb-6 lg:pb-[60px]">
                 <h1 className="font-bold text-blue-900 italic text-3xl text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
                   Climatizador
                 </h1>
@@ -119,12 +119,12 @@ export default function Slider() {
               </div>
 
               {/* Mobile View */}
-              <div className="sm:hidden flex w-full  mt-[10px]" data-aos="zoom-in" data-aos-delay="100">
+              <div className="sm:hidden flex w-full mt-[10px]" data-aos="zoom-in" data-aos-delay="100">
                 <Swiper
                   effect={'cards'}
                   grabCursor={true}
                   modules={[EffectCards]}
-                  className="mySwiper h-[350px] w-[350px]"
+                  className="mySwiper h-[330px] w-[310px] h850:h-[350px] h850:w-[350px]"
                 >
                   <SwiperSlide><img src={clima2} alt="" /></SwiperSlide>
                   <SwiperSlide><img src={climatiza} alt="" /></SwiperSlide>
@@ -168,12 +168,21 @@ export default function Slider() {
               </div>
 
               {/* Mobile View */}
-              <div className="sm:hidden flex w-full mt-[10px]" data-aos="zoom-in" data-aos-delay="100">
+              <div className="sm:hidden flex-col w-full " data-aos="zoom-in" data-aos-delay="100">
+                <div className="flex flex-col items-center pb-2 h850:pb-6 lg:pb-[60px]">
+                  <h1 className="font-bold text-blue-900 italic text-3xl text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
+                    Climatizador
+                  </h1>
+                  <div className="w-16 sm:w-24 md:w-32 lg:w-[10vw] h-[1px] sm:h-[2px] md:h-[2px] bg-blue-900 my-2 sm:my-3 md:my-4 " data-aos="zoom-in" data-aos-delay="800"></div>
+                  <button className="emerge-animation bg-black text-white py-1.5 sm:py-2 px-4 sm:px-6 lg:py-[1vh] lg:px-[2vw] rounded-full text-sm sm:text-base lg:text-[1vw] hover:bg-gray-800 transition-all duration-300">
+                    Saiba Mais
+                  </button>
+                </div>
                 <Swiper
                   effect={'cards'}
                   grabCursor={true}
                   modules={[EffectCards]}
-                  className="mySwiper h-[350px] w-[350px]"
+                  className="mySwiper h-[330px] w-[310px] h850:h-[350px] h850:w-[350px] "
                 >
                   <SwiperSlide><img src={clima2} alt="" /></SwiperSlide>
                   <SwiperSlide><img src={climatiza} alt="" /></SwiperSlide>
@@ -183,7 +192,7 @@ export default function Slider() {
 
             {/* Title Section (agora na direita) */}
             <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-130px]">
-              <div className="flex flex-col items-center pb-6 lg:pb-[60px]">
+              <div className="hidden lg:block flex flex-col items-center pb-6 lg:pb-[60px]">
                 <h1 className="font-bold text-blue-900 italic text-3xl text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
                   Climatizador
                 </h1>
