@@ -1,4 +1,3 @@
-import papet from '../../assets/papet.jpeg'; // Imagem de exemplo
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";

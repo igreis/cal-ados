@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -10,7 +10,7 @@ export const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const menuRef = useRef(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -23,8 +23,8 @@ export const Header = () => {
   ];
 
   useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };

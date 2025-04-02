@@ -1,4 +1,4 @@
-import { Radio, RadioGroup, FormControlLabel, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { Radio, RadioGroup, FormControlLabel, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import { Man, Woman } from '@mui/icons-material';
 import { useState, ChangeEvent, useEffect } from 'react';
 import { motion } from 'framer-motion'
@@ -76,7 +76,7 @@ export const Infantil2 = () => {
         setGenero(event.target.value)
       }
     
-      const handleType = (event: ChangeEvent<HTMLInputElement>) => {
+      const handleType = (event: SelectChangeEvent<string>) => {
         setShoeType(event.target.value)
       }
 

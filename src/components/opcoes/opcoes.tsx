@@ -5,7 +5,7 @@ import { Autoplay } from "swiper/modules";
 export const ProductSections = () => {
 
 
-    const Data = [
+{/*   const Data = [
         {
             marca: "Nike Pegasus",
             imageUrl: img,
@@ -24,7 +24,7 @@ export const ProductSections = () => {
             preço: 449.99,
             rating: 5
         },
-    ];
+    ];*/}
 
     return (
         <section className="w-full py-12 flex justify-center lg:mt-[30px]">

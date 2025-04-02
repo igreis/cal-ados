@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes, FaHome, FaShoppingBag, FaChild, FaNewspaper, FaPhoneAlt } from 'react-icons/fa';
 import logo from '../../assets/image-removebg-preview.png';
 
-export const Header = () => {
+export const Header2 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 

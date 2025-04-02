@@ -3,10 +3,10 @@ import 'swiper/css';
 import 'swiper/css/effect-creative';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-cards';
-import { Pagination, Autoplay } from 'swiper/modules';
-import bg from '../../assets/bg.jpeg';
-import climatiza from '../../assets/climatiza.jpg';
-import clima2 from '../../assets/clima2.jpg';
+import { Pagination } from 'swiper/modules';
+//import bg from '../../assets/bg.jpeg';
+//import climatiza from '../../assets/climatiza.jpg';
+//import clima2 from '../../assets/clima2.jpg';
 import carna from '../../assets/carna.jpg'
 
 

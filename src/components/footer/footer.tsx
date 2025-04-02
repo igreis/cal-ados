@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaPhone, FaMapMarkerAlt, FaEnvelope, FaFacebook, FaInstagram, FaWhatsapp, FaChevronLeft, FaChevronRight, FaLinkedin, FaGithub } from 'react-icons/fa'
+import { FaPhone, FaMapMarkerAlt, FaEnvelope, FaFacebook, FaInstagram, FaWhatsapp, FaChevronLeft, FaChevronRight, FaLinkedin } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const stores = [

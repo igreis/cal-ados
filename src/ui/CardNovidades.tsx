@@ -5,7 +5,7 @@ interface Data {
 }
 
 interface CardProps {
-  data: Record<string, Record<string, Data[]>>;
+  data: Data[];
 }
 
 export default function CardNovidades({ data }: CardProps) {
