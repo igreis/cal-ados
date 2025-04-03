@@ -76,7 +76,7 @@ export const Infantil = () => {
 
   return (
     <section id="infantil" className="min-h-screen bg-white lg:py-8 relative">
-      <div className="relative w-fit mx-auto text-center mb-8 mt-[20px]">
+      <div className="relative w-fit mx-auto text-center mb-2 mt-[20px]">
         <h2 className="text-3xl font-bold text-black">INFANTIL</h2>
         <div className="absolute left-1/2 bottom-0 w-0 h-[1px] bg-black transition-all duration-500 ease-out animate-[expand_1s_ease-out_forwards]"></div>
       </div>
@@ -97,7 +97,7 @@ export const Infantil = () => {
       </style>
 
       {/* Botões de seleção de gênero */}
-      <div className="flex flex-col items-center space-y-2 mb-6">
+      <div className="flex flex-col items-center space-y-2 mb-10">
         <label htmlFor="gender-group" className="text-sm font-medium text-gray-700">
           Selecione o gênero:
         </label>

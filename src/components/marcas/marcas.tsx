@@ -49,23 +49,23 @@ export const BrandsCarousel: React.FC = () => {
         }}
         breakpoints={{
           100: {
-            slidesPerView: 3,
+            slidesPerView: 4,
           },
           380: {
-            slidesPerView: 4
+            slidesPerView: 5,
           },
           // when window width is >= 640px
           530: {
-            slidesPerView: 5,
+            slidesPerView: 6,
            
           },
           // when window width is >= 768px
           768: {
-            slidesPerView: 6,
+            slidesPerView: 7,
             
           },
           1024: {
-            slidesPerView: 7,
+            slidesPerView: 8,
           },
         }}
         className="team-logos-swiper"
