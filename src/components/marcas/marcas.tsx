@@ -29,6 +29,8 @@ export const BrandsCarousel: React.FC = () => {
     { src: adidas, alt: 'Italy', delay: 500 },
     { src: adidas, alt: 'Italy', delay: 500 },
     { src: adidas, alt: 'Italy', delay: 500 },
+    { src: adidas, alt: 'Italy', delay: 500 },
+    { src: adidas, alt: 'Italy', delay: 500 },
   ];
 
   return (

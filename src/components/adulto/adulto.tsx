@@ -14,7 +14,7 @@ interface Data {
 const data: Record<string, Record<string, Data[]>> = {
   masculino: {
     tenis: [
-      { marca: 'nike', imageUrl: tenis, preço: 169.90 },
+      { marca: 'Tênis Nike', imageUrl: tenis, preço: 169.90 },
       { marca: 'nike', imageUrl: tenis, preço: 169.90 },
       { marca: 'nike', imageUrl: tenis, preço: 169.90 },
       { marca: 'nike', imageUrl: tenis, preço: 169.90 },

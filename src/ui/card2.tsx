@@ -44,29 +44,30 @@ export default function Card2({ data, onClickModal, titulo }: CardProps) {
         {data.map((product, index) => (
           <a key={index} className="group">
             <div
-              className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200"
+              className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 relative group"
               onClick={() => onClickModal(product)}
             >
               <img
                 alt={product.marca}
-                src={product.imageUrl}
-                className="w-full object-contain object-center transition-transform duration-300 ease-in-out group-hover:scale-110"
+                src={product.imageUrl || "/placeholder.svg"}
+                className="w-full object-contain object-center transition-transform duration-300 ease-in-out cursor-pointer"
               />
+              {/* Botão de Comprar - Centralizado */}
+              <button className="absolute border-2 border-white text-white font-semibold px-8 py-3 rounded-full bg-black bg-opacity-50 hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-all duration-300 transform hover:scale-105 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                Ver mais
+              </button>
             </div>
-            <h3 className="mt-4 text-sm text-gray-700">{product.marca}</h3>
-            <p className="mt-1 text-lg font-medium text-gray-900">
-              {product.preço.toFixed(2).replace('.', ',')}
+            <h3 className="text-[16px] font-normal leading-[1.2] mt-4 ">
+              {product.marca}
+            </h3>
+            <p className="mt-3 text-sm font-normal text-gray-900">
+              R$ {product.preço.toFixed(2).replace('.', ',')}
             </p>
-            <div className="mt-1">
+            <div className="mt-2">
               <StarRating rating={product.rating} />
             </div>
           </a>
         ))}
-      </div>
-      <div className="text-center mt-4">
-        <a href="#" className="text-blue-500 hover:underline">
-          Ver mais opções
-        </a>
       </div>
     </div>
   );

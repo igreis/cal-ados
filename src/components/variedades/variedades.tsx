@@ -28,11 +28,6 @@ export default function VariedadesCarrossel() {
   const [selectedProduct, setSelectedProduct] = useState<Data | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (produto: Data) => {
-    setSelectedProduct(produto);
-    setIsModalOpen(true);
-  };
-
   const closeModal = () => {
     setSelectedProduct(null);
     setIsModalOpen(false);
@@ -95,7 +90,7 @@ export default function VariedadesCarrossel() {
         {data.novidades.map((produto, index) => (
           <SwiperSlide key={index} className="flex justify-center">
             <div className="" style={{ maxWidth: '800px', width: '100%' }}>
-              <div onClick={() => openModal(produto)}>
+              <div>
                 <CardNovidades data={[produto]} />
               </div>
             </div>
