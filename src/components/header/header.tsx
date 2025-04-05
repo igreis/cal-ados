@@ -1,27 +1,22 @@
 import { useState, useEffect, useRef } from 'react';
-
 import { motion, AnimatePresence } from 'framer-motion';
-
-import { FaBars, FaTimes, FaHome, FaShoppingBag, FaChild, FaNewspaper, FaPhoneAlt } from 'react-icons/fa';
-
+import { Home, Newspaper, ShoppingBag, User, Baby, Info, Menu, X } from "lucide-react"
 import logo from '../../assets/logo.png';
 
 export const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
-
   const menuRef = useRef<HTMLDivElement | null>(null);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const menuItems = [
-    { name: 'Início', icon: FaHome, href: '#' },
-    { name: 'Novidades', icon: FaNewspaper, href: '#novidades' },
-    { name: 'Adulto', icon: FaShoppingBag, href: '#adulto' },
-    { name: 'Infantil', icon: FaChild, href: '#infantil' },
-    { name: 'Saiba Mais', icon: FaPhoneAlt, href: '#saibaMais' },
-  ];
-
+    { name: "Início", icon: Home, href: "#" },
+    { name: "Variedades", icon: Newspaper, href: "#variedades" },
+    { name: "Novidades", icon: ShoppingBag, href: "#novidades" },
+    { name: "Adulto", icon: User, href: "#adulto" },
+    { name: "Infantil", icon: Baby, href: "#infantil" },
+    { name: "Saiba Mais", icon: Info, href: "#saibaMais" },
+  ]
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -48,17 +43,17 @@ export const Header = () => {
       <div className="flex-1"></div>
 
       {/* Navegação Desktop */}
-      <nav className="hidden sm:flex gap-4 md:gap-10">
+      <nav className="hidden md:flex items-center gap-3 lg:gap-6 ml-auto">
         {menuItems.map((item) => (
           <motion.a
             key={item.name}
             href={item.href}
-            className="text-gray-700 hover:text-blue-600 font-medium text-sm flex items-center gap-2 transition-all"
+            className="text-gray-700 hover:text-blue-600 font-medium text-xs lg:text-sm flex flex-col lg:flex-row items-center gap-1 lg:gap-2 transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <item.icon className="w-6 h-6 text-black" />
-            {item.name}
+            <item.icon className="w-5 h-5 text-blue-500" />
+            <span className="text-center">{item.name}</span>
           </motion.a>
         ))}
       </nav>
@@ -66,10 +61,10 @@ export const Header = () => {
       {/* Botão do menu móvel */}
       <button
         onClick={toggleMenu}
-        className="ml-auto sm:hidden text-gray-700 focus:outline-none"
-        aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+        className="ml-auto md:hidden text-gray-700 focus:outline-none"
+        aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
       >
-        {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       {/* Menu móvel */}
@@ -81,7 +76,7 @@ export const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-16 left-0 right-0 bg-white shadow-md rounded-b-lg sm:hidden overflow-hidden"
+            className="fixed top-20 left-0 right-0 bg-white shadow-md rounded-b-lg md:hidden overflow-hidden z-50 max-h-[calc(100vh-5rem)] overflow-y-auto"
           >
             {menuItems.map((item) => (
               <motion.a
@@ -92,7 +87,7 @@ export const Header = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <item.icon className="mr-3 text-blue-500" size={20} />
+                <item.icon className="mr-3 text-blue-500 h-5 w-5" />
                 {item.name}
               </motion.a>
             ))}
@@ -100,5 +95,6 @@ export const Header = () => {
         )}
       </AnimatePresence>
     </header>
-  );
-};
+  )
+}
+

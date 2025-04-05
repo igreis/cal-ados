@@ -79,7 +79,7 @@ export const BrandsCarousel: React.FC = () => {
             <img 
               src={logo.src} 
               alt={logo.alt} 
-              className="max-h-16 max-w-16 object-contain transition-transform duration-300"
+              className="md:max-h-15 md:max-w-15 max-h-14 max-w-14 object-contain transition-transform duration-300"
               data-aos="fade-up" data-aos-delay= {logo.delay}
             />
           </SwiperSlide>

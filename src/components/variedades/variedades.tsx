@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import CardNovidades from "../../ui/CardNovidades";
-import Modal from '../../ui/modal';
 import opcao from '../../assets/relogio.jpg';
 
 const data = {
@@ -18,20 +16,9 @@ const data = {
   ]
 };
 
-interface Data {
-  marca: string;
-  imageUrl: string;
-  preço: number;
-}
+
 
 export default function VariedadesCarrossel() {
-  const [selectedProduct, setSelectedProduct] = useState<Data | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const closeModal = () => {
-    setSelectedProduct(null);
-    setIsModalOpen(false);
-  };
 
   return (
     <section id="variedades" className="bg-white pt-[25px] sm:pt-[50px] fade-up" >
@@ -97,11 +84,6 @@ export default function VariedadesCarrossel() {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Modal */}
-      {selectedProduct && (
-        <Modal isOpen={isModalOpen} product={selectedProduct} onClose={closeModal} />
-      )}
     </section>
   );
 }

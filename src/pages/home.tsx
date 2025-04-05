@@ -7,7 +7,8 @@ import Variedades from '../components/variedades/variedades'
 import { Categorias } from '../components/categorias/categorias'
 import Footer from '../components/footer/footer';
 import Slider from '../components/slider/slider'; 
-import {ProductSections} from '../components/opcoes/opcoes'
+//import Slider2 from '../components/slider/slider2'
+import {NovidadeSections} from '../components/novidades/novidades'
 import {BrandsCarousel}  from '../components/marcas/marcas'
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -27,7 +28,7 @@ export default function LandingPage() {
       <main className="flex-1 pt-16">
         <Slider />
         <Variedades />
-        <ProductSections />
+        <NovidadeSections />
         <Categorias />
         <BrandsCarousel />
         <Adulto />

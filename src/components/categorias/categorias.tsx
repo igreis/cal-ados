@@ -13,7 +13,7 @@ export const Categorias = () => {
   };
 
   return (
-    <section id="novidades" className="h-[400px] bg-white md:py-12 sm:mt-[10px]" > {/* Ajuste no padding vertical */}
+    <section id="categorias" className="h-[400px] bg-white md:py-12 sm:mt-[10px]" > {/* Ajuste no padding vertical */}
       <div className="flex items-center justify-center w-full mb-[50px]" data-aos="fade-up">
         <div className="sm:w-[34%] w-[26%] border-b border-black mr-2"></div>
         <h1 className="text-3xl text-black text-center">Categorias</h1>

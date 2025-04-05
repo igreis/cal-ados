@@ -2,7 +2,7 @@ import img from '../../assets/climatiza.jpg';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
-export const ProductSections = () => {
+export const NovidadeSections = () => {
 
 
 {/*   const Data = [
@@ -27,7 +27,7 @@ export const ProductSections = () => {
     ];*/}
 
     return (
-        <section className="w-full py-12 flex justify-center lg:mt-[30px]">
+        <section className="w-full py-12 flex justify-center lg:mt-[30px]" id='novidades'>
             <Swiper
                 className="w-full flex justify-center items-center items-center gap-8  md:max-w-[75%] sm:max-w-[90%] max-w-[95%] max-h-full"
                 breakpoints={{

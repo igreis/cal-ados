@@ -117,14 +117,14 @@ export const Infantil = () => {
         </div>
       </div>
 
-      <div className="md:max-w-[80%] sm:max-w-[90%] max-w-[95%] mx-auto">
+      <div className="md:max-w-[75%] sm:max-w-[85%] max-w-[95%] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <div id=''>
-            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />
+            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tênis' />
           </div>
           <div id='tenisInfantil'>
             <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />

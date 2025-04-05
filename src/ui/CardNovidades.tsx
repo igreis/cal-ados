@@ -23,17 +23,13 @@ export default function CardNovidades({ data }: CardProps) {
                   src={product.imageUrl}
                   className="h-full w-full object-cover object-center transition-transform duration-300 ease-in-out"
                 />
-                {/* Botão de Comprar */}
-                <a href="https://wa.me/553432426156" target="_blank" rel="noopener noreferrer" 
-                className="absolute border-2 border-white text-white font-semibold px-8 py-3 rounded-full bg-black bg-opacity-50 hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-all duration-300 transform hover:scale-105"
-                >  
-                <button>
-                  Ver Mais
-                </button>
-                </a>
               </div>
               <h3 className="mt-4 text-md font-bold text-gray-700">{product.marca}</h3>
-              <p className="mt-1 text-sm font-medium text-gray-900">{product.preço}</p>
+              <a href="https://wa.me/553432426156" target="_blank" rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 underline underline-offset-4 transition-colors duration-200">
+                Ver mais
+              </a>
+
             </a>
           ))}
         </div>

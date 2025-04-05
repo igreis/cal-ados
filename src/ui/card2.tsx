@@ -57,10 +57,10 @@ export default function Card2({ data, onClickModal, titulo }: CardProps) {
                 Ver mais
               </button>
             </div>
-            <h3 className="text-[16px] font-normal leading-[1.2] mt-4 ">
+            <h3 className="text-[16px] sm:text-[19px] font-normal leading-[1.2] mt-4 ">
               {product.marca}
             </h3>
-            <p className="mt-3 text-sm font-normal text-gray-900">
+            <p className="mt-3 sm:text-base text-sm font-normal text-gray-900">
               R$ {product.preço.toFixed(2).replace('.', ',')}
             </p>
             <div className="mt-2">
