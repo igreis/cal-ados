@@ -14,7 +14,6 @@ export default function Slider() {
   return (
     <Swiper
       modules={[Pagination]}
-      pagination={{ clickable: true }}
       autoplay={{ delay: 4000 }}
       className="w-full"
     >

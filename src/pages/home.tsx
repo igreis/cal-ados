@@ -6,8 +6,8 @@ import { Infantil } from '../components/infantil/infantil'
 import Variedades from '../components/variedades/variedades'
 import { Categorias } from '../components/categorias/categorias'
 import Footer from '../components/footer/footer';
-import Slider from '../components/slider/slider'; 
-//import Slider2 from '../components/slider/slider2'
+//import Slider from '../components/slider/slider'; 
+import Slider2 from '../components/slider/slider2'
 import {NovidadeSections} from '../components/novidades/novidades'
 import {BrandsCarousel}  from '../components/marcas/marcas'
 import AOS from "aos";
@@ -26,7 +26,7 @@ export default function LandingPage() {
     <div className="">
       <Header />
       <main className="flex-1 pt-16">
-        <Slider />
+        <Slider2 />
         <Variedades />
         <NovidadeSections />
         <Categorias />

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import Card2 from '../../ui/card2';
 import Modal from '../../ui/modal';
 import papet from '../../assets/papet.jpeg';
@@ -76,7 +75,7 @@ export const Infantil = () => {
 
   return (
     <section id="infantil" className="min-h-screen bg-white lg:py-8 relative">
-      <div className="relative w-fit mx-auto text-center mb-2 mt-[20px]">
+      <div className="relative w-fit mx-auto text-center mb-2 mt-[20px]" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-black">INFANTIL</h2>
         <div className="absolute left-1/2 bottom-0 w-0 h-[1px] bg-black transition-all duration-500 ease-out animate-[expand_1s_ease-out_forwards]"></div>
       </div>
@@ -97,7 +96,7 @@ export const Infantil = () => {
       </style>
 
       {/* Botões de seleção de gênero */}
-      <div className="flex flex-col items-center space-y-2 mb-10">
+      <div className="flex flex-col items-center space-y-2 mb-10" data-aos="fade-up">
         <label htmlFor="gender-group" className="text-sm font-medium text-gray-700">
           Selecione o gênero:
         </label>
@@ -118,24 +117,18 @@ export const Infantil = () => {
       </div>
 
       <div className="md:max-w-[75%] sm:max-w-[85%] max-w-[95%] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
-          <div id=''>
+          <div>
             <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tênis' />
           </div>
           <div id='tenisInfantil'>
             <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />
           </div>
-          <div id=''>
+          <div>
             <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />
           </div>
-          <div id=''>
+          <div>
             <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />
           </div>
-        </motion.div>
       </div>
 
       {/* Modal */}

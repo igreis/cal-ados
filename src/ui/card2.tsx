@@ -1,10 +1,11 @@
 import { Star } from 'lucide-react';
+import { motion } from 'framer-motion'; // ✅ importa o motion
 
 interface Data {
   marca: string;
   imageUrl: string;
   preço: number;
-  rating?: number; // Added rating property
+  rating?: number;
 }
 
 interface CardProps {
@@ -42,7 +43,18 @@ export default function Card2({ data, onClickModal, titulo }: CardProps) {
       <h2 className="sr-only">Products</h2>
       <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5 mb-8">
         {data.map((product, index) => (
-          <a key={index} className="group">
+          <motion.a
+            key={index}
+            className="group"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.1,
+              ease: "easeOut",
+            }}
+          >
             <div
               className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 relative group"
               onClick={() => onClickModal(product)}
@@ -52,8 +64,7 @@ export default function Card2({ data, onClickModal, titulo }: CardProps) {
                 src={product.imageUrl || "/placeholder.svg"}
                 className="w-full object-contain object-center transition-transform duration-300 ease-in-out cursor-pointer"
               />
-              {/* Botão de Comprar - Centralizado */}
-              <button className="absolute border-2 border-white text-white font-semibold px-8 py-3 rounded-full bg-black bg-opacity-50 hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-all duration-300 transform hover:scale-105 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <button className="hidden lg:block absolute border-2 border-white text-white font-semibold px-8 py-3 rounded-full bg-black bg-opacity-50 hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-all duration-300 transform hover:scale-105 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 Ver mais
               </button>
             </div>
@@ -66,7 +77,7 @@ export default function Card2({ data, onClickModal, titulo }: CardProps) {
             <div className="mt-2">
               <StarRating rating={product.rating} />
             </div>
-          </a>
+          </motion.a>
         ))}
       </div>
     </div>

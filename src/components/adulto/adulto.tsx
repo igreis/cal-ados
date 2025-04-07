@@ -123,14 +123,25 @@ export const Adulto = () => {
 
       <div className="md:max-w-[75%] sm:max-w-[85%] max-w-[95%] mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.6,
+                ease: "easeOut",
+                staggerChildren: 0.15
+              }
+            }
+          }}
         >
-          <div data-aos="fade-right">
+          <div >
             <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tênis' />
           </div>
-          <div data-aos="fade-right">
+          <div >
             <Card2 data={filteredData.sapato || null} onClickModal={openModal} titulo='Sapato' />
           </div>
         </motion.div>
