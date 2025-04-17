@@ -5,12 +5,12 @@ import "swiper/css/autoplay";
 import { motion } from "framer-motion";
 
 import CardNovidades from "../../ui/CardNovidades";
-import bolsas from "../../assets/img/bolsas.jpg";
-import perfumes from "../../assets/img/perfumes.jpg";
-import biquinis from "../../assets/img/biiquiinis.jpg";
-import relogios from "../../assets/img/relgoio.jpg";
-import climatizadores from "../../assets/img/climatizadores.jpg";
-import toalhas from "../../assets/img/toalhas.jpg";
+import bolsas from "../../assets/img/variedades/bolsas.jpg";
+import perfumes from "../../assets/img/variedades/perfumes.jpg";
+import biquinis from "../../assets/img/variedades/biiquiinis.jpg";
+import relogios from "../../assets/img/variedades/relgoio.jpg";
+import climatizadores from "../../assets/img/variedades/climatizadores.jpg";
+import toalhas from "../../assets/img/variedades/toalhas.jpg";
 
 const data = {
   novidades: [

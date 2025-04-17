@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'
 import Card2 from '../../ui/card2';
-import papet from '../../assets/papet.jpeg';
 import Modal from '../../ui/modal';
 
 //Esportivo feminino
-import tenisOlympikusFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisOlympikusFeminino.jpeg'
 import tenisOlympikusFeminino2 from '../../assets/img/adultoFeminino/tenisEsportivo/TenisOlympikusFeminino2.jpeg'
 import tenisMizunoFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisMizunoFeminino.jpeg'
 import tenisUnderFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisUnderFeminino.jpeg'
 import tenisFilaFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisFilaFeminino.jpeg'
+import tenisNikeFem from '../../assets/img/adultoFeminino/tenisEsportivo/tenisNikeFem.jpg'
 
 
 //Casual feminino
@@ -18,13 +17,20 @@ import tenisCasual2 from '../../assets/img/adultoFeminino/tenisCasual/TenisCasua
 import tenisCasual3 from '../../assets/img/adultoFeminino/tenisCasual/TenisCasualFeminino3.jpeg'
 import tenisRamarin from '../../assets/img/adultoFeminino/tenisCasual/TenisRamarimCasual.jpeg'
 
+//papet feminino
+import papetMississipi from '../../assets/img/adultoFeminino/papet/papetMississipi.jpg'
+import papetMoleca from '../../assets/img/adultoFeminino/papet/papetMoleca.jpg'
+import papetVizano from '../../assets/img/adultoFeminino/papet/papetVizano.jpg'
+import papetBeiraRio from '../../assets/img/adultoFeminino/papet/papetBeiraRio.jpg'
+import papet from '../../assets/img/adultoFeminino/papet/papet2.jpg'
+
 
 //Esportivo Masculino
-import tenisAdidas from '../../assets/img/adultoMasculino/tenisEsportivo/TenisAdidasMasculino.jpeg'
 import tenisOlimpykus from '../../assets/img/adultoMasculino/tenisEsportivo/TenisOlympikusMasculino.jpeg'
 import tenisUnder from '../../assets/img/adultoMasculino/tenisEsportivo/TenisUnderMasculino.jpeg'
 import tenisNike from '../../assets/img/adultoMasculino/tenisEsportivo/TenisNikeMasculino.jpeg'
 import tenisMizuno from '../../assets/img/adultoMasculino/tenisEsportivo/TenisMizuno.jpeg'
+import tenisAdidasMasc from '../../assets/img/adultoMasculino/tenisEsportivo/tenisAdidasMasc.jpg'
 
 
 //Casual Masculino
@@ -45,9 +51,9 @@ const data: Record<string, Record<string, Data[]>> = {
     tenisEsportivo: [
       { marca: 'Tênis Nike', imageUrl: tenisNike, preço: 169.90 },
       { marca: 'Tênis Olympikus', imageUrl: tenisOlimpykus, preço: 169.90 },
-      { marca: 'Tênis Adidas', imageUrl: tenisMizuno, preço: 169.90 },
+      { marca: 'Tênis Mizuno', imageUrl: tenisMizuno, preço: 169.90 },
       { marca: 'Tênis Under Armour', imageUrl: tenisUnder, preço: 169.90 },
-      { marca: 'Tênis Fila', imageUrl: tenisAdidas, preço: 169.90 },
+      { marca: 'Tênis Adidas', imageUrl: tenisAdidasMasc, preço: 169.90 },
     ],
     tenisCasual: [
       { marca: 'sapato', imageUrl: tenisCasualMasc, preço: 169.90 },
@@ -60,7 +66,7 @@ const data: Record<string, Record<string, Data[]>> = {
   feminino: {
     tenisEsportivo: [
       { marca: 'Tênis Mizuno', imageUrl: tenisMizunoFeminino, preço: 169.90 },
-      { marca: 'Tênis Olympikus', imageUrl: tenisOlympikusFeminino, preço: 169.90 },
+      { marca: 'Tênis Nike', imageUrl: tenisNikeFem, preço: 169.90 },
       { marca: 'Tênis Olympikus', imageUrl: tenisOlympikusFeminino2, preço: 169.90 },
       { marca: 'Tênis Under Armour', imageUrl: tenisUnderFeminino, preço: 169.90 },
       { marca: 'Tênis Fila', imageUrl: tenisFilaFeminino, preço: 169.90 },
@@ -71,6 +77,13 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'nike', imageUrl: tenisCasual3, preço: 169.90 },
       { marca: 'nike', imageUrl: tenisRamarin, preço: 169.90 },
 
+    ],
+    papet: [
+      { marca: 'Papet Moleca', imageUrl: papetMoleca, preço: 169.90 },
+      { marca: 'Papet Vizano', imageUrl: papetVizano, preço: 169.90 },
+      { marca: 'Papet Beira Rio', imageUrl: papetBeiraRio, preço: 169.90 },
+      { marca: 'Papet Mississipi', imageUrl: papetMississipi, preço: 169.90 },
+      { marca: 'Papet', imageUrl: papet, preço: 169.90 },
     ]
   },
 };
@@ -166,7 +179,7 @@ export const Adulto = () => {
             <Card2 data={filteredData.tenisCasual || null} onClickModal={openModal} titulo='Tênis Casual' />
           </div>
           <div >
-            <Card2 data={filteredData.sapatilha || null} onClickModal={openModal} titulo='Sapatilha' />
+            <Card2 data={filteredData.papet || null} onClickModal={openModal} titulo='Papet' />
           </div>
       </div>
       {/* Modal */}

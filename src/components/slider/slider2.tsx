@@ -8,6 +8,12 @@ import { Pagination, EffectCards } from "swiper/modules"
 import bg from "../../assets/bg.jpeg"
 //import carna from '../../assets/carna.jpg'
 
+//imagens
+import novidade1 from '../../assets/img/novidades/novidade1.jpg'
+import novidade2 from '../../assets/img/novidades/novidade2.jpg'
+import promoçao1 from '../../assets/img/promoçoes/promoçao1.jpg'
+import promoçao2 from '../../assets/img/promoçoes/promoçao2.jpg'
+
 export default function Slider2() {
   return (
     <Swiper modules={[Pagination]} pagination={{ clickable: true }} autoplay={{ delay: 4000 }} className="w-full">
@@ -110,14 +116,14 @@ export default function Slider2() {
               <div className="hidden sm:flex justify-center gap-8" data-aos="zoom-in-down" data-aos-delay="800">
                 <div className="flex items-center lg:mt-[160px] relative">
                   <img
-                    src="https://scontent.fudi1-1.fna.fbcdn.net/v/t39.30808-6/486971043_1254726499987241_8431987309192830650_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFKsh5cV8Y2J3UsrTIK61r0YyHw79BWcqtjIfDv0FZyq3jQFYlV7O8g2t-SvedncJOB7cOofbGWsb6QJZhVVSLE&_nc_ohc=8Jn1VBOdaK0Q7kNvwHOpECT&_nc_oc=Adlvkdn54r7jD01VQNQ477AwovOH1x08hCS1Qmo4aZKfRteAa2SNdYJ4kPbU7hST5RgeUIwoQ5DVXhZHaX4TrR5f&_nc_zt=23&_nc_ht=scontent.fudi1-1.fna&_nc_gid=D8ClPkZgmt_HtMRLiUDrqg&oh=00_AfEnCJvHN2a5oiYyTeSsGj58HemDRqprdBi-8BOLrbXOgw&oe=67F8FD8F"
+                    src={promoçao1}
                     alt=""
                     className="w-full h-[400px] lg:h-[352px] object-contain rounded-lg transition-all duration-300 "
                   />
                 </div>
                 <div className="flex items-center relative">
                   <img
-                    src="https://scontent.fudi1-2.fna.fbcdn.net/v/t39.30808-6/486543884_1252812086845349_8090270446861365970_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHkU9VAmyg1kkgGx8XIrRpym3nqxUsYek6beerFSxh6TgZ13yiW5eJne9yy2e9H0bkwN6DXQsgaNQzIA3VQCFd2&_nc_ohc=dtkPS0kaksQQ7kNvwFYnN4F&_nc_oc=Adl7FHwAlURjw490la0Bd0TLDAs_-HzR7HK9IyeRU9B53H_U_Rs426fnl0TMEDSgxEjTJQgkfSITGfcwqMx-d1pL&_nc_zt=23&_nc_ht=scontent.fudi1-2.fna&_nc_gid=sn75sbYT2w_DoXjHkV_ZHQ&oh=00_AfEd_NAWFBeXp_rPiOWZozgZw6FYcsExlM2Sj0vGdBpbxA&oe=67F8EEEB"
+                    src={promoçao2}
                     alt=""
                     className="w-full h-[400px] lg:h-[550px] object-contain rounded-lg"
                   />
@@ -134,13 +140,13 @@ export default function Slider2() {
                 >
                   <SwiperSlide>
                     <img
-                      src="https://scontent.fudi1-2.fna.fbcdn.net/v/t39.30808-6/486543884_1252812086845349_8090270446861365970_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHkU9VAmyg1kkgGx8XIrRpym3nqxUsYek6beerFSxh6TgZ13yiW5eJne9yy2e9H0bkwN6DXQsgaNQzIA3VQCFd2&_nc_ohc=dtkPS0kaksQQ7kNvwFYnN4F&_nc_oc=Adl7FHwAlURjw490la0Bd0TLDAs_-HzR7HK9IyeRU9B53H_U_Rs426fnl0TMEDSgxEjTJQgkfSITGfcwqMx-d1pL&_nc_zt=23&_nc_ht=scontent.fudi1-2.fna&_nc_gid=sn75sbYT2w_DoXjHkV_ZHQ&oh=00_AfEd_NAWFBeXp_rPiOWZozgZw6FYcsExlM2Sj0vGdBpbxA&oe=67F8EEEB"
+                      src={promoçao1}
                       alt=""
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img
-                      src="https://scontent.fudi1-1.fna.fbcdn.net/v/t39.30808-6/486971043_1254726499987241_8431987309192830650_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFKsh5cV8Y2J3UsrTIK61r0YyHw79BWcqtjIfDv0FZyq3jQFYlV7O8g2t-SvedncJOB7cOofbGWsb6QJZhVVSLE&_nc_ohc=8Jn1VBOdaK0Q7kNvwHOpECT&_nc_oc=Adlvkdn54r7jD01VQNQ477AwovOH1x08hCS1Qmo4aZKfRteAa2SNdYJ4kPbU7hST5RgeUIwoQ5DVXhZHaX4TrR5f&_nc_zt=23&_nc_ht=scontent.fudi1-1.fna&_nc_gid=D8ClPkZgmt_HtMRLiUDrqg&oh=00_AfEnCJvHN2a5oiYyTeSsGj58HemDRqprdBi-8BOLrbXOgw&oe=67F8FD8F"
+                      src={promoçao2}
                       alt=""
                     />
                   </SwiperSlide>
@@ -167,14 +173,14 @@ export default function Slider2() {
               <div className="hidden sm:flex justify-center gap-8" data-aos="zoom-in-down" data-aos-delay="800">
                 <div className="flex items-center relative">
                   <img
-                    src="https://scontent.fudi1-1.fna.fbcdn.net/v/t39.30808-6/487070403_1252807026845855_4852960794209659916_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF4SoMYtkEtK-oBDcfzDrjs6_H0LPd02a3r8fQs93TZrZg9q1gZ9VI34qkoyR7DFnJJ4ie60Vx4ZjeU4IJiSJnq&_nc_ohc=9B0SnXst_jAQ7kNvwF5enCb&_nc_oc=AdlC_bduoouQ95iCOZH_gcfJ-9SdbIc7BZEhT_U1LC3hxs7eEfeBZlg5N1IyvlIuTTecz9UB_qWl6jl1rJ2Vrhmd&_nc_zt=23&_nc_ht=scontent.fudi1-1.fna&_nc_gid=BnZempgfybn1fptSffcrFw&oh=00_AfHBnQg8JW8ODYtkJyXIINapMoVP3suXTVCEB4ztxtkXSQ&oe=67F8FBE7"
+                    src={novidade1}
                     alt=""
                     className="w-full h-[400px] lg:h-[550px] object-contain rounded-lg"
                   />
                 </div>
                 <div className="flex items-center lg:mt-[160px] relative">
                   <img
-                    src="https://scontent.fudi1-2.fna.fbcdn.net/v/t39.30808-6/482260572_1252806893512535_6260073849148144572_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGgAzn18dq08KT6DHrpJkyXXWFShU4-w3JdYVKFTj7DchgfgtezqyUtwbId6UTFG93aQ0C9pUMPL_UOdQq9ul-A&_nc_ohc=em31O2PLMgwQ7kNvwEOC7ms&_nc_oc=Adkpod5A-fzjPxScEOlcm-BN3iTXyazHkeYZW6A7AiqzAmPhU_ydjV3VLVr4AXRmbczqRqudDCLhdrEVbeIza8tL&_nc_zt=23&_nc_ht=scontent.fudi1-2.fna&_nc_gid=ainbQaoZyR0k6C2Wgdn-Qg&oh=00_AfEslOfm20dFJ6IIKU4fv-ZGERCv7EX67J9USliaqOUvSw&oe=67F8D9B6"
+                    src={novidade2}
                     alt=""
                     className="w-full h-[400px] lg:h-[352px] object-contain rounded-lg transition-all duration-300"
                   />
@@ -204,13 +210,13 @@ export default function Slider2() {
                 >
                   <SwiperSlide>
                     <img
-                      src="https://scontent.fudi1-1.fna.fbcdn.net/v/t39.30808-6/487070403_1252807026845855_4852960794209659916_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF4SoMYtkEtK-oBDcfzDrjs6_H0LPd02a3r8fQs93TZrZg9q1gZ9VI34qkoyR7DFnJJ4ie60Vx4ZjeU4IJiSJnq&_nc_ohc=9B0SnXst_jAQ7kNvwF5enCb&_nc_oc=AdlC_bduoouQ95iCOZH_gcfJ-9SdbIc7BZEhT_U1LC3hxs7eEfeBZlg5N1IyvlIuTTecz9UB_qWl6jl1rJ2Vrhmd&_nc_zt=23&_nc_ht=scontent.fudi1-1.fna&_nc_gid=BnZempgfybn1fptSffcrFw&oh=00_AfHBnQg8JW8ODYtkJyXIINapMoVP3suXTVCEB4ztxtkXSQ&oe=67F8FBE7"
+                    src= {novidade1}
                       alt=""
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img
-                      src="https://scontent.fudi1-2.fna.fbcdn.net/v/t39.30808-6/482260572_1252806893512535_6260073849148144572_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGgAzn18dq08KT6DHrpJkyXXWFShU4-w3JdYVKFTj7DchgfgtezqyUtwbId6UTFG93aQ0C9pUMPL_UOdQq9ul-A&_nc_ohc=em31O2PLMgwQ7kNvwEOC7ms&_nc_oc=Adkpod5A-fzjPxScEOlcm-BN3iTXyazHkeYZW6A7AiqzAmPhU_ydjV3VLVr4AXRmbczqRqudDCLhdrEVbeIza8tL&_nc_zt=23&_nc_ht=scontent.fudi1-2.fna&_nc_gid=ainbQaoZyR0k6C2Wgdn-Qg&oh=00_AfEslOfm20dFJ6IIKU4fv-ZGERCv7EX67J9USliaqOUvSw&oe=67F8D9B6"
+                      src={novidade2}
                       alt=""
                     />
                   </SwiperSlide>
