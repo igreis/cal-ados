@@ -1,9 +1,38 @@
-import tenis from '../../assets/mizu.jpg'
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'
 import Card2 from '../../ui/card2';
 import papet from '../../assets/papet.jpeg';
 import Modal from '../../ui/modal';
+
+//Esportivo feminino
+import tenisOlympikusFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisOlympikusFeminino.jpeg'
+import tenisOlympikusFeminino2 from '../../assets/img/adultoFeminino/tenisEsportivo/TenisOlympikusFeminino2.jpeg'
+import tenisMizunoFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisMizunoFeminino.jpeg'
+import tenisUnderFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisUnderFeminino.jpeg'
+import tenisFilaFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisFilaFeminino.jpeg'
+
+
+//Casual feminino
+import tenisCasual from '../../assets/img/adultoFeminino/tenisCasual/TenisCasualFeminino.jpeg'
+import tenisCasual2 from '../../assets/img/adultoFeminino/tenisCasual/TenisCasualFeminino2.jpeg'
+import tenisCasual3 from '../../assets/img/adultoFeminino/tenisCasual/TenisCasualFeminino3.jpeg'
+import tenisRamarin from '../../assets/img/adultoFeminino/tenisCasual/TenisRamarimCasual.jpeg'
+
+
+//Esportivo Masculino
+import tenisAdidas from '../../assets/img/adultoMasculino/tenisEsportivo/TenisAdidasMasculino.jpeg'
+import tenisOlimpykus from '../../assets/img/adultoMasculino/tenisEsportivo/TenisOlympikusMasculino.jpeg'
+import tenisUnder from '../../assets/img/adultoMasculino/tenisEsportivo/TenisUnderMasculino.jpeg'
+import tenisNike from '../../assets/img/adultoMasculino/tenisEsportivo/TenisNikeMasculino.jpeg'
+import tenisMizuno from '../../assets/img/adultoMasculino/tenisEsportivo/TenisMizuno.jpeg'
+
+
+//Casual Masculino
+import tenisCasualMasc from '../../assets/img/adultoMasculino/tenisCasual/TenisCasualMasc.jpeg'
+import tenisOlympCasual from '../../assets/img/adultoMasculino/tenisCasual/TenisOlympCasual.jpeg'
+import tenisQixCasual from '../../assets/img/adultoMasculino/tenisCasual/TenisQixCasual.jpeg'
+import tenisCasualMasc2 from '../../assets/img/adultoMasculino/tenisCasual/TenisCasualMasc2.jpeg'
+
 
 interface Data {
   marca: string,
@@ -13,35 +42,35 @@ interface Data {
 
 const data: Record<string, Record<string, Data[]>> = {
   masculino: {
-    tenis: [
-      { marca: 'Tênis Nike', imageUrl: tenis, preço: 169.90 },
-      { marca: 'nike', imageUrl: tenis, preço: 169.90 },
-      { marca: 'nike', imageUrl: tenis, preço: 169.90 },
-      { marca: 'nike', imageUrl: tenis, preço: 169.90 },
-      { marca: 'nike', imageUrl: tenis, preço: 169.90 },
+    tenisEsportivo: [
+      { marca: 'Tênis Nike', imageUrl: tenisNike, preço: 169.90 },
+      { marca: 'Tênis Olympikus', imageUrl: tenisOlimpykus, preço: 169.90 },
+      { marca: 'Tênis Adidas', imageUrl: tenisMizuno, preço: 169.90 },
+      { marca: 'Tênis Under Armour', imageUrl: tenisUnder, preço: 169.90 },
+      { marca: 'Tênis Fila', imageUrl: tenisAdidas, preço: 169.90 },
     ],
-    sapato: [
-      { marca: 'sapato', imageUrl: papet, preço: 169.90 },
-      { marca: 'sapato', imageUrl: papet, preço: 169.90 },
-      { marca: 'sapato', imageUrl: papet, preço: 169.90 },
-      { marca: 'sapato', imageUrl: papet, preço: 169.90 },
+    tenisCasual: [
+      { marca: 'sapato', imageUrl: tenisCasualMasc, preço: 169.90 },
+      { marca: 'sapato', imageUrl: tenisOlympCasual, preço: 169.90 },
+      { marca: 'sapato', imageUrl: tenisQixCasual, preço: 169.90 },
+      { marca: 'sapato', imageUrl: tenisCasualMasc2, preço: 169.90 },
       { marca: 'sapato', imageUrl: papet, preço: 169.90 },
     ]
   },
   feminino: {
-    sapatilha: [
-      { marca: 'modare', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true', preço: 169.90 },
-      { marca: 'modare', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true', preço: 169.90 },
-      { marca: 'modare', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true', preço: 169.90 },
-      { marca: 'modare', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true', preço: 169.90 },
-      { marca: 'modare', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true', preço: 169.90 },
+    tenisEsportivo: [
+      { marca: 'Tênis Mizuno', imageUrl: tenisMizunoFeminino, preço: 169.90 },
+      { marca: 'Tênis Olympikus', imageUrl: tenisOlympikusFeminino, preço: 169.90 },
+      { marca: 'Tênis Olympikus', imageUrl: tenisOlympikusFeminino2, preço: 169.90 },
+      { marca: 'Tênis Under Armour', imageUrl: tenisUnderFeminino, preço: 169.90 },
+      { marca: 'Tênis Fila', imageUrl: tenisFilaFeminino, preço: 169.90 },
     ],
-    tenis: [
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
+    tenisCasual: [
+      { marca: 'nike', imageUrl: tenisCasual, preço: 169.90 },
+      { marca: 'nike', imageUrl: tenisCasual2, preço: 169.90 },
+      { marca: 'nike', imageUrl: tenisCasual3, preço: 169.90 },
+      { marca: 'nike', imageUrl: tenisRamarin, preço: 169.90 },
+
     ]
   },
 };
@@ -79,11 +108,17 @@ export const Adulto = () => {
 
   return (
     <section id="adulto" className=" bg-white py-4 relative mt-[10px]" >
-      <div className="relative w-fit mx-auto text-center mb-2 mt-[10px]" data-aos="fade-up">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        viewport={{ once: true, amount: 0.5 }} // 'once' faz a animação rodar só 1 vez
+      >
+      <div className="relative w-fit mx-auto text-center mb-2 mt-[10px]" >
         <h2 className="text-3xl text-black font-bold">ADULTO</h2>
         <div className="absolute left-[10%] bottom-0 w-[80%] h-[1px] bg-black" data-aos="zoom-in"></div>
       </div>
-
+      
 
       <style>
         {`
@@ -101,7 +136,7 @@ export const Adulto = () => {
       </style>
 
       {/* Botões de seleção de gênero */}
-      <div className="flex flex-col items-center space-y-2 mb-10" data-aos="fade-up">
+      <div className="flex flex-col items-center space-y-2 mb-10">
         <label htmlFor="gender-group" className="text-sm font-medium text-gray-700">
           Selecione o gênero:
         </label>
@@ -121,32 +156,19 @@ export const Adulto = () => {
         </div>
       </div>
 
+      </motion.div>
       <div className="md:max-w-[75%] sm:max-w-[85%] max-w-[95%] mx-auto">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: {
-                duration: 0.6,
-                ease: "easeOut",
-                staggerChildren: 0.15
-              }
-            }
-          }}
-        >
+        
           <div >
-            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tênis' />
+            <Card2 data={filteredData.tenisEsportivo} onClickModal={openModal} titulo='Tênis Esportivo' />
           </div>
           <div >
-            <Card2 data={filteredData.sapato || null} onClickModal={openModal} titulo='Sapato' />
+            <Card2 data={filteredData.tenisCasual || null} onClickModal={openModal} titulo='Tênis Casual' />
           </div>
-        </motion.div>
+          <div >
+            <Card2 data={filteredData.sapatilha || null} onClickModal={openModal} titulo='Sapatilha' />
+          </div>
       </div>
-
       {/* Modal */}
       {selectedProduct && (
         <Modal isOpen={isModalOpen} product={selectedProduct} onClose={closeModal} />

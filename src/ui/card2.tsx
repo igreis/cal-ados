@@ -36,10 +36,16 @@ export default function Card2({ data, onClickModal, titulo }: CardProps) {
 
   return (
     <div className="bg-white">
-      <div className="flex items-center mb-4">
+      <motion.div
+        className="flex items-center mb-4"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        viewport={{ once: true, amount: 0.5 }} // 'once' faz a animação rodar só 1 vez
+      >
         <h1 className="text-3xl font-bold text-black">{titulo}</h1>
         <div className="h-0.5 bg-black w-[20%] ml-4" />
-      </div>
+      </motion.div>
       <h2 className="sr-only">Products</h2>
       <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5 mb-8">
         {data.map((product, index) => (
@@ -56,7 +62,7 @@ export default function Card2({ data, onClickModal, titulo }: CardProps) {
             }}
           >
             <div
-              className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 relative group"
+              className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg relative group"
               onClick={() => onClickModal(product)}
             >
               <img
