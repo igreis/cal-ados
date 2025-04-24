@@ -6,16 +6,16 @@ import Modal from '../../ui/modal';
 //Esportivo feminino
 import tenisOlympikusFeminino2 from '../../assets/img/adultoFeminino/tenisEsportivo/TenisOlympikusFeminino2.jpeg'
 import tenisMizunoFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisMizunoFeminino.jpeg'
-import tenisUnderFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisUnderFeminino.jpeg'
 import tenisFilaFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisFilaFeminino.jpeg'
 import tenisNikeFem from '../../assets/img/adultoFeminino/tenisEsportivo/tenisNikeFem.jpg'
-
+import tenisUnderFem from '../../assets/img/adultoFeminino/tenisEsportivo/tenisUnderFem.jpg'
 
 //Casual feminino
 import tenisCasual from '../../assets/img/adultoFeminino/tenisCasual/TenisCasualFeminino.jpeg'
 import tenisCasual2 from '../../assets/img/adultoFeminino/tenisCasual/TenisCasualFeminino2.jpeg'
 import tenisCasual3 from '../../assets/img/adultoFeminino/tenisCasual/TenisCasualFeminino3.jpeg'
 import tenisRamarin from '../../assets/img/adultoFeminino/tenisCasual/TenisRamarimCasual.jpeg'
+import tenisVest from '../../assets/img/adultoFeminino/tenisCasual/tenisVertsFem.jpeg'
 
 //papet feminino
 import papetMississipi from '../../assets/img/adultoFeminino/papet/papetMississipi.jpg'
@@ -24,12 +24,25 @@ import papetVizano from '../../assets/img/adultoFeminino/papet/papetVizano.jpg'
 import papetBeiraRio from '../../assets/img/adultoFeminino/papet/papetBeiraRio.jpg'
 import papet from '../../assets/img/adultoFeminino/papet/papet2.jpg'
 
+//rasteirinha feminina
+import rasteirinhaMoleca from '../../assets/img/adultoFeminino/rasteirinha/rasteirinhaMoleca.jpg'
+import rasteirinhaCecilia from '../../assets/img/adultoFeminino/rasteirinha/rasteirinhaCecilia.jpg'
+import rasteirinhaBeiraRio from '../../assets/img/adultoFeminino/rasteirinha/rasteirinhaBeiraRio.jpg'
+import rasteirinhaMississipi from '../../assets/img/adultoFeminino/rasteirinha/rasteirinhaMississipi.jpg'
+import rasteirinhaRamarim from '../../assets/img/adultoFeminino/rasteirinha/rasteirinhaRamarim.jpg'
+
+//sandalia feminina
+import sandaliaMoleca from '../../assets/img/adultoFeminino/sandalia/sandaliaMoleca.jpg'
+import sandaliaMississipi from '../../assets/img/adultoFeminino/sandalia/sandaliaMississipi.jpg'
+import sandaliaRamarim from '../../assets/img/adultoFeminino/sandalia/sandaliaRamarim.jpg'
+import sandaliaPrinces from '../../assets/img/adultoFeminino/sandalia/sandaliaPrinces.jpg'
+import sandaliaAMoleca from '../../assets/img/adultoFeminino/sandalia/sandaliaAMoleca.jpg'
 
 //Esportivo Masculino
 import tenisOlimpykus from '../../assets/img/adultoMasculino/tenisEsportivo/TenisOlympikusMasculino.jpeg'
 import tenisUnder from '../../assets/img/adultoMasculino/tenisEsportivo/TenisUnderMasculino.jpeg'
 import tenisNike from '../../assets/img/adultoMasculino/tenisEsportivo/TenisNikeMasculino.jpeg'
-import tenisMizuno from '../../assets/img/adultoMasculino/tenisEsportivo/TenisMizuno.jpeg'
+import tenisMizuno from '../../assets/img/adultoMasculino/tenisEsportivo/tenisMizunoMasc.jpeg'
 import tenisAdidasMasc from '../../assets/img/adultoMasculino/tenisEsportivo/tenisAdidasMasc.jpg'
 
 
@@ -37,7 +50,8 @@ import tenisAdidasMasc from '../../assets/img/adultoMasculino/tenisEsportivo/ten
 import tenisCasualMasc from '../../assets/img/adultoMasculino/tenisCasual/TenisCasualMasc.jpeg'
 import tenisOlympCasual from '../../assets/img/adultoMasculino/tenisCasual/TenisOlympCasual.jpeg'
 import tenisQixCasual from '../../assets/img/adultoMasculino/tenisCasual/TenisQixCasual.jpeg'
-import tenisCasualMasc2 from '../../assets/img/adultoMasculino/tenisCasual/TenisCasualMasc2.jpeg'
+import tenisRedikal from '../../assets/img/adultoMasculino/tenisCasual/tenisRedikal.jpg'
+import tenisArk from '../../assets/img/adultoMasculino/tenisCasual/tenisArkMasc.jpg'
 
 
 interface Data {
@@ -59,8 +73,8 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'sapato', imageUrl: tenisCasualMasc, preço: 169.90 },
       { marca: 'sapato', imageUrl: tenisOlympCasual, preço: 169.90 },
       { marca: 'sapato', imageUrl: tenisQixCasual, preço: 169.90 },
-      { marca: 'sapato', imageUrl: tenisCasualMasc2, preço: 169.90 },
-      { marca: 'sapato', imageUrl: papet, preço: 169.90 },
+      { marca: 'sapato', imageUrl: tenisRedikal, preço: 169.90 },
+      { marca: 'sapato', imageUrl: tenisArk, preço: 169.90 },
     ]
   },
   feminino: {
@@ -68,7 +82,7 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'Tênis Mizuno', imageUrl: tenisMizunoFeminino, preço: 169.90 },
       { marca: 'Tênis Nike', imageUrl: tenisNikeFem, preço: 169.90 },
       { marca: 'Tênis Olympikus', imageUrl: tenisOlympikusFeminino2, preço: 169.90 },
-      { marca: 'Tênis Under Armour', imageUrl: tenisUnderFeminino, preço: 169.90 },
+      { marca: 'Tênis Under Armour', imageUrl: tenisUnderFem, preço: 169.90 },
       { marca: 'Tênis Fila', imageUrl: tenisFilaFeminino, preço: 169.90 },
     ],
     tenisCasual: [
@@ -76,6 +90,7 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'nike', imageUrl: tenisCasual2, preço: 169.90 },
       { marca: 'nike', imageUrl: tenisCasual3, preço: 169.90 },
       { marca: 'nike', imageUrl: tenisRamarin, preço: 169.90 },
+      { marca: 'nike', imageUrl: tenisVest, preço: 169.90 },
 
     ],
     papet: [
@@ -84,6 +99,20 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'Papet Beira Rio', imageUrl: papetBeiraRio, preço: 169.90 },
       { marca: 'Papet Mississipi', imageUrl: papetMississipi, preço: 169.90 },
       { marca: 'Papet', imageUrl: papet, preço: 169.90 },
+    ],
+    rasteirinha: [
+      { marca: 'Papet Moleca', imageUrl: rasteirinhaBeiraRio, preço: 169.90 },
+      { marca: 'Papet Vizano', imageUrl: rasteirinhaCecilia, preço: 169.90 },
+      { marca: 'Papet Beira Rio', imageUrl: rasteirinhaMississipi, preço: 169.90 },
+      { marca: 'Papet Mississipi', imageUrl: rasteirinhaRamarim, preço: 169.90 },
+      { marca: 'Papet', imageUrl: rasteirinhaMoleca, preço: 169.90 },
+    ],
+    sandalia: [
+      { marca: 'Papet Moleca', imageUrl: sandaliaMoleca, preço: 169.90 },
+      { marca: 'Papet Vizano', imageUrl: sandaliaMississipi, preço: 169.90 },
+      { marca: 'Papet Beira Rio', imageUrl: sandaliaRamarim, preço: 169.90 },
+      { marca: 'Papet Mississipi', imageUrl: sandaliaPrinces, preço: 169.90 },
+      { marca: 'Papet', imageUrl: sandaliaAMoleca, preço: 169.90 },
     ]
   },
 };
@@ -180,6 +209,12 @@ export const Adulto = () => {
           </div>
           <div >
             <Card2 data={filteredData.papet || null} onClickModal={openModal} titulo='Papet' />
+          </div>
+          <div >
+            <Card2 data={filteredData.rasteirinha || null} onClickModal={openModal} titulo='Rasteirinha' />
+          </div>
+          <div >
+            <Card2 data={filteredData.sandalia || null} onClickModal={openModal} titulo='Sandalia' />
           </div>
       </div>
       {/* Modal */}

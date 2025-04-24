@@ -2,15 +2,16 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-// Import Swiper styles
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import adidas from '../../assets/adidas.png'
-import nike from '../../assets/nike-logo-47A65A59D5-seeklogo.com.png'
-import ol from '../../assets/olympikus.png'
-import mizuno from '../../assets/mizuno-seeklogo.png'
-
+import adidas from '../../assets/img/marcas/adidas.png'
+import nike from '../../assets/img/marcas/nike-logo-47A65A59D5-seeklogo.com.png'
+import ol from '../../assets/img/marcas/olympikus-seeklogo.png'
+import mizuno from '../../assets/img/marcas/mizuno-seeklogo.png'
+import ramarim from '../../assets/img/marcas/ramarim-seeklogo.png'
+import moleca from '../../assets/img/marcas/moleca-seeklogo.png'
 // Import team logos (you would replace these with actual imported images)
 
 
@@ -23,13 +24,12 @@ interface TeamLogo {
 
 export const BrandsCarousel: React.FC = () => {
   const teamLogos: TeamLogo[] = [
+    { src: adidas, alt: 'Italy', delay: 500 },
     { src: mizuno, alt: 'Argentina', delay: 0 },
     { src: nike, alt: 'Chile', delay: 200 },
     { src: ol, alt: 'Peru', delay: 300 },
-    { src: adidas, alt: 'Italy', delay: 500 },
-    { src: adidas, alt: 'Italy', delay: 500 },
-    { src: adidas, alt: 'Italy', delay: 500 },
-    { src: adidas, alt: 'Italy', delay: 500 },
+    { src: ramarim, alt: 'Italy', delay: 500 },
+    { src: moleca, alt: 'Italy', delay: 500 },
     { src: adidas, alt: 'Italy', delay: 500 },
   ];
 
@@ -79,7 +79,7 @@ export const BrandsCarousel: React.FC = () => {
             <img 
               src={logo.src} 
               alt={logo.alt} 
-              className="md:max-h-15 md:max-w-15 max-h-14 max-w-14 object-contain transition-transform duration-300"
+              className="md:max-h-15 md:max-w-15 max-h-14 max-w-14 object-contain transition-transform duration-300 min-h-[28px]"
               data-aos="fade-up" data-aos-delay= {logo.delay}
             />
           </SwiperSlide>
