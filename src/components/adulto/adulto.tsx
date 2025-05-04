@@ -38,6 +38,18 @@ import sandaliaRamarim from '../../assets/img/adultoFeminino/sandalia/sandaliaRa
 import sandaliaPrinces from '../../assets/img/adultoFeminino/sandalia/sandaliaPrinces.jpg'
 import sandaliaAMoleca from '../../assets/img/adultoFeminino/sandalia/sandaliaAMoleca.jpg'
 
+//sandaliaCubana
+import sandaliaCubanaVizzano from '../../assets/img/adultoFeminino/sandaliaCubana/sandaliaCubanaViz.jpeg'
+import sandaliaCubanaConfort from '../../assets/img/adultoFeminino/sandaliaCubana/sandaliaCubanaConfort.jpeg'
+import sandaliaCubanaMississipi from '../../assets/img/adultoFeminino/sandaliaCubana/sandaliaCubanaMissi.jpeg'
+
+//sapatilha feminina
+import sapatilhaMoleca from '../../assets/img/adultoFeminino/sapatilha/sapatilhaMol.jpeg'
+import sapatilhaVizzano from '../../assets/img/adultoFeminino/sapatilha/sapatilhaViz.jpeg'
+import sapatilhaSantinelli from '../../assets/img/adultoFeminino/sapatilha/sapatilhaSant.jpeg'
+import sapatilha from '../../assets/img/adultoFeminino/sapatilha/sapatilha.jpeg'
+import sapatilha2 from '../../assets/img/adultoFeminino/sapatilha/sapatilha2.jpeg'
+
 //Esportivo Masculino
 import tenisOlimpykus from '../../assets/img/adultoMasculino/tenisEsportivo/TenisOlympikusMasculino.jpeg'
 import tenisUnder from '../../assets/img/adultoMasculino/tenisEsportivo/TenisUnderMasculino.jpeg'
@@ -52,6 +64,27 @@ import tenisOlympCasual from '../../assets/img/adultoMasculino/tenisCasual/Tenis
 import tenisQixCasual from '../../assets/img/adultoMasculino/tenisCasual/TenisQixCasual.jpeg'
 import tenisRedikal from '../../assets/img/adultoMasculino/tenisCasual/tenisRedikal.jpg'
 import tenisArk from '../../assets/img/adultoMasculino/tenisCasual/tenisArkMasc.jpg'
+
+//sapato masculino
+import sapatoMasc from '../../assets/img/adultoMasculino/sapato/sapatoMasc.jpeg'
+import sapatoMasc2 from '../../assets/img/adultoMasculino/sapato/sapatoMasc2.jpeg'
+import sapatoRafarillo from '../../assets/img/adultoMasculino/sapato/sapatoRafarilloMasc.jpeg'
+import sapatoFerraccini from '../../assets/img/adultoMasculino/sapato/sapatoFerracciniMasc.jpeg'
+import sapatoBerteli from '../../assets/img/adultoMasculino/sapato/sapatoBertelliMasc.jpeg'
+
+//sapatenis masculino
+import sapatenisMasc from '../../assets/img/adultoMasculino/sapatenis/sapatenisMasc.jpeg'
+import sapatenisFerraciniMasc from '../../assets/img/adultoMasculino/sapatenis/sapatenisFerraciniMasc.jpeg'
+import sapatenisPegadaMasc from '../../assets/img/adultoMasculino/sapatenis/sapatenisPegadaMasc.jpeg'
+import sapatenisPgdMasc from '../../assets/img/adultoMasculino/sapatenis/sapatenisPgdMasc.jpeg'
+import sapatenisFireWaveMasc from '../../assets/img/adultoMasculino/sapatenis/sapatenisFireWaveMasc.jpeg'
+
+//coturno masculino
+import CoturnoMasc from '../../assets/img/adultoMasculino/coturno/CoturnoMasc.jpeg'
+import Coturno2Masc from '../../assets/img/adultoMasculino/coturno/Coturno2Masc.jpeg'
+import CoturnoCatMasc from '../../assets/img/adultoMasculino/coturno/CoturnoCatMasc.jpeg'
+import CoturnoCaterpillarMasc from '../../assets/img/adultoMasculino/coturno/CoturnoCaterpillarMasc.jpeg'
+import CoturnoMacbootMasc from '../../assets/img/adultoMasculino/coturno/CoturnoMacbootMasc.jpeg'
 
 
 interface Data {
@@ -75,7 +108,28 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'sapato', imageUrl: tenisQixCasual, preço: 169.90 },
       { marca: 'sapato', imageUrl: tenisRedikal, preço: 169.90 },
       { marca: 'sapato', imageUrl: tenisArk, preço: 169.90 },
-    ]
+    ],
+    sapato: [
+      { marca: 'sapato', imageUrl: sapatoMasc, preço: 169.90 },
+      { marca: 'sapato', imageUrl: sapatoMasc2, preço: 169.90 },
+      { marca: 'sapato', imageUrl: sapatoRafarillo, preço: 169.90 },
+      { marca: 'sapato', imageUrl: sapatoFerraccini, preço: 169.90 },
+      { marca: 'sapato', imageUrl: sapatoBerteli, preço: 169.90 },
+    ],
+    sapatenis: [
+      { marca: 'sapato', imageUrl: sapatenisMasc, preço: 169.90 },
+      { marca: 'sapato', imageUrl: sapatenisFerraciniMasc, preço: 169.90 },
+      { marca: 'sapato', imageUrl: sapatenisPegadaMasc, preço: 169.90 },
+      { marca: 'sapato', imageUrl: sapatenisPgdMasc, preço: 169.90 },
+      { marca: 'sapato', imageUrl: sapatenisFireWaveMasc, preço: 169.90 },
+    ],
+    coturno: [
+      { marca: 'sapato', imageUrl: CoturnoMasc, preço: 169.90 },
+      { marca: 'sapato', imageUrl: Coturno2Masc, preço: 169.90 },
+      { marca: 'sapato', imageUrl: CoturnoCatMasc, preço: 169.90 },
+      { marca: 'sapato', imageUrl: CoturnoCaterpillarMasc, preço: 169.90 },
+      { marca: 'sapato', imageUrl: CoturnoMacbootMasc, preço: 169.90 },
+    ],
   },
   feminino: {
     tenisEsportivo: [
@@ -113,6 +167,18 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'Papet Beira Rio', imageUrl: sandaliaRamarim, preço: 169.90 },
       { marca: 'Papet Mississipi', imageUrl: sandaliaPrinces, preço: 169.90 },
       { marca: 'Papet', imageUrl: sandaliaAMoleca, preço: 169.90 },
+    ],
+    sandaliaCubana: [
+      { marca: 'Papet Moleca', imageUrl: sandaliaCubanaVizzano, preço: 169.90 },
+      { marca: 'Papet Vizano', imageUrl: sandaliaCubanaConfort, preço: 169.90 },
+      { marca: 'Papet Beira Rio', imageUrl: sandaliaCubanaMississipi, preço: 169.90 },
+    ],
+    sapatilha: [
+      { marca: 'Papet Moleca', imageUrl: sapatilhaMoleca, preço: 169.90 },
+      { marca: 'Papet Vizano', imageUrl: sapatilhaVizzano, preço: 169.90 },
+      { marca: 'Papet Beira Rio', imageUrl: sapatilhaSantinelli, preço: 169.90 },
+      { marca: 'Papet Mississipi', imageUrl: sapatilha, preço: 169.90 },
+      { marca: 'Papet', imageUrl: sapatilha2, preço: 169.90 },
     ]
   },
 };
@@ -215,6 +281,21 @@ export const Adulto = () => {
           </div>
           <div >
             <Card2 data={filteredData.sandalia || null} onClickModal={openModal} titulo='Sandalia' />
+          </div>
+          <div >
+            <Card2 data={filteredData.sapatilha || null} onClickModal={openModal} titulo='Sapatilha' />
+          </div>
+          <div >
+            <Card2 data={filteredData.sandaliaCubana || null} onClickModal={openModal} titulo='Sandalia Cubana' />
+          </div>
+          <div >
+            <Card2 data={filteredData.sapato || null} onClickModal={openModal} titulo='Sapato' />
+          </div>
+          <div >
+            <Card2 data={filteredData.sapatenis || null} onClickModal={openModal} titulo='Sapatenis' />
+          </div>
+          <div >
+            <Card2 data={filteredData.coturno || null} onClickModal={openModal} titulo='coturno' />
           </div>
       </div>
       {/* Modal */}
