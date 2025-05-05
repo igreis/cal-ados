@@ -42,6 +42,8 @@ import sandaliaAMoleca from '../../assets/img/adultoFeminino/sandalia/sandaliaAM
 import sandaliaCubanaVizzano from '../../assets/img/adultoFeminino/sandaliaCubana/sandaliaCubanaViz.jpeg'
 import sandaliaCubanaConfort from '../../assets/img/adultoFeminino/sandaliaCubana/sandaliaCubanaConfort.jpeg'
 import sandaliaCubanaMississipi from '../../assets/img/adultoFeminino/sandaliaCubana/sandaliaCubanaMissi.jpeg'
+import sandaliaCubanaDakota from '../../assets/img/adultoFeminino/sandaliaCubana/sandaliaCubanaDakota.jpeg'
+import sandaliaCubanaMoleca from '../../assets/img/adultoFeminino/sandaliaCubana/sandaliaCubanaMoleca.jpeg'
 
 //sapatilha feminina
 import sapatilhaMoleca from '../../assets/img/adultoFeminino/sapatilha/sapatilhaMol.jpeg'
@@ -49,6 +51,13 @@ import sapatilhaVizzano from '../../assets/img/adultoFeminino/sapatilha/sapatilh
 import sapatilhaSantinelli from '../../assets/img/adultoFeminino/sapatilha/sapatilhaSant.jpeg'
 import sapatilha from '../../assets/img/adultoFeminino/sapatilha/sapatilha.jpeg'
 import sapatilha2 from '../../assets/img/adultoFeminino/sapatilha/sapatilha2.jpeg'
+
+//sapato feminino
+import sapatoFeminino from '../../assets/img/adultoFeminino/sapato/sapatoFeminino.jpeg'
+import sapatoVizanno from '../../assets/img/adultoFeminino/sapato/sapatoVizanno.jpeg'
+import sapatoBeiraRio from '../../assets/img/adultoFeminino/sapato/sapatoBeiraRio.jpeg'
+import sapatoMariota from '../../assets/img/adultoFeminino/sapato/sapatoMariota.jpeg'
+import sapatoSantinelli from '../../assets/img/adultoFeminino/sapato/sapatoSantinelli.jpeg'
 
 //Esportivo Masculino
 import tenisOlimpykus from '../../assets/img/adultoMasculino/tenisEsportivo/TenisOlympikusMasculino.jpeg'
@@ -172,6 +181,8 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'Papet Moleca', imageUrl: sandaliaCubanaVizzano, preço: 169.90 },
       { marca: 'Papet Vizano', imageUrl: sandaliaCubanaConfort, preço: 169.90 },
       { marca: 'Papet Beira Rio', imageUrl: sandaliaCubanaMississipi, preço: 169.90 },
+      { marca: 'Papet Mississipi', imageUrl: sandaliaCubanaDakota, preço: 169.90 },
+      { marca: 'Papet', imageUrl: sandaliaCubanaMoleca, preço: 169.90 },
     ],
     sapatilha: [
       { marca: 'Papet Moleca', imageUrl: sapatilhaMoleca, preço: 169.90 },
@@ -179,7 +190,14 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'Papet Beira Rio', imageUrl: sapatilhaSantinelli, preço: 169.90 },
       { marca: 'Papet Mississipi', imageUrl: sapatilha, preço: 169.90 },
       { marca: 'Papet', imageUrl: sapatilha2, preço: 169.90 },
-    ]
+    ],
+    sapato: [
+      { marca: 'Papet Moleca', imageUrl: sapatoFeminino, preço: 169.90 },
+      { marca: 'Papet Vizano', imageUrl: sapatoVizanno, preço: 169.90 },
+      { marca: 'Papet Beira Rio', imageUrl: sapatoBeiraRio, preço: 169.90 },
+      { marca: 'Papet Mississipi', imageUrl: sapatoMariota, preço: 169.90 },
+      { marca: 'Papet', imageUrl: sapatoSantinelli, preço: 169.90 },
+    ],
   },
 };
 
@@ -296,6 +314,9 @@ export const Adulto = () => {
           </div>
           <div >
             <Card2 data={filteredData.coturno || null} onClickModal={openModal} titulo='coturno' />
+          </div>
+          <div >
+            <Card2 data={filteredData.sapatilha || null} onClickModal={openModal} titulo='Sapatilha' />
           </div>
       </div>
       {/* Modal */}
