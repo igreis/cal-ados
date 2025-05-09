@@ -95,6 +95,13 @@ import CoturnoCatMasc from '../../assets/img/adultoMasculino/coturno/CoturnoCatM
 import CoturnoCaterpillarMasc from '../../assets/img/adultoMasculino/coturno/CoturnoCaterpillarMasc.jpeg'
 import CoturnoMacbootMasc from '../../assets/img/adultoMasculino/coturno/CoturnoMacbootMasc.jpeg'
 
+//chuteira mascrulina
+import chuteiraNike from '../../assets/img/adultoMasculino/chuteira/chuteiraNike.jpeg'
+import chuteiraAdidas from '../../assets/img/adultoMasculino/chuteira/chuteiraAdidas.jpeg'
+import chuteiraPenalty from '../../assets/img/adultoMasculino/chuteira/chuteiraPenalty.jpeg'
+import chuteiraToper from '../../assets/img/adultoMasculino/chuteira/chuteiraToper.jpeg'
+import chuteiraUmbro from '../../assets/img/adultoMasculino/chuteira/chuteiraUmbro.jpeg'
+
 
 interface Data {
   marca: string,
@@ -105,11 +112,11 @@ interface Data {
 const data: Record<string, Record<string, Data[]>> = {
   masculino: {
     tenisEsportivo: [
-      { marca: 'Tênis Nike', imageUrl: tenisNike, preço: 169.90 },
+      { marca: 'Tênis Nike Revolution 7', imageUrl: tenisNike, preço: 559.90 },
       { marca: 'Tênis Olympikus', imageUrl: tenisOlimpykus, preço: 169.90 },
-      { marca: 'Tênis Mizuno', imageUrl: tenisMizuno, preço: 169.90 },
-      { marca: 'Tênis Under Armour', imageUrl: tenisUnder, preço: 169.90 },
-      { marca: 'Tênis Adidas', imageUrl: tenisAdidasMasc, preço: 169.90 },
+      { marca: 'Tênis Mizuno Wave Frontier 15', imageUrl: tenisMizuno, preço: 899.90 },
+      { marca: 'Tênis Under Armour Great', imageUrl: tenisUnder, preço: 369.90 },
+      { marca: 'Tênis Adidas Duramo SL', imageUrl: tenisAdidasMasc, preço: 559.90 },
     ],
     tenisCasual: [
       { marca: 'sapato', imageUrl: tenisCasualMasc, preço: 169.90 },
@@ -138,6 +145,13 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'sapato', imageUrl: CoturnoCatMasc, preço: 169.90 },
       { marca: 'sapato', imageUrl: CoturnoCaterpillarMasc, preço: 169.90 },
       { marca: 'sapato', imageUrl: CoturnoMacbootMasc, preço: 169.90 },
+    ],
+    chuteira: [
+      { marca: 'Chuteira Nike Vapor 15 Society', imageUrl: chuteiraNike, preço: 599.90 },
+      { marca: 'Chuteira Adidas Predator Campo', imageUrl: chuteiraAdidas, preço: 599.90 },
+      { marca: 'Chuteira Penalty Max 1000 Futsal', imageUrl: chuteiraPenalty, preço: 449.90 },
+      { marca: 'Chuteira Topper Maestro Campo', imageUrl: chuteiraToper, preço: 349.90 },
+      { marca: 'Chuteira Umbro Class Society', imageUrl: chuteiraUmbro, preço: 169.90 },
     ],
   },
   feminino: {
@@ -317,6 +331,9 @@ export const Adulto = () => {
           </div>
           <div >
             <Card2 data={filteredData.sapatilha || null} onClickModal={openModal} titulo='Sapatilha' />
+          </div>
+          <div >
+            <Card2 data={filteredData.chuteira || null} onClickModal={openModal} titulo='chuteira' />
           </div>
       </div>
       {/* Modal */}
