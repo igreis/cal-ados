@@ -4,6 +4,20 @@ import Modal from '../../ui/modal';
 import papet from '../../assets/papet.jpeg';
 import { motion } from 'framer-motion'
 
+//tenis infantil
+import tenisBotinhoInfantil from '../../assets/img/infantilMasculino/tenis/tenisBotinhoInfantil.jpg'
+import tenisDokiInfantil from '../../assets/img/infantilMasculino/tenis/tenisDokiInfantil.jpg'
+import tenisOlympikusInfantil2 from '../../assets/img/infantilMasculino/tenis/tenisOlympikusInfantil2.jpg'
+import tenisOlympikusInfantil from '../../assets/img/infantilMasculino/tenis/tenisOlympikusInfantil.jpg'
+import tenisMolekinhoInfantil from '../../assets/img/infantilMasculino/tenis/tenisMolekinhoInfantil.jpg'
+
+//sandalia infantil
+import sandaliaGrendeneInfantil from '../../assets/img/infantilMasculino/sandalia/sandaliaGrendeneInfantil.jpg'
+import sandaliaMolequinhoInfantil from '../../assets/img/infantilMasculino/sandalia/sandaliaMolequinhoInfantil.jpg'
+import sandaliaPgdInfantil from '../../assets/img/infantilMasculino/sandalia/sandaliaPgdInfantil.jpg'
+import crocsBoaOndaInfantil from '../../assets/img/infantilMasculino/sandalia/crocsBoaOndaInfantil.jpg'
+import crocsWordColorsInfantil from '../../assets/img/infantilMasculino/sandalia/crocsWordColorsInfatil.jpg'
+
 interface Data {
   marca: string;
   imageUrl: string;
@@ -13,29 +27,21 @@ interface Data {
 const data: Record<string, Record<string, Data[]>> = {
   masculino: {
     tenis: [
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      // Adicione outros produtos se necessário
+      { marca: 'Têns Botinho', imageUrl: tenisBotinhoInfantil, preço: 119.90 },
+      { marca: 'Tênis Dok', imageUrl: tenisDokiInfantil, preço: 139.90 },
+      { marca: 'Tênis Olympikus Stream', imageUrl: tenisOlympikusInfantil2, preço: 229.90 },
+      { marca: 'Tênis Olympikus Versa', imageUrl: tenisOlympikusInfantil, preço: 319.90 },
+      { marca: 'TênisMolekinho', imageUrl: tenisMolekinhoInfantil, preço: 139.90 },
     ],
-    sapato: [
-      { marca: 'sapato', imageUrl: papet, preço: 169.90 },
-      { marca: 'sapato', imageUrl: papet, preço: 169.90 },
-      { marca: 'sapato', imageUrl: papet, preço: 169.90 },
-      { marca: 'sapato', imageUrl: papet, preço: 169.90 },
-      { marca: 'sapato', imageUrl: papet, preço: 169.90 },
+    sandalia: [ 
+      { marca: 'Sandália Grendene Kids', imageUrl: sandaliaGrendeneInfantil, preço: 99.90 },
+      { marca: 'Sandália Molekinho', imageUrl: sandaliaMolequinhoInfantil, preço: 99.90 },
+      { marca: 'Sandália PGD', imageUrl: sandaliaPgdInfantil, preço: 159.90 },
+      { marca: 'Crocs Boa Onda', imageUrl: crocsBoaOndaInfantil, preço: 79.90 },
+      { marca: 'Crocs Word Colors', imageUrl: crocsWordColorsInfantil, preço: 69.90 },
     ]
   },
   feminino: {
-    sapatilha: [
-      { marca: 'modare', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true', preço: 169.90 },
-      { marca: 'modare', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true', preço: 169.90 },
-      { marca: 'modare', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true', preço: 169.90 },
-      { marca: 'modare', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true', preço: 169.90 },
-      { marca: 'modare', imageUrl: 'https://mizunobr.vtexassets.com/arquivos/ids/237844-800-800?v=638367866833700000&width=800&height=800&aspect=true', preço: 169.90 },
-    ],
     tenis: [
       { marca: 'nike', imageUrl: papet, preço: 169.90 },
       { marca: 'nike', imageUrl: papet, preço: 169.90 },
@@ -125,17 +131,12 @@ export const Infantil = () => {
       </motion.div>
       <div className="md:max-w-[75%] sm:max-w-[85%] max-w-[95%] mx-auto">
           <div>
-            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tênis' />
-          </div>
-          <div id='tenisInfantil'>
-            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />
+            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='tenis' />
           </div>
           <div>
-            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />
+            <Card2 data={filteredData.sandalia} onClickModal={openModal} titulo='sandalia' />
           </div>
-          <div>
-            <Card2 data={filteredData.tenis} onClickModal={openModal} titulo='Tẽnis' />
-          </div>
+          
       </div>
 
       {/* Modal */}
