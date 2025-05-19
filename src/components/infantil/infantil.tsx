@@ -26,11 +26,11 @@ import mocassimMolekinhoInfantil from '../../assets/img/infantilMasculino/social
 import mocassimMolekinhoInfantil2 from '../../assets/img/infantilMasculino/social/mocassimMolekinhoInfantil2.jpg'
 
 //all star
-import allStar from '../../assets/img/infantilMasculino/allStar.jpg'
-import allStar2 from '../../assets/img/infantilMasculino/allStar2.jpg'
-import allStar3 from '../../assets/img/infantilMasculino/allStar3.jpg'
-import allStar4 from '../../assets/img/infantilMasculino/allStar4.jpg'
-import allStar5 from '../../assets/img/infantilMasculino/allStar5.jpg'
+import allStar from '../../assets/img/infantilMasculino/allStart/allStartInfantil.jpg'
+import allStar2 from '../../assets/img/infantilMasculino/allStart/allStartInfantil2.jpg'
+import allStar3 from '../../assets/img/infantilMasculino/allStart/allStartInfantil3.jpg'
+import allStar4 from '../../assets/img/infantilMasculino/allStart/allStartInfantil4.jpg'
+import allStar5 from '../../assets/img/infantilMasculino/allStart/allStartInfantil5.jpg'
 
 interface Data {
   marca: string;
@@ -163,6 +163,12 @@ export const Infantil = () => {
           </div>
           <div>
             <Card2 data={filteredData.sandalia} onClickModal={openModal} titulo='sandalia' />
+          </div>
+          <div>
+            <Card2 data={filteredData.social} onClickModal={openModal} titulo='social' />
+          </div>
+          <div>
+            <Card2 data={filteredData.allStar} onClickModal={openModal} titulo='allStar' />
           </div>
           
       </div>
