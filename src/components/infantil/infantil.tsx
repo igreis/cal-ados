@@ -18,6 +18,20 @@ import sandaliaPgdInfantil from '../../assets/img/infantilMasculino/sandalia/san
 import crocsBoaOndaInfantil from '../../assets/img/infantilMasculino/sandalia/crocsBoaOndaInfantil.jpg'
 import crocsWordColorsInfantil from '../../assets/img/infantilMasculino/sandalia/crocsWordColorsInfatil.jpg'
 
+//social infantil
+import sapatoBertelliInfantil from '../../assets/img/infantilMasculino/social/sapatoBertelliInfantil.jpg'
+import sapatoFearnothiInfantil from '../../assets/img/infantilMasculino/social/sapatoFearnothiInfantil.jpg'
+import sapatoRedMaxInfantil from '../../assets/img/infantilMasculino/social/sapatoRedMaxInfantil.jpg'
+import mocassimMolekinhoInfantil from '../../assets/img/infantilMasculino/social/mocassimMolekinhoInfantil.jpg'
+import mocassimMolekinhoInfantil2 from '../../assets/img/infantilMasculino/social/mocassimMolekinhoInfantil2.jpg'
+
+//all star
+import allStar from '../../assets/img/infantilMasculino/allStar.jpg'
+import allStar2 from '../../assets/img/infantilMasculino/allStar2.jpg'
+import allStar3 from '../../assets/img/infantilMasculino/allStar3.jpg'
+import allStar4 from '../../assets/img/infantilMasculino/allStar4.jpg'
+import allStar5 from '../../assets/img/infantilMasculino/allStar5.jpg'
+
 interface Data {
   marca: string;
   imageUrl: string;
@@ -39,8 +53,22 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'Sandália PGD', imageUrl: sandaliaPgdInfantil, preço: 159.90 },
       { marca: 'Crocs Boa Onda', imageUrl: crocsBoaOndaInfantil, preço: 79.90 },
       { marca: 'Crocs Word Colors', imageUrl: crocsWordColorsInfantil, preço: 69.90 },
-    ]
-  },
+    ],
+    social: [
+      { marca: 'Sapato Bertelli', imageUrl: sapatoBertelliInfantil, preço: 0.00 },
+      { marca: 'Sapato Fearnothi', imageUrl: sapatoFearnothiInfantil, preço: 89.90 },
+      { marca: 'Sapato REDMAX', imageUrl: sapatoRedMaxInfantil, preço: 84.90 },
+      { marca: 'Mocassim Molekinho', imageUrl: mocassimMolekinhoInfantil, preço: 89.90 },
+      { marca: 'Mocassim Molekinho', imageUrl: mocassimMolekinhoInfantil2, preço: 89.90 },
+    ],
+    allStar: [
+      { marca: 'All Star', imageUrl: allStar, preço: 229.90 },
+      { marca: 'All Star', imageUrl: allStar2, preço: 269.90 },
+      { marca: 'All Star', imageUrl: allStar3, preço: 229.90 },
+      { marca: 'All Star', imageUrl: allStar4, preço: 229.90 },
+      { marca: 'All Star', imageUrl: allStar5, preço: 269.90 },
+    ],
+    },
   feminino: {
     tenis: [
       { marca: 'nike', imageUrl: papet, preço: 169.90 },
