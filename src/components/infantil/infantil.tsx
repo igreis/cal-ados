@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Card2 from '../../ui/card2';
 import Modal from '../../ui/modal';
-import papet from '../../assets/papet.jpeg';
 import { motion } from 'framer-motion'
 
 //tenis infantil
@@ -31,6 +30,26 @@ import allStar2 from '../../assets/img/infantilMasculino/allStart/allStartInfant
 import allStar3 from '../../assets/img/infantilMasculino/allStart/allStartInfantil3.jpg'
 import allStar4 from '../../assets/img/infantilMasculino/allStart/allStartInfantil4.jpg'
 import allStar5 from '../../assets/img/infantilMasculino/allStart/allStartInfantil5.jpg'
+
+//sandalia infantil feminino
+import sandaliaEmiliaKids from '../../assets/img/infantilFeminino/sandalia/sandaliaEmiliaKids.jpg'
+import sandaliaGruguiInfantil from '../../assets/img/infantilFeminino/sandalia/sandaliaGruguiInfantil.jpg'
+import sandaliaMolekinhaInfantil from '../../assets/img/infantilFeminino/sandalia/sandaliaMolekinhaInfantil.jpg'
+import sandaliaDakotaInfantil from '../../assets/img/infantilFeminino/sandalia/sandaliaDakotaInfantil.jpg'
+import sandaliaDedinhoNoPeInfantil from '../../assets/img/infantilFeminino/sandalia/sandaliaDedinhoNoPeInfantil.jpg'
+
+//tamanco infantil feminino
+import tamancoDakotaInfantil from '../../assets/img/infantilFeminino/tamanco/tamancoDakotaInfantil.jpg'
+import tamancoMolekinhaInfantil from '../../assets/img/infantilFeminino/tamanco/tamancoMolekinhaInfantil.jpg'
+import tamancoMolekinhaInfantil2 from '../../assets/img/infantilFeminino/tamanco/tamancoMolekinhaInfantil2.jpg'
+import tamancoMolekinhaInfantil3 from '../../assets/img/infantilFeminino/tamanco/tamancoMolekinhaInfantil3.jpg'
+import tamancoMolekinhaInfantil4 from '../../assets/img/infantilFeminino/tamanco/tamancoMolekinhaInfantil4.jpg'
+
+//mocassim infantil
+import mocassimMolekinhaInfantil from '../../assets/img/infantilFeminino/mocassim/mocassimMolekinhaInfantil.jpg'
+import mocassimMolekinhaInfantil2 from '../../assets/img/infantilFeminino/mocassim/mocassimMolekinhaInfantil2.jpg'
+import mocassimMolekinhaInfantil3 from '../../assets/img/infantilFeminino/mocassim/mocassimMolekinhaInfantil3.jpg'
+import mocassimMolekinhaInfantil4 from '../../assets/img/infantilFeminino/mocassim/mocassimMolekinhaInfantil4.jpg'
 
 interface Data {
   marca: string;
@@ -70,10 +89,25 @@ const data: Record<string, Record<string, Data[]>> = {
     ],
     },
   feminino: {
-    tenis: [
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
-      { marca: 'nike', imageUrl: papet, preço: 169.90 },
+    sandalia: [
+      { marca: 'Sandália Emilia Kids', imageUrl: sandaliaEmiliaKids, preço: 0.90 },
+      { marca: 'Sandália Grugui', imageUrl: sandaliaGruguiInfantil, preço: 119.90 },
+      { marca: 'Sandália Molekinha', imageUrl: sandaliaMolekinhaInfantil, preço: 0.90 },
+      { marca: 'Sandália Dakota', imageUrl: sandaliaDakotaInfantil, preço: 119.90 },
+      { marca: 'Sandália Dedinho No Pe', imageUrl: sandaliaDedinhoNoPeInfantil, preço: 109.90 },
+    ],
+    tamanco: [
+      { marca: 'Tamanco Dakota', imageUrl: tamancoDakotaInfantil, preço: 139.90 },
+      { marca: 'Tamanco Molekinha', imageUrl: tamancoMolekinhaInfantil, preço: 49.90 },
+      { marca: 'Tamanco Molekinha', imageUrl: tamancoMolekinhaInfantil2, preço: 89.90 },
+      { marca: 'Tamanco Molekinha', imageUrl: tamancoMolekinhaInfantil3, preço: 79.90 },
+      { marca: 'Tamanco Molekinha', imageUrl: tamancoMolekinhaInfantil4, preço: 109.90 },
+    ],
+    mocassim: [
+      { marca: 'Mocassim Molekinha', imageUrl: mocassimMolekinhaInfantil, preço: 139.90 },
+      { marca: 'Mocassim Molekinha', imageUrl: mocassimMolekinhaInfantil2, preço: 149.90 },
+      { marca: 'Mocassim Molekinha', imageUrl: mocassimMolekinhaInfantil3, preço: 149.90 },
+      { marca: 'Mocassim Molekinha', imageUrl: mocassimMolekinhaInfantil4, preço: 139.90 },
     ]
   },
 };
@@ -170,7 +204,12 @@ export const Infantil = () => {
           <div>
             <Card2 data={filteredData.allStar} onClickModal={openModal} titulo='allStar' />
           </div>
-          
+          <div>
+            <Card2 data={filteredData.tamanco} onClickModal={openModal} titulo='tamanco' />
+          </div>
+          <div>
+            <Card2 data={filteredData.mocassim} onClickModal={openModal} titulo='mocassim' />
+          </div>
       </div>
 
       {/* Modal */}
