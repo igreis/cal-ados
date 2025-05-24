@@ -133,18 +133,18 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'Sapato Bertelli', imageUrl: sapatoBerteli, preço: 159.90 },
     ],
     sapatenis: [
-      { marca: 'Sapatenis ', imageUrl: sapatenisMasc, preço: 0.90 },
+      { marca: 'Sapatenis Ferricelli', imageUrl: sapatenisMasc, preço: 299.90 },
       { marca: 'Sapatenis Ferracini', imageUrl: sapatenisFerraciniMasc, preço: 379.90 },
-      { marca: 'Sapatenis Pegada', imageUrl: sapatenisPegadaMasc, preço: 0.90 },
+      { marca: 'Sapatenis Pegada', imageUrl: sapatenisPegadaMasc, preço: 299.90 },
       { marca: 'Sapatenis PGD', imageUrl: sapatenisPgdMasc, preço: 239.90 },
       { marca: 'Sapatenis Fire Wave', imageUrl: sapatenisFireWaveMasc, preço: 189.90 },
     ],
     coturno: [
       { marca: 'Coturno ', imageUrl: CoturnoMasc, preço: 169.90 },
       { marca: 'Coturno ', imageUrl: Coturno2Masc, preço: 169.90 },
-      { marca: 'Coturno ', imageUrl: CoturnoCatMasc, preço: 169.90 },
-      { marca: 'sapato', imageUrl: CoturnoCaterpillarMasc, preço: 169.90 },
-      { marca: 'sapato', imageUrl: CoturnoMacbootMasc, preço: 169.90 },
+      { marca: 'Coturno Caterpillar', imageUrl: CoturnoCatMasc, preço: 99.90 },
+      { marca: 'Coturno Caterpillar', imageUrl: CoturnoCaterpillarMasc, preço: 229.90 },
+      { marca: 'Coturno Macboot', imageUrl: CoturnoMacbootMasc, preço: 449.90 },
     ],
     chuteira: [
       { marca: 'Chuteira Nike Vapor 15 Society', imageUrl: chuteiraNike, preço: 599.90 },
@@ -156,10 +156,10 @@ const data: Record<string, Record<string, Data[]>> = {
   },
   feminino: {
     tenisEsportivo: [
-      { marca: 'Tênis Mizuno', imageUrl: tenisMizunoFeminino, preço: 169.90 },
-      { marca: 'Tênis Nike', imageUrl: tenisNikeFem, preço: 169.90 },
-      { marca: 'Tênis Olympikus', imageUrl: tenisOlympikusFeminino2, preço: 169.90 },
-      { marca: 'Tênis Under Armour', imageUrl: tenisUnderFem, preço: 169.90 },
+      { marca: 'Tênis Mizuno Glow 2', imageUrl: tenisMizunoFeminino, preço: 459.90 },
+      { marca: 'Tênis Nike Downshifter 11', imageUrl: tenisNikeFem, preço: 559.90 },
+      { marca: 'Tênis Olympikus NYX', imageUrl: tenisOlympikusFeminino2, preço: 239.90 },
+      { marca: 'Tênis Under Armour Great', imageUrl: tenisUnderFem, preço: 369.90 },
       { marca: 'Tênis Fila', imageUrl: tenisFilaFeminino, preço: 169.90 },
     ],
     tenisCasual: [
@@ -171,10 +171,10 @@ const data: Record<string, Record<string, Data[]>> = {
 
     ],
     papet: [
-      { marca: 'Papet Moleca', imageUrl: papetMoleca, preço: 169.90 },
-      { marca: 'Papet Vizano', imageUrl: papetVizano, preço: 169.90 },
-      { marca: 'Papet Beira Rio', imageUrl: papetBeiraRio, preço: 169.90 },
-      { marca: 'Papet Mississipi', imageUrl: papetMississipi, preço: 169.90 },
+      { marca: 'Papet Moleca', imageUrl: papetMoleca, preço: 149.90 },
+      { marca: 'Papet Vizano', imageUrl: papetVizano, preço: 179.90 },
+      { marca: 'Papet Beira Rio', imageUrl: papetBeiraRio, preço: 129.90 },
+      { marca: 'Papet Mississipi', imageUrl: papetMississipi, preço: 139.90 },
       { marca: 'Papet Petite Jolie', imageUrl: papet, preço: 189.90 },
     ],
     rasteirinha: [

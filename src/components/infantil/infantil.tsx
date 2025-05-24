@@ -74,7 +74,7 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'Crocs Word Colors', imageUrl: crocsWordColorsInfantil, preço: 69.90 },
     ],
     social: [
-      { marca: 'Sapato Bertelli', imageUrl: sapatoBertelliInfantil, preço: 0.00 },
+      { marca: 'Sapato Bertelli', imageUrl: sapatoBertelliInfantil, preço: 129.00 },
       { marca: 'Sapato Fearnothi', imageUrl: sapatoFearnothiInfantil, preço: 89.90 },
       { marca: 'Sapato REDMAX', imageUrl: sapatoRedMaxInfantil, preço: 84.90 },
       { marca: 'Mocassim Molekinho', imageUrl: mocassimMolekinhoInfantil, preço: 89.90 },
