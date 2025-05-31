@@ -92,10 +92,10 @@ export default function Footer() {
             <div className="mt-8">
               <h3 className="text-2xl font-semibold mb-6">Siga-nos</h3>
               <div className="flex space-x-6">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+                <a href="https://www.facebook.com/calcados500" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
                   <FaFacebook size={28} />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+                <a href="https://www.instagram.com/calcadosavbahia/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
                   <FaInstagram size={28} />
                 </a>
                 <a href="https://wa.me/553432426156" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
@@ -108,13 +108,13 @@ export default function Footer() {
         <div className="mt-12 text-center flex justify-center gap-[20px] flex-nowrap">
         <p className="mt-6 whitespace-nowrap">&copy; Desenvolvido por Igor Reis</p>
           <div className="flex justify-center space-x-6 items-end">
-            <a href="https://wa.me/553432426156" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+            <a href="https://wa.me/5534988313620" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
               <FaWhatsapp size={22} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+            <a href="https://www.linkedin.com/in/igor-reis-a9b522266/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
               <FaLinkedin size={22} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
+            <a href="https://www.instagram.com/ig.reiis/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-colors">
               <FaInstagram size={22} />
             </a>
           </div>

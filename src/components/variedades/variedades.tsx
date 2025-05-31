@@ -19,7 +19,8 @@ const data = {
     { marca: 'Biquinis', imageUrl: biquinis, preço: 149.90 },
     { marca: 'Relogios', imageUrl: relogios, preço: 200.90 },
     { marca: 'Climatizadores', imageUrl: climatizadores, preço: 149.90 },
-    { marca: 'Toalhas', imageUrl: toalhas, preço: 149.90 },
+    { marca: 'Toalhas/Tapetes/Roupas de cama', imageUrl: toalhas, preço: 149.90 },
+    
   ]
 };
 

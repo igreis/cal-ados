@@ -92,10 +92,10 @@ export default function ProductModal({ isOpen, onClose, product }: ModalProps) {
 
               {/* Action buttons */}
               <div className="mt-6 flex gap-3">
-                <button className="flex-1 flex items-center justify-center gap-2 bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                <a href="https://wa.me/553432426156" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
                   <ShoppingBag size={18} />
                   Comprar agora
-                </button>
+                </a>
 
                 <button
                   onClick={onClose}

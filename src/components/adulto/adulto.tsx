@@ -121,7 +121,7 @@ const data: Record<string, Record<string, Data[]>> = {
     tenisCasual: [
       { marca: 'Tênis New Acess', imageUrl: tenisCasualMasc, preço: 169.90 },
       { marca: 'Tênis Olympikus Urbano', imageUrl: tenisOlympCasual, preço: 289.90 },
-      { marca: 'Tênis Qix Comabate Suede', imageUrl: tenisQixCasual, preço: 0.00 },
+      { marca: 'Tênis Qix Comabate Suede', imageUrl: tenisQixCasual, preço: 449.90 },
       { marca: 'Tênis Redikal', imageUrl: tenisRedikal, preço: 219.90 },
       { marca: 'Tênis Ark', imageUrl: tenisArk, preço: 149.90 },
     ],
@@ -140,8 +140,8 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'Sapatenis Fire Wave', imageUrl: sapatenisFireWaveMasc, preço: 189.90 },
     ],
     coturno: [
-      { marca: 'Coturno ', imageUrl: CoturnoMasc, preço: 169.90 },
-      { marca: 'Coturno ', imageUrl: Coturno2Masc, preço: 169.90 },
+      { marca: 'Coturno ', imageUrl: CoturnoMasc, preço: 289.90 },
+      { marca: 'Coturno ', imageUrl: Coturno2Masc, preço: 279.90 },
       { marca: 'Coturno Caterpillar', imageUrl: CoturnoCatMasc, preço: 99.90 },
       { marca: 'Coturno Caterpillar', imageUrl: CoturnoCaterpillarMasc, preço: 229.90 },
       { marca: 'Coturno Macboot', imageUrl: CoturnoMacbootMasc, preço: 449.90 },
@@ -165,7 +165,7 @@ const data: Record<string, Record<string, Data[]>> = {
     tenisCasual: [
       { marca: 'Tênis Vizzano', imageUrl: tenisCasual, preço: 139.90 },
       { marca: 'Tênis Via Marte', imageUrl: tenisCasual2, preço: 229.90 },
-      { marca: 'Tênis Via Marte', imageUrl: tenisCasual3, preço: 0.90 },
+      { marca: 'Tênis Via Marte', imageUrl: tenisCasual3, preço: 329.90 },
       { marca: 'Tênis Ramarim', imageUrl: tenisRamarin, preço: 269.90 },
       { marca: 'Tênis Vert', imageUrl: tenisVest, preço: 199.90 },
 

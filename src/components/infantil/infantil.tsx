@@ -90,9 +90,9 @@ const data: Record<string, Record<string, Data[]>> = {
     },
   feminino: {
     sandalia: [
-      { marca: 'Sandália Emilia Kids', imageUrl: sandaliaEmiliaKids, preço: 0.90 },
+      { marca: 'Sandália Emilia Kids', imageUrl: sandaliaEmiliaKids, preço: 79.90 },
       { marca: 'Sandália Grugui', imageUrl: sandaliaGruguiInfantil, preço: 119.90 },
-      { marca: 'Sandália Molekinha', imageUrl: sandaliaMolekinhaInfantil, preço: 0.90 },
+      { marca: 'Sandália Molekinha', imageUrl: sandaliaMolekinhaInfantil, preço: 89.90 },
       { marca: 'Sandália Dakota', imageUrl: sandaliaDakotaInfantil, preço: 119.90 },
       { marca: 'Sandália Dedinho No Pe', imageUrl: sandaliaDedinhoNoPeInfantil, preço: 109.90 },
     ],

@@ -5,8 +5,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-cards';
 
 //imagens
-import novidade1 from '../../assets/novidade1.png'
-import novidade2 from '../../assets/novidade2.png'
+import novidade1 from '../../assets/img/novidades/novidadeInverno.jpg'
+import novidade2 from '../../assets/img/novidades/novidadeInverno2.jpg'
 
 import { Pagination } from 'swiper/modules';
 
@@ -23,7 +23,7 @@ export default function Slider() {
     >
 
 
-      {/* Slide 1 - Climatizador */}
+      {/* Slide 1  */}
       <SwiperSlide>
         <section className='' >
           <div className='md:block hidden'>

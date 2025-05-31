@@ -12,6 +12,7 @@ import ol from '../../assets/img/marcas/olympikus-seeklogo.png'
 import mizuno from '../../assets/img/marcas/mizuno-seeklogo.png'
 import ramarim from '../../assets/img/marcas/ramarim-seeklogo.png'
 import moleca from '../../assets/img/marcas/moleca-seeklogo.png'
+import fila from '../../assets/img/marcas/fila-seeklogo.png'
 // Import team logos (you would replace these with actual imported images)
 
 
@@ -30,7 +31,7 @@ export const BrandsCarousel: React.FC = () => {
     { src: ol, alt: 'Peru', delay: 300 },
     { src: ramarim, alt: 'Italy', delay: 500 },
     { src: moleca, alt: 'Italy', delay: 500 },
-    { src: adidas, alt: 'Italy', delay: 500 },
+    { src: fila, alt: 'Italy', delay: 500 },
   ];
 
   return (
@@ -42,11 +43,11 @@ export const BrandsCarousel: React.FC = () => {
       </div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        
+        loop={true}
         slidesPerView={4}
-        
+        speed={2500}
         autoplay={{
-          delay: 2500,
+          delay: 0,
           disableOnInteraction: false,
         }}
         breakpoints={{

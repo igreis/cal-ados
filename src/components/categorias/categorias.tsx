@@ -59,7 +59,7 @@ export const Categorias = () => {
         navigation // Ativando a navegação
       >
         {/* Card 1 */}
-        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisInfantil")}>
+        <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("Tênis Casual")}>
           <img src="https://static.clube.netshoes.com.br/produtos/tenis-feminino-casual-original-estilo-shoes/14/30G-0016-014/30G-0016-014_zoom1.jpg?ts=1727867070" alt="Tênis" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Tênis Feminio
