@@ -135,9 +135,10 @@ export default function Slider2() {
               {/* Mobile View */}
               <div className="sm:hidden flex w-full mt-[10px]" data-aos="zoom-in" data-aos-delay="100">
                 <Swiper
+                  autoplay={{ delay: 2000 }}
                   effect={"cards"}
                   grabCursor={true}
-                  modules={[EffectCards]}
+                  modules={[EffectCards, Autoplay]}
                   className="mySwiper h-[330px] w-[310px] h850:h-[350px] h850:w-[350px]"
                 >
                   <SwiperSlide>
