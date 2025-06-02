@@ -4,15 +4,20 @@ import "swiper/css/effect-creative"
 import "swiper/css/pagination"
 import "swiper/css/effect-cards"
 
+import bg2 from "../../assets/img/bg2.jpg"
+import bgNamorados from "../../assets/img/bgNamorados.jpg"
+
 //novidades
 import novidadeInverno from "../../assets/img/novidades/novidadeInverno.jpg"
 import novidadeInverno2 from "../../assets/img/novidades/novidadeInverno2.jpg"
-import bobojacoinfantil from "../../assets/img/novidades/bobojacoinfantil.jpg"
-import moletomInfantil from "../../assets/img/novidades/moletomInfantil.jpg"
+
+//namorados
+import relogioNamorados from "../../assets/img/slider/relogioNamorados.jpg"
+import perfumeNamorados from "../../assets/img/slider/perfumeNamorados.jpg"
+
 
 import { Pagination, EffectCards, Autoplay } from "swiper/modules"
-import bg from "../../assets/bg.jpeg"
-//import carna from '../../assets/carna.jpg'
+
 
 export default function Slider2() {
   return (
@@ -23,12 +28,12 @@ export default function Slider2() {
         <section
           className="mt-[15px] h-[60dvh] md:min-h-[75dvh] sm:min-h-[70dvh] lg:min-h-[70dvh] flex justify-center items-center"
           style={{
-            backgroundImage: `url(${bg})`,
+            backgroundImage: `url(${bg2})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="lg:max-w-[1770px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center lg:gap-24">
+          <div className="lg:max-w-[1770px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center ">
             {/* Title Section */}
 
             <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-130px]">
@@ -166,25 +171,25 @@ export default function Slider2() {
         <section
           className="mt-[15px] h-[60dvh] md:min-h-[75dvh] sm:min-h-[70dvh] lg:min-h-[70dvh] bg-[#f4ff2b] flex justify-center items-center"
           style={{
-            backgroundImage: `url(${bg})`,
+            backgroundImage: `url(${bgNamorados})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="lg:max-w-[1770px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center lg:gap-24">
+          <div className="lg:max-w-[1770px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center ">
             {/* Products Section (agora na esquerda) */}
             <div className="w-full lg:w-auto">
               <div className="hidden sm:flex justify-center gap-8" data-aos="zoom-in-down" data-aos-delay="800">
                 <div className="flex items-center relative">
                   <img
-                    src={bobojacoinfantil}
+                    src={relogioNamorados}
                     alt=""
                     className="w-full h-[400px] lg:h-[550px] object-contain rounded-lg"
                   />
                 </div>
                 <div className="flex items-center lg:mt-[160px] relative">
                   <img
-                    src={moletomInfantil}
+                    src={perfumeNamorados}
                     alt=""
                     className="w-full h-[400px] lg:h-[352px] object-contain rounded-lg transition-all duration-300"
                   />
@@ -195,7 +200,7 @@ export default function Slider2() {
               <div className="sm:hidden flex-col w-full " data-aos="zoom-in" data-aos-delay="100">
                 <div className="flex flex-col items-center pb-2 h850:pb-6 lg:pb-[60px]">
                   <h1 className="font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 text-3xl text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
-                    NOVIDADES
+                    Dia dos Namorados
                   </h1>
                   <div
                     className="w-16 sm:w-24 md:w-32 lg:w-[10vw] h-[1px] sm:h-[2px] md:h-[2px] bg-slate-700 my-2 sm:my-3 md:my-4"
@@ -220,13 +225,13 @@ export default function Slider2() {
                 >
                   <SwiperSlide>
                     <img
-                      src={bobojacoinfantil}
+                      src={relogioNamorados}
                       alt=""
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img
-                      src={moletomInfantil}
+                      src={perfumeNamorados}
                       alt=""
                     />
                   </SwiperSlide>
@@ -238,7 +243,7 @@ export default function Slider2() {
             <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-130px]">
               <div className="hidden sm:flex flex-col items-center h850:pb-6 lg:pb-[70px]">
                 <h1 className="font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
-                  NOVIDADES
+                  Dia dos Namorados
                 </h1>
                 <div
                   className="w-16 sm:w-24 md:w-32 lg:w-[10vw] h-[1px] sm:h-[2px] md:h-[2px] bg-slate-700 my-2 sm:my-3 md:my-4"
@@ -256,12 +261,12 @@ export default function Slider2() {
               </div>
               <div className="mt-[20px] hidden lg:block">
                 <h2 className="flex items-center text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-700 transition-all duration-300 emerge-animation">
-                  <span className="w-2 h-2 bg-slate-600 rounded-full mr-2"></span> Bobojaco Infantil
+                  <span className="w-2 h-2 bg-slate-600 rounded-full mr-2"></span> Relógio Mondaine
                 </h2>
                 <span className="text-slate-700 font-bold text-base sm:text-lg md:text-xl lg:text-2xl pl-6 transition-all duration-300 emerge-animation"></span>
 
                 <h2 className="flex items-center mt-8 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-700 transition-all duration-300 emerge-animation">
-                  <span className="w-2 h-2 bg-slate-600 rounded-full mr-2"></span> Conjunto Moleton Infantil
+                  <span className="w-2 h-2 bg-slate-600 rounded-full mr-2"></span> Perfume La Rive
                 </h2>
                 <span className="text-slate-700 font-bold text-base sm:text-lg md:text-xl lg:text-2xl pl-6 transition-all duration-300 emerge-animation"></span>
               </div>
