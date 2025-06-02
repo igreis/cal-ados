@@ -86,7 +86,7 @@ export default function Footer() {
             <ul className="space-y-5 text-lg">
               <li className="flex items-center">
                 <FaEnvelope className="mr-2 text-yellow-400" />
-                <span>contato@calcados.com</span>
+                <span>Calcados500@gmail.com</span>
               </li>
             </ul>
             <div className="mt-8">

@@ -6,7 +6,7 @@ import Modal from '../../ui/modal';
 //Esportivo feminino
 import tenisOlympikusFeminino2 from '../../assets/img/adultoFeminino/tenisEsportivo/TenisOlympikusFeminino2.jpeg'
 import tenisMizunoFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisMizunoFeminino.jpeg'
-import tenisFilaFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/TenisFilaFeminino.jpeg'
+import tenisFilaFeminino from '../../assets/img/adultoFeminino/tenisEsportivo/tenisFemininoFila.jpg'
 import tenisNikeFem from '../../assets/img/adultoFeminino/tenisEsportivo/tenisNikeFem.jpg'
 import tenisUnderFem from '../../assets/img/adultoFeminino/tenisEsportivo/tenisUnderFem.jpg'
 
@@ -60,7 +60,7 @@ import sapatoMariota from '../../assets/img/adultoFeminino/sapato/sapatoMariota.
 import sapatoSantinelli from '../../assets/img/adultoFeminino/sapato/sapatoSantinelli.jpeg'
 
 //Esportivo Masculino
-import tenisOlimpykus from '../../assets/img/adultoMasculino/tenisEsportivo/TenisOlympikusMasculino.jpeg'
+import tenisOlympikus from '../../assets/img/adultoMasculino/tenisEsportivo/tenisOlympikus.jpg'
 import tenisUnder from '../../assets/img/adultoMasculino/tenisEsportivo/TenisUnderMasculino.jpeg'
 import tenisNike from '../../assets/img/adultoMasculino/tenisEsportivo/TenisNikeMasculino.jpeg'
 import tenisMizuno from '../../assets/img/adultoMasculino/tenisEsportivo/tenisMizunoMasc.jpeg'
@@ -113,7 +113,7 @@ const data: Record<string, Record<string, Data[]>> = {
   masculino: {
     tenisEsportivo: [
       { marca: 'Tênis Nike Revolution 7', imageUrl: tenisNike, preço: 559.90 },
-      { marca: 'Tênis Olympikus', imageUrl: tenisOlimpykus, preço: 169.90 },
+      { marca: 'Tênis Olympikus Index 3', imageUrl: tenisOlympikus, preço: 229.90 },
       { marca: 'Tênis Mizuno Wave Frontier 15', imageUrl: tenisMizuno, preço: 899.90 },
       { marca: 'Tênis Under Armour Great', imageUrl: tenisUnder, preço: 369.90 },
       { marca: 'Tênis Adidas Duramo SL', imageUrl: tenisAdidasMasc, preço: 559.90 },
@@ -160,7 +160,7 @@ const data: Record<string, Record<string, Data[]>> = {
       { marca: 'Tênis Nike Downshifter 11', imageUrl: tenisNikeFem, preço: 559.90 },
       { marca: 'Tênis Olympikus NYX', imageUrl: tenisOlympikusFeminino2, preço: 239.90 },
       { marca: 'Tênis Under Armour Great', imageUrl: tenisUnderFem, preço: 369.90 },
-      { marca: 'Tênis Fila', imageUrl: tenisFilaFeminino, preço: 169.90 },
+      { marca: 'Tênis Fila Renno Classic', imageUrl: tenisFilaFeminino, preço: 349.90 },
     ],
     tenisCasual: [
       { marca: 'Tênis Vizzano', imageUrl: tenisCasual, preço: 139.90 },
