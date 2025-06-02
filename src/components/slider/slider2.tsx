@@ -3,8 +3,12 @@ import "swiper/css"
 import "swiper/css/effect-creative"
 import "swiper/css/pagination"
 import "swiper/css/effect-cards"
+
+//novidades
 import novidadeInverno from "../../assets/img/novidades/novidadeInverno.jpg"
 import novidadeInverno2 from "../../assets/img/novidades/novidadeInverno2.jpg"
+import bobojacoinfantil from "../../assets/img/novidades/bobojacoinfantil.jpg"
+import moletomInfantil from "../../assets/img/novidades/moletomInfantil.jpg"
 
 import { Pagination, EffectCards, Autoplay } from "swiper/modules"
 import bg from "../../assets/bg.jpeg"
@@ -172,14 +176,14 @@ export default function Slider2() {
               <div className="hidden sm:flex justify-center gap-8" data-aos="zoom-in-down" data-aos-delay="800">
                 <div className="flex items-center relative">
                   <img
-                    src="https://scontent.fudi1-1.fna.fbcdn.net/v/t39.30808-6/499486687_1302422208551003_3692119928342905514_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHfkJ3wU5AiRz86M0olLOgK0Q0u9FRfXNnRDS70VF9c2cxuYEH3B-mcJ7YljIYVF6J3pfkb1eZlKKZ_xpzoDJrQ&_nc_ohc=VCLLmyS_cBoQ7kNvwGRxMPE&_nc_oc=Adn3mycprNE2SwE8_mUI5GofO3jxSIfmhTz4IR-vrupTswkPhiiRzdf2NDGdqCd0RxwmN0qQtXDyu3SniL3rnwGf&_nc_zt=23&_nc_ht=scontent.fudi1-1.fna&_nc_gid=O7yT_LDHSf09kl3s6n757w&oh=00_AfKcYhsxQ64MAKomCggb0yJWg5aT4ng8KA-jJT2xm7xGPA&oe=683D1ECE"
+                    src={bobojacoinfantil}
                     alt=""
                     className="w-full h-[400px] lg:h-[550px] object-contain rounded-lg"
                   />
                 </div>
                 <div className="flex items-center lg:mt-[160px] relative">
                   <img
-                    src="https://scontent.fudi1-1.fna.fbcdn.net/v/t39.30808-6/498678462_1302422041884353_9134469628117244112_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE2A9Ss9CVlNylaDMiiZk9Gh7sJJRU0vuyHuwklFTS-7L6iLrrEfvgBCJDGiwmWNHF9ImhWpFtwRfCG0iXuCADz&_nc_ohc=CzA1_ev_JjsQ7kNvwH_Ulbv&_nc_oc=Adk8glJYu8strwCrb9W10xuL4nl3SLmTFglzX-DRKz6m-DMJsXYq7SZW-iyYy2QfTCjbtaBGonam8E4QuEEN_5vb&_nc_zt=23&_nc_ht=scontent.fudi1-1.fna&_nc_gid=KAiMbKcN3oaX8v1jcIg4Qg&oh=00_AfIWfxgwK1xUTL-gsiMy2oh0tcFNSIVKJXWv5-H_V_Ke3g&oe=683D41BB"
+                    src={moletomInfantil}
                     alt=""
                     className="w-full h-[400px] lg:h-[352px] object-contain rounded-lg transition-all duration-300"
                   />
