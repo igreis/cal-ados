@@ -21,23 +21,23 @@ import { Pagination, EffectCards, Autoplay } from "swiper/modules"
 
 export default function Slider2() {
   return (
-    <Swiper modules={[Pagination, Autoplay]} pagination={{ clickable: true }} autoplay={{ delay: 4000 }} className="w-full">
+    <Swiper modules={[Pagination]} pagination={{ clickable: true }} autoplay={{ delay: 4000 }} className="w-full">
       {/* Slide 1 */}
 
       <SwiperSlide>
         <section
-          className="mt-[15px] h-[60dvh] md:min-h-[75dvh] sm:min-h-[70dvh] lg:min-h-[70dvh] flex justify-center items-center"
+          className="mt-[15px] h-[65dvh] h750:h-[60dvh] md:min-h-[75dvh] sm:min-h-[70dvh] lg:min-h-[70dvh] flex justify-center items-center"
           style={{
             backgroundImage: `url(${bg2})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="lg:max-w-[1770px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center ">
+          <div className="lg:max-w-[1400px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center ">
             {/* Title Section */}
 
-            <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-130px]">
-              <div className="flex flex-col items-center h850:pb-6 lg:pb-[70px]">
+            <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-90px]"> {/*lg:mt-[-130px]*/}
+              <div className="flex flex-col items-center h850:pb-6 lg:pb-[20px]"> {/*lg:pb-[70px]*/}
                 <h1 className="font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
                   Novidades De Inverno
                 </h1>
@@ -46,7 +46,7 @@ export default function Slider2() {
                   data-aos="zoom-in"
                   data-aos-delay="800"
                 ></div>
-                <button className="emerge-animation bg-gradient-to-r from-slate-700 to-slate-600 text-white py-1.5 sm:py-2 px-6 sm:px-8 lg:py-[1vh] lg:px-[2vw] rounded-full text-sm sm:text-base lg:text-[1vw] hover:from-slate-800 hover:to-slate-700 transition-all duration-300 shadow-lg font-medium tracking-wide">
+                <button className="mb-4 emerge-animation bg-gradient-to-r from-slate-700 to-slate-600 text-white py-1.5 sm:py-2 px-6 sm:px-8 lg:py-[1vh] lg:px-[2vw] rounded-full text-sm sm:text-base lg:text-[1vw] hover:from-slate-800 hover:to-slate-700 transition-all duration-300 shadow-lg font-medium tracking-wide">
                   SAIBA MAIS
                 </button>
               </div>
@@ -144,7 +144,7 @@ export default function Slider2() {
                   effect={"cards"}
                   grabCursor={true}
                   modules={[EffectCards, Autoplay]}
-                  className="mySwiper h-[330px] w-[310px] h850:h-[350px] h850:w-[350px]"
+                  className="mySwiper h-[280px] w-[310px] h750:h-[330px]"
                 >
                   <SwiperSlide>
                     <img
@@ -169,14 +169,14 @@ export default function Slider2() {
       {/* Slide 2 - Outro Produto */}
       <SwiperSlide>
         <section
-          className="mt-[15px] h-[60dvh] md:min-h-[75dvh] sm:min-h-[70dvh] lg:min-h-[70dvh] bg-[#f4ff2b] flex justify-center items-center"
+          className="mt-[15px] h-[65dvh] h750:h-[60dvh] md:min-h-[75dvh] sm:min-h-[70dvh] lg:min-h-[70dvh] bg-[#f4ff2b] flex justify-center items-center"
           style={{
             backgroundImage: `url(${bgNamorados})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="lg:max-w-[1770px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center ">
+          <div className="lg:max-w-[1350px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center ">
             {/* Products Section (agora na esquerda) */}
             <div className="w-full lg:w-auto">
               <div className="hidden sm:flex justify-center gap-8" data-aos="zoom-in-down" data-aos-delay="800">
@@ -199,7 +199,7 @@ export default function Slider2() {
               {/* Mobile View */}
               <div className="sm:hidden flex-col w-full " data-aos="zoom-in" data-aos-delay="100">
                 <div className="flex flex-col items-center pb-2 h850:pb-6 lg:pb-[60px]">
-                  <h1 className="font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 text-3xl text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
+                  <h1 className="font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 text-4xl h750:text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
                     Dia dos Namorados
                   </h1>
                   <div
@@ -211,7 +211,7 @@ export default function Slider2() {
                     href="https://wa.me/553432426156"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="emerge-animation bg-gradient-to-r from-slate-700 to-slate-600 text-white py-1.5 sm:py-2 px-6 sm:px-8 lg:py-[1vh] lg:px-[2vw] rounded-full text-sm sm:text-base lg:text-[1vw] hover:from-slate-800 hover:to-slate-700 transition-all duration-300 shadow-lg font-medium tracking-wide"
+                    className="emerge-animation bg-gradient-to-r from-slate-700 to-slate-600 text-white py-1.5 mb-4 sm:py-2 px-6 sm:px-8 lg:py-[1vh] lg:px-[2vw] rounded-full text-sm sm:text-base lg:text-[1vw] hover:from-slate-800 hover:to-slate-700 transition-all duration-300 shadow-lg font-medium tracking-wide"
                   >
                     SAIBA MAIS
                   </a>
@@ -220,8 +220,8 @@ export default function Slider2() {
                   autoplay={{ delay: 2000 }}
                   effect={"cards"}
                   grabCursor={true}
-                  modules={[EffectCards, Autoplay]}
-                  className="mySwiper h-[330px] w-[310px] h850:h-[350px] h850:w-[350px] "
+                  modules={[EffectCards]}
+                  className="mySwiper h-[280px] w-[310px] h750:h-[330px] "
                 >
                   <SwiperSlide>
                     <img
@@ -240,8 +240,8 @@ export default function Slider2() {
             </div>
 
             {/* Title Section (agora na direita) */}
-            <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-130px]">
-              <div className="hidden sm:flex flex-col items-center h850:pb-6 lg:pb-[70px]">
+            <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-80px]"> {/*lg:mt-[-130px]*/}
+              <div className="hidden sm:flex flex-col items-center h850:pb-6 lg:pb-[20px]"> {/*lg:pb-[70px]*/}
                 <h1 className="font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
                   Dia dos Namorados
                 </h1>
