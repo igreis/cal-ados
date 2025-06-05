@@ -21,7 +21,7 @@ import { Pagination, EffectCards, Autoplay } from "swiper/modules"
 
 export default function Slider2() {
   return (
-    <Swiper modules={[Pagination]} pagination={{ clickable: true }} autoplay={{ delay: 4000 }} className="w-full">
+    <Swiper modules={[Pagination, Autoplay]} pagination={{ clickable: true }} autoplay={{ delay: 4000 }} className="w-full">
       {/* Slide 1 */}
 
       <SwiperSlide>
@@ -37,8 +37,8 @@ export default function Slider2() {
             {/* Title Section */}
 
             <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-90px]"> {/*lg:mt-[-130px]*/}
-              <div className="flex flex-col items-center h850:pb-6 lg:pb-[20px]"> {/*lg:pb-[70px]*/}
-                <h1 className="font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
+              <div className="flex flex-col items-center lg:pb-[20px] pt-5"> {/*lg:pb-[70px]*/}
+                <h1 className="font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 text-4xl md:text-5xl  lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
                   Novidades De Inverno
                 </h1>
                 <div
@@ -46,7 +46,7 @@ export default function Slider2() {
                   data-aos="zoom-in"
                   data-aos-delay="800"
                 ></div>
-                <button className="mb-4 emerge-animation bg-gradient-to-r from-slate-700 to-slate-600 text-white py-1.5 sm:py-2 px-6 sm:px-8 lg:py-[1vh] lg:px-[2vw] rounded-full text-sm sm:text-base lg:text-[1vw] hover:from-slate-800 hover:to-slate-700 transition-all duration-300 shadow-lg font-medium tracking-wide">
+                <button className="mb-2 emerge-animation bg-gradient-to-r from-slate-700 to-slate-600 text-white py-1.5 sm:py-2 px-6 sm:px-8 lg:py-[1vh] lg:px-[2vw] rounded-full text-sm sm:text-base lg:text-[1vw] hover:from-slate-800 hover:to-slate-700 transition-all duration-300 shadow-lg font-medium tracking-wide">
                   SAIBA MAIS
                 </button>
               </div>
@@ -199,7 +199,7 @@ export default function Slider2() {
               {/* Mobile View */}
               <div className="sm:hidden flex-col w-full " data-aos="zoom-in" data-aos-delay="100">
                 <div className="flex flex-col items-center pb-2 h850:pb-6 lg:pb-[60px]">
-                  <h1 className="font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 text-4xl h750:text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
+                  <h1 className="font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center transition-all duration-300 writing-animation">
                     Dia dos Namorados
                   </h1>
                   <div
@@ -220,7 +220,7 @@ export default function Slider2() {
                   autoplay={{ delay: 2000 }}
                   effect={"cards"}
                   grabCursor={true}
-                  modules={[EffectCards]}
+                  modules={[EffectCards, Autoplay]}
                   className="mySwiper h-[280px] w-[310px] h750:h-[330px] "
                 >
                   <SwiperSlide>
