@@ -8,6 +8,7 @@ export default {
     extend: {
       screens: {
         'h750': { 'raw': '(min-height: 750px)' }, // Define breakpoint para altura
+        'w1920': { 'raw': '(min-width: 1920px)' }, // Define breakpoint para largura
       },
     },
   },

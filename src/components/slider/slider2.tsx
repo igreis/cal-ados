@@ -33,7 +33,7 @@ export default function Slider2() {
             backgroundPosition: "center",
           }}
         >
-          <div className="lg:max-w-[1400px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center ">
+          <div className="lg:max-w-[1400px] w1920:max-w-[1770px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center ">
             {/* Title Section */}
 
             <div className="flex flex-col items-center justify-start w-full lg:w-auto mt-[-10px] sm:mt-[-2px] md:mt-[-10px] lg:mt-[-90px]"> {/*lg:mt-[-130px]*/}
@@ -176,7 +176,7 @@ export default function Slider2() {
             backgroundPosition: "center",
           }}
         >
-          <div className="lg:max-w-[1350px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center ">
+          <div className="lg:max-w-[1350px] w1920:max-w-[1770px] max-w-7xl sm:mt-[20px] w-full flex flex-col lg:flex-row justify-center items-center ">
             {/* Products Section (agora na esquerda) */}
             <div className="w-full lg:w-auto">
               <div className="hidden sm:flex justify-center gap-8" data-aos="zoom-in-down" data-aos-delay="800">
