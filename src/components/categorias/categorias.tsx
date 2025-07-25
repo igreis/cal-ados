@@ -74,12 +74,12 @@ export const Categorias = () => {
 
         {/* Card 2 */}
         <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
-          <img src="https://importego.com/cdn/shop/products/chuteira-profissional-de-futebolfutsal-masculina-antiderrapante-p20-42-importe-go-549300_800x.jpg?v=1686796288" alt="Chuteiras" className="w-full h-full object-cover rounded-lg" />
+          <img src="https://futcarioca.com/cdn/shop/files/chuteira-campo-rocket-chuteira-campo-rocket-grupo-42-futcarioca-830557_800x.webp?v=1706250082" alt="Chuteiras" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Chuteiras
           </div>
         </SwiperSlide>
-
+s
         {/* Card 3 */}
         <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
           <img src="https://cdnv2.moovin.com.br/margilcalcados/imagens/produtos/det/-643418b17d4dc.jpeg" alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
@@ -100,7 +100,7 @@ export const Categorias = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="relative min-w-[250px]" onClick={() => scrollToSection("tenisAdulto")}>
-          <img src="https://domdosmares.com.br/cdn/shop/files/Sc6c22cacf97d4c5e97a5971f6745eecf4_800x.webp?v=1721220399" alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
+          <img src="https://lojaviego.com.br/cdn/shop/files/Sapato-Oxford-Masculino-Social-Preto-Carbon_1.jpg?v=1736085160" alt="Sapatilhas" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 rounded-lg">
             Sapatos Masculinos
           </div>
